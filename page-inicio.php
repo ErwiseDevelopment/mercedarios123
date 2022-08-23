@@ -19,6 +19,10 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<h1>
+    <?php the_title() ?>
+</h1>
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
