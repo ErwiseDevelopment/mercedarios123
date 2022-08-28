@@ -1,0 +1,11 @@
+$utility-name: 'u-bg';
+
+.#{$utility-name} {
+    &-cover {
+        background-size: cover !important;
+    }
+
+    &-no-repeat {
+        background-repeat: no-repeat !important;
+    }
+}

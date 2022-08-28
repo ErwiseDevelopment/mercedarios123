@@ -2,11 +2,31 @@ $utility-name: 'u-color-folk';
 
 .#{$utility-name} {
     &-black {
-        color: $color-folk-black;
+        color: $color-folk-black !important;
+    }
+
+    &-dark-blue {
+        color: $color-folk-dark-blue !important;
+    }
+
+    &-dark-golden {
+        color: $color-folk-dark-golden !important;
+    }
+
+    &-dark-marron {
+        color: $color-folk-dark-marron !important;
+    }
+
+    &-gray {
+        color: $color-folk-gray !important;
+    }
+
+    &-light-gray {
+        color: $color-folk-light-gray !important;
     }
 
     &-white {
-        color: $color-folk-white;
+        color: $color-folk-white !important; 
     }
 }
 

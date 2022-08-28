@@ -1,0 +1,9 @@
+$utility-name: 'u-border-radius';
+
+.px\: {
+    &#{$utility-name} {
+        &-24 {
+            border-radius: 24px !important;
+        }
+    }   
+}

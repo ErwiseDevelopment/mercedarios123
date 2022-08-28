@@ -19,33 +19,37 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<!-- menu -->
-<?php echo get_template_part( 'template-parts/content', 'menu-editorials' ) ?>
-<!-- end menu -->
 
-<!-- banner -->
-<?php echo get_template_part( 'template-parts/content', 'banner' ) ?>
-<!-- end banner -->
+<section 
+class="l-template-content__banner u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png)">
+    <div class="container-fluid">
 
-<!-- news -->
-<?php echo get_template_part( 'template-parts/content', 'news' ) ?>
-<!-- end news -->
-
-<section>
-    <div class="container" style="background:yellow">
-        
         <div class="row">
 
-            <div class="col-6 bg-info">
-                aa
-            </div>
-
-            <div class="col-6 bg-primary">
-                bb
+            <div class="col-12 px-0">
+                <h1>
+                    Quem somos
+                </h1>
             </div>
         </div>
     </div>
 </section>
+
+<section class="mt-3 pb-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-10">
+
+                <?php the_content() ?>
+            </div>
+        </div>
+    </div>
+</section>
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

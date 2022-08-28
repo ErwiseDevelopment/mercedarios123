@@ -1,0 +1,15 @@
+$layout-name: 'l-news';
+
+.#{$layout-name} {
+    background-color: $color-folk-bold-marron;
+
+    &::before {
+        content: '';
+        width: calc((100% - 1140px) / 2);
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-color: $color-folk-white;
+    }
+}

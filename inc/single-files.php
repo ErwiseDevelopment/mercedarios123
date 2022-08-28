@@ -1,3 +1,5 @@
+<?php
+
 function single_temas_scripts()
 {
     //css

@@ -1,0 +1,22 @@
+$layout-name: 'l-template-content';
+
+.#{$layout-name} {
+    &__banner {
+        height: 280px;
+
+        &__title {
+            font-size: 4rem;
+
+            &::before {
+                content: '';
+                width: 280px;
+                height: 5px;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                background-color: $color-folk-dark-golden;
+            }
+        }
+    }
+}

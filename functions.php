@@ -6,3 +6,6 @@ require get_template_directory() . '/../wp-bootstrap-starter-child/inc/register-
 
 //single functions
 require get_template_directory() . '/../wp-bootstrap-starter-child/inc/single-functions.php';
+
+//single files
+require get_template_directory() . '/../wp-bootstrap-starter-child/inc/single-files.php';

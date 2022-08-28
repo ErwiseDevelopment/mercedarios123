@@ -13,6 +13,12 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__envelope {
+        &::before {
+            content: '\f0e0';
+        }
+    }
+    
     &__facebook {
         &::before {
             content: '\f39e';
@@ -22,6 +28,18 @@ $utility-name: 'u-icon';
     &__instagram {
         &::before {
             content: '\f16d';
+        }
+    }
+
+    &__map {
+        &::before {
+            content: '\f3c5';
+        }
+    }
+
+    &__phone {
+        &::before {
+            content: '\f879';
         }
     }
 

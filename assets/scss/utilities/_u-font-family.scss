@@ -1,0 +1,24 @@
+$utility-name: 'u-font-family';
+
+.#{$utility-name} {
+    &-cinzel {
+        font-family: 'Cinzel', sans-serif !important;
+    }
+
+    &-cinzel-decorative {
+        font-family: 'Cinzel Decorative ', sans-serif !important;
+    }
+
+    &-lato {
+        font-family: 'Lato', sans-serif !important;
+    }
+}
+
+.all\: {
+    &#{$utility-name} {
+        &-cinzel,
+        &-cinzel * {
+            font-family: 'Cinzel', sans-serif !important;
+        }
+    }
+}

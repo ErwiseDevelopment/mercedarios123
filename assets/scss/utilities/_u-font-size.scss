@@ -48,6 +48,18 @@ $utility-name: 'u-font-size';
     &-18 {
         font-size: 1.125rem !important;
     }
+
+    &-19 {
+        font-size: 1.1875rem !important;
+    }
+
+    &-26 {
+        font-size: 1.625rem !important;
+    }
+    
+    &-28 {
+        font-size: 1.75rem !important;
+    }
 }
 
 //before
@@ -122,6 +134,12 @@ $utility-name: 'u-font-size';
         &-18 {
             &::before {
                 font-size: 1.125rem !important;
+            }
+        }
+
+        &-20 {
+            &::before {
+                font-size: 1.25rem !important;
             }
         }
     }    
@@ -584,6 +602,12 @@ $utility-name: 'u-font-size';
         &-18 {
             @media screen and (min-width: 1600px) {
                 font-size: 1.125rem !important;
+            }
+        }
+
+        &-32 {
+            @media screen and (min-width: 1600px) {
+                font-size: 2rem !important;
             }
         }
     }    

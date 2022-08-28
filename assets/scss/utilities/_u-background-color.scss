@@ -5,6 +5,22 @@ $utility-name: 'u-bg-folk';
         background-color: $color-folk-black !important;
     }
 
+    &-bold-marron {
+        background-color: $color-folk-bold-marron !important;
+    }
+
+    &-dark-golden {
+        background-color: $color-folk-dark-golden !important;
+    }
+
+    &-golden {
+        background-color: $color-folk-golden !important;
+    }
+
+    &-light-gray {
+        background-color: $color-folk-light-gray !important;
+    }
+
     &-none {
         background: none !important;
     }
@@ -66,6 +82,12 @@ $utility-name: 'u-bg-folk';
         &-black {
             &:hover {
                 background-color: $color-folk-black !important;
+            }
+        }
+
+        &-dark-marron {
+            &:hover {
+                background-color: $color-folk-dark-marron !important;
             }
         }
 
