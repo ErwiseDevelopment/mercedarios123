@@ -995,7 +995,7 @@ button.swiper-pagination-bullet {
 .u-font-family-cinzel {
   font-family: 'Cinzel', sans-serif !important; }
 .u-font-family-cinzel-decorative {
-  font-family: 'Cinzel Decorative ', sans-serif !important; }
+  font-family: 'Cinzel Decorative', sans-serif !important; }
 .u-font-family-lato {
   font-family: 'Lato', sans-serif !important; }
 
@@ -1790,5 +1790,9 @@ button.swiper-pagination-bullet {
               transform: translateX(-50%);
       position: absolute;
       background-color: #D99E32; }
+.l-template-content__content h1, .l-template-content__content h2, .l-template-content__content h3, .l-template-content__content h4, .l-template-content__content h5, .l-template-content__content h6 {
+  font-family: 'Cinzel', sans-serif !important; }
+  .l-template-content__content h1 *, .l-template-content__content h2 *, .l-template-content__content h3 *, .l-template-content__content h4 *, .l-template-content__content h5 *, .l-template-content__content h6 * {
+    font-family: 'Cinzel', sans-serif !important; }
 
 /*# sourceMappingURL=main.css.map */

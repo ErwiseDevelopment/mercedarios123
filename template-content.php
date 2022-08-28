@@ -29,7 +29,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
             <div class="col-12 px-0">
                 <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
-                    Quem somos
+                    <?php the_title() ?>
                 </h1>
             </div>
         </div>
@@ -44,9 +44,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
         <div class="row justify-content-center">
 
-            <div class="col-md-10">
+            <div class="col-12">
 
-                <span class="d-block u-font-family-lato">
+                <span class="l-template-content__content d-block u-font-family-lato">
                     <?php the_content() ?>
                 </span>
             </div>
@@ -54,6 +54,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     </div>
 </section>
 <!-- end content -->
+
+<!-- banner materials -->
+<?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
+<!-- end banner materials -->
 
 <?php endwhile; endif; ?>
 </main><!-- #main -->
