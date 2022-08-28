@@ -25,7 +25,7 @@
         </div>
     </footer> #colophon -->
 
-    <footer class="footer">
+    <footer class="footer" style="height:500px">
         <h2 class="text-center py-4">Footer</h2>
     </footer>
 

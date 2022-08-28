@@ -2,15 +2,19 @@ $utility-name: 'u-border-color';
 
 .#{$utility-name} {
     &-black {
-        border-color: $color-folk-black;
+        border-color: $color-folk-black !important;
+    }
+
+    &-dark-golden {
+        border-color: $color-folk-dark-golden !important;
     }
 
     &-dark-marron {
-        border-color: $color-folk-dark-marron;
+        border-color: $color-folk-dark-marron !important;
     }
 
     &-white {
-        border-color: $color-folk-white;
+        border-color: $color-folk-white !important;
     }
 }
 

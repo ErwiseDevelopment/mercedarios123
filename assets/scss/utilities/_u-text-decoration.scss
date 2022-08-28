@@ -1,0 +1,11 @@
+$utility-name: 'u-text-decoration';
+
+.hover\: {
+    &#{$utility-name} {
+        &-underline {
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+}
