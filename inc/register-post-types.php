@@ -9,7 +9,7 @@ function erwise_create_post_type() {
 		'has_archive' 	=> true,
 		'menu_icon' 	=> 'dashicons-book',
 		'menu-position' => 10,
-		'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author' )
+		'supports' 		=> array( 'title',  'thumbnail')
 	) );
 
 	register_post_type( 'Comunidades', array(
@@ -35,6 +35,39 @@ function erwise_create_post_type() {
 		'menu_icon'		=> 'dashicons-images-alt2',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
+	register_post_type( 'obras', array(
+		'labels' 		=> array( 'name' => 'Nossas Obras', 'singular_name' => 'Nossa Obra', 'all_items' => 'Nossas Obras' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-universal-access-alt',
+		'supports' 		=> array( 'title', 'thumbnail' ) 
+	) );
+	register_post_type( 'acervo', array(
+		'labels' 		=> array( 'name' => 'Acervo', 'singular_name' => 'Acervo', 'all_items' => 'Acervo' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-media-spreadsheet',
+		'supports' 		=> array( 'title' ) 
+	) );
+	register_post_type( 'devocoes', array(
+		'labels' 		=> array( 'name' => 'Nossas Devoções', 'singular_name' => 'Nossa Devoção', 'all_items' => 'Nossas Devoções' ),
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'menu_icon' 	=> 'dashicons-open-folder',
+		'menu-position' => 10,
+		'supports' 		=> array( 'title', 'editor', 'thumbnail', 'revisions', 'author' )
+	) );
+	register_post_type( 'governo', array(
+		'labels' 		=> array( 'name' => 'Governo', 'singular_name' => 'Governo', 'all_items' => 'Governo' ),
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'menu_icon' 	=> 'dashicons-open-folder',
+		'menu-position' => 10,
+		'supports' 		=> array( 'title',  'thumbnail',  )
+	) );
+
+
+	
 
 }
 add_action( 'init', 'erwise_create_post_type' );
@@ -44,9 +77,12 @@ function erwise_create_taxonomy() {
 	register_taxonomy( 'agendacidade', 'agendas', array( 'labels' => array( 'name' => 'Cidades', 'singular_name' => 'Cidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'tipoevento', 'agendas', array( 'labels' => array( 'name' => 'Tipo Evento', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'categoria-datas-especiais', 'datas-especiais', array( 'labels' => array( 'name' => 'Tipo da Data', 'singular_name' => 'Tipo da Data' ), 'hierarchical' => true, 'show_admin_column' => true ) );
-    register_taxonomy( 'ebook-categoria', 'ebook', array( 'labels' => array( 'name' => 'Tipo E-book', 'singular_name' => 'Tipo E-book' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+    register_taxonomy( 'ebook-categoria', 'ebook', array( 'labels' => array( 'name' => 'Editoria E-book', 'singular_name' => 'Editoria E-book' ), 'hierarchical' => true, 'show_admin_column' => true ) );
     register_taxonomy( 'comunidades-categoria', 'comunidades', array( 'labels' => array( 'name' => 'Tipo Comunidade', 'singular_name' => 'Tipo Comunidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'comunidades-estados', 'comunidades', array( 'labels' => array( 'name' => 'Estados', 'singular_name' => 'Estados' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'santos', 'devocoes', array( 'labels' => array( 'name' => 'Tipo de devoção', 'singular_name' => 'Tipo de devoção' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'atuacoes', 'governo', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
