@@ -8,7 +8,6 @@ function erwise_create_post_type() {
 		'public' 		=> true,
 		'has_archive' 	=> true,
 		'menu_icon' 	=> 'dashicons-book',
-		'menu-position' => 10,
 		'supports' 		=> array( 'title',  'thumbnail')
 	) );
 
@@ -54,15 +53,13 @@ function erwise_create_post_type() {
 		'public' 		=> true,
 		'has_archive' 	=> true,
 		'menu_icon' 	=> 'dashicons-open-folder',
-		'menu-position' => 10,
 		'supports' 		=> array( 'title', 'editor', 'thumbnail', 'revisions', 'author' )
 	) );
 	register_post_type( 'governo', array(
 		'labels' 		=> array( 'name' => 'Governo', 'singular_name' => 'Governo', 'all_items' => 'Governo' ),
 		'public' 		=> true,
 		'has_archive' 	=> true,
-		'menu_icon' 	=> 'dashicons-open-folder',
-		'menu-position' => 10,
+		'menu_icon' 	=> 'dashicons-businessperson',
 		'supports' 		=> array( 'title',  'thumbnail',  )
 	) );
 
