@@ -42,6 +42,14 @@ function erwise_create_post_type() {
 		'menu_icon'		=> 'dashicons-universal-access-alt',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
+	register_post_type( 'acervo', array(
+		'labels' 		=> array( 'name' => 'Acervo', 'singular_name' => 'Acervo', 'all_items' => 'Acervo' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-media-spreadsheet',
+		'supports' 		=> array( 'title', 'thumbnail' ) 
+	) );
+
 
 	
 
