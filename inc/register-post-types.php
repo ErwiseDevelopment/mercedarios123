@@ -35,6 +35,13 @@ function erwise_create_post_type() {
 		'menu_icon'		=> 'dashicons-images-alt2',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
+	register_post_type( 'obras', array(
+		'labels' 		=> array( 'name' => 'Nossas Obras', 'singular_name' => 'Nossa Obra', 'all_items' => 'Nossas Obras' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-images-alt2',
+		'supports' 		=> array( 'title', 'thumbnail' ) 
+	) );
 
 	
 
