@@ -33,3 +33,9 @@ const swiperBannerMaterials = new Swiper( '.js-swiper-banner-materials', {
         disableOnInteraction: false
     }
 })
+
+/* blogs */
+const swiperBlogs = new Swiper( '.js-swiper-blogs', {
+    slidesPerView: 3,
+    spaceBetween: 30
+})

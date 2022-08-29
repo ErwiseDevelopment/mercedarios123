@@ -683,6 +683,8 @@ button.swiper-pagination-bullet {
   border: 1px solid; }
 .u-border-2 {
   border: 2px solid; }
+.u-border-5 {
+  border: 5px solid; }
 .u-border-y-1 {
   border-top: 1px solid; }
 .u-border-y-2 {
@@ -691,6 +693,8 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid; }
 .u-border-b-2 {
   border-bottom: 2px solid; }
+.u-border-b-5 {
+  border-bottom: 5px solid; }
 .u-border-l-1 {
   border-left: 1px solid; }
 .u-border-l-2 {
@@ -1038,6 +1042,8 @@ button.swiper-pagination-bullet {
   font-size: 1.1875rem !important; }
 .u-font-size-20 {
   font-size: 1.25rem !important; }
+.u-font-size-22 {
+  font-size: 1.375rem !important; }
 .u-font-size-26 {
   font-size: 1.625rem !important; }
 .u-font-size-28 {

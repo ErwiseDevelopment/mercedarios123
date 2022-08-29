@@ -13,6 +13,10 @@ $utility-name: 'u-border';
         border: 2px solid;
     }
 
+    &-5 {
+        border: 5px solid;
+    }
+
     &-y-1 {
         border-top: 1px solid;
     }
@@ -27,6 +31,10 @@ $utility-name: 'u-border';
 
     &-b-2 {
         border-bottom: 2px solid;
+    }
+
+    &-b-5 {
+        border-bottom: 5px solid;
     }
 
     &-l-1 {

@@ -31,21 +31,10 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'news' ) ?>
 <!-- end news -->
 
-<section>
-    <div class="container" style="background:yellow">
-        
-        <div class="row">
+<!-- blog -->
+<?php echo get_template_part( 'template-parts/content', 'blog' ) ?>
+<!-- end blog -->
 
-            <div class="col-6 bg-info">
-                aa
-            </div>
-
-            <div class="col-6 bg-primary">
-                bb
-            </div>
-        </div>
-    </div>
-</section>
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
