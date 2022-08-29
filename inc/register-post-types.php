@@ -39,7 +39,7 @@ function erwise_create_post_type() {
 		'labels' 		=> array( 'name' => 'Nossas Obras', 'singular_name' => 'Nossa Obra', 'all_items' => 'Nossas Obras' ),
 		'public' 		=> true,
 		'has_archive'	=> true,
-		'menu_icon'		=> 'dashicons-images-alt2',
+		'menu_icon'		=> 'dashicons-universal-access-alt',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
 
