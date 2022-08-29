@@ -9,7 +9,7 @@ function erwise_create_post_type() {
 		'has_archive' 	=> true,
 		'menu_icon' 	=> 'dashicons-book',
 		'menu-position' => 10,
-		'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author' )
+		'supports' 		=> array( 'title',  'thumbnail')
 	) );
 
 	register_post_type( 'Comunidades', array(
@@ -55,7 +55,15 @@ function erwise_create_post_type() {
 		'has_archive' 	=> true,
 		'menu_icon' 	=> 'dashicons-open-folder',
 		'menu-position' => 10,
-		'supports' 		=> array( 'title', 'editor', 'editor', 'thumbnail', 'revisions', 'author' )
+		'supports' 		=> array( 'title', 'editor', 'thumbnail', 'revisions', 'author' )
+	) );
+	register_post_type( 'governo', array(
+		'labels' 		=> array( 'name' => 'Governo', 'singular_name' => 'Governo', 'all_items' => 'Governo' ),
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'menu_icon' 	=> 'dashicons-open-folder',
+		'menu-position' => 10,
+		'supports' 		=> array( 'title',  'thumbnail',  )
 	) );
 
 
@@ -74,6 +82,7 @@ function erwise_create_taxonomy() {
 	register_taxonomy( 'comunidades-estados', 'comunidades', array( 'labels' => array( 'name' => 'Estados', 'singular_name' => 'Estados' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'santos', 'devocoes', array( 'labels' => array( 'name' => 'Tipo de devoção', 'singular_name' => 'Tipo de devoção' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'atuacoes', 'governo', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
