@@ -47,7 +47,15 @@ function erwise_create_post_type() {
 		'public' 		=> true,
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-media-spreadsheet',
-		'supports' 		=> array( 'title', 'thumbnail' ) 
+		'supports' 		=> array( 'title' ) 
+	) );
+	register_post_type( 'devocoes', array(
+		'labels' 		=> array( 'name' => 'Nossas Devoções', 'singular_name' => 'Nossa Devoção', 'all_items' => 'Nossas Devoções' ),
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'menu_icon' 	=> 'dashicons-open-folder',
+		'menu-position' => 10,
+		'supports' 		=> array( 'title', 'editor', 'editor', 'thumbnail', 'revisions', 'author' )
 	) );
 
 
@@ -65,6 +73,7 @@ function erwise_create_taxonomy() {
     register_taxonomy( 'comunidades-categoria', 'comunidades', array( 'labels' => array( 'name' => 'Tipo Comunidade', 'singular_name' => 'Tipo Comunidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'comunidades-estados', 'comunidades', array( 'labels' => array( 'name' => 'Estados', 'singular_name' => 'Estados' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'santos', 'devocoes', array( 'labels' => array( 'name' => 'Tipo de devoção', 'singular_name' => 'Tipo de devoção' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
