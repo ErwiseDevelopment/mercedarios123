@@ -36,6 +36,8 @@ function erwise_create_post_type() {
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
 
+	
+
 }
 add_action( 'init', 'erwise_create_post_type' );
 
@@ -46,6 +48,7 @@ function erwise_create_taxonomy() {
 	register_taxonomy( 'categoria-datas-especiais', 'datas-especiais', array( 'labels' => array( 'name' => 'Tipo da Data', 'singular_name' => 'Tipo da Data' ), 'hierarchical' => true, 'show_admin_column' => true ) );
     register_taxonomy( 'ebook-categoria', 'ebook', array( 'labels' => array( 'name' => 'Tipo E-book', 'singular_name' => 'Tipo E-book' ), 'hierarchical' => true, 'show_admin_column' => true ) );
     register_taxonomy( 'comunidades-categoria', 'comunidades', array( 'labels' => array( 'name' => 'Tipo Comunidade', 'singular_name' => 'Tipo Comunidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'comunidades-categoria', 'Estados', array( 'labels' => array( 'name' => 'Estados', 'singular_name' => 'Estados' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
