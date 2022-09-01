@@ -35,6 +35,14 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'blog' ) ?>
 <!-- end blog -->
 
+<!-- banner materials -->
+<?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
+<!-- end banner materials -->
+
+<!-- calendar -->
+<?php echo get_template_part( 'template-parts/content', 'calendar' ) ?>
+<!-- end calendar -->
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

@@ -151,7 +151,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="card-footer">
+                                        <div class="c-card-footer-absolute card-footer">
 
                                             <div class="row justify-content-center">
 
@@ -184,7 +184,7 @@
 
                             <div class="col-12">
                                 <a
-                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-dark-golden py-2"
+                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
                                 href="#">
                                     Todas as Notícias
                                 </a>

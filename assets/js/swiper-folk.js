@@ -37,5 +37,35 @@ const swiperBannerMaterials = new Swiper( '.js-swiper-banner-materials', {
 /* blogs */
 const swiperBlogs = new Swiper( '.js-swiper-blogs', {
     slidesPerView: 3,
-    spaceBetween: 30
+    spaceBetween: 30,
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-blogs',
+        nextEl: '.js-swiper-button-next-blogs'
+    },
+
+    pagination: {
+        el: '.js-swiper-pagination-blogs'
+    }
+})
+
+//calendar
+const swiperMonths = new Swiper( '.js-swiper-months', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-months',
+        nextEl: '.js-swiper-button-next-months'
+    },
+})
+
+const swiperCalendar = new Swiper( '.js-swiper-calendar', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-months',
+        nextEl: '.js-swiper-button-next-months'
+    },
 })

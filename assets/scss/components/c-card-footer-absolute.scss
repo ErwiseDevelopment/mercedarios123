@@ -1,0 +1,10 @@
+$component-name: 'c-card-footer-absolute';
+
+.#{$component-name} {
+    width: 100%;
+    bottom: -25px;
+    left: 0;
+    border: 0;
+    position: absolute;
+    background: none;
+}
