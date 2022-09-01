@@ -40,4 +40,25 @@ $component-name: 'c-title';
             background-color: $color-folk-bold-marron;
         }
     }
+
+    &-secondary {
+        position: relative;
+        display: inline-block;
+        font-size: 2.375rem;
+        font-weight: 700;
+        font-family: 'Cinzel Decorative';
+        text-align: center;   
+        color: $color-folk-dark-golden;
+
+        &::before {
+            content: '';
+            width: calc(100% + 20px);
+            height: 3px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            background-color: $color-folk-bold-marron;
+        }
+    }
 }

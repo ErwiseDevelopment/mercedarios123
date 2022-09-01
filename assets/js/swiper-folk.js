@@ -53,6 +53,7 @@ const swiperBlogs = new Swiper( '.js-swiper-blogs', {
 const swiperMonths = new Swiper( '.js-swiper-months', {
     slidesPerView: 2,
     spaceBetween: 30,
+    allowTouchMove: false,
 
     navigation: {
         prevEl: '.js-swiper-button-prev-months',
@@ -63,6 +64,7 @@ const swiperMonths = new Swiper( '.js-swiper-months', {
 const swiperCalendar = new Swiper( '.js-swiper-calendar', {
     slidesPerView: 2,
     spaceBetween: 30,
+    allowTouchMove: false,
 
     navigation: {
         prevEl: '.js-swiper-button-prev-months',

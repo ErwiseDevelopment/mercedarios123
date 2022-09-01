@@ -43,6 +43,14 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'calendar' ) ?>
 <!-- end calendar -->
 
+<!-- gallery -->
+<?php echo get_template_part( 'template-parts/content', 'gallery' ) ?>
+<!-- end gallery -->
+
+<!-- photos -->
+<?php echo get_template_part( 'template-parts/content', 'photos' ) ?>
+<!-- end photos -->
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

@@ -94,7 +94,7 @@
                 <!-- end swiper -->
             </div>
 
-            <div class="col-12">
+            <div class="col-12 mt-5">
 
                 <div class="row">
 

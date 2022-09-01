@@ -4,6 +4,15 @@
 
         <div class="row justify-content-center">
 
+            <div class="col-12 d-flex justify-content-center my-5">
+                
+                <h2 class="c-title-pattern pb-2">
+                    Calendário    
+
+                    <span class="c-title-pattern__underline"></span>
+                </h2>
+            </div>
+
             <div class="col-12">
 
                 <!-- swiper -->
@@ -71,7 +80,7 @@
                                 <?php for( $i = 0; $i < 6; $i++ ) { ?>
                                     <div>
                                         <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
-                                            02/<?php echo $key; ?>
+                                            02/<?php echo '0' . $key; ?>
                                         </p>
 
                                         <p class="u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-dark-gray">
@@ -85,6 +94,30 @@
                     </div>
                 </div>
                 <!-- end swiper -->
+            </div>
+
+            <div class="col-12 mt-5">
+
+                <div class="row">
+
+                    <div class="col-9 d-flex justify-content-center align-items-center">
+                        <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
+                    </div>
+
+                    <div class="col-3">
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <a
+                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
+                                href="#">
+                                    Calendário Completo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

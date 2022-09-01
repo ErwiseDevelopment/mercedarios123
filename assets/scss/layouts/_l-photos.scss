@@ -1,0 +1,62 @@
+$layout-name: 'l-photos';
+
+.#{$layout-name} {
+    &__photo {
+        &::before {
+            content:'';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+            opacity: 0;
+            position: absolute;
+            background-color: $color-folk-black;
+            z-index: 9;
+        }
+
+        &:hover {
+            &::before {
+                opacity: .5;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            transform: scale(1);
+            transition: all .2s;
+        }
+    }
+
+    &__album {
+        &::before {
+            content:'';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+            opacity: .3;
+            position: absolute;
+            background-color: $color-folk-black;
+            z-index: 9;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: all .2s;
+            }
+        }
+
+        &__name {
+            bottom: 0;
+            left: 2rem;
+            position: absolute;
+            z-index: 99;
+        }
+    }
+}
