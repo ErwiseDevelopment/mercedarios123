@@ -25,8 +25,173 @@
         </div>
     </footer> #colophon -->
 
-    <footer class="footer" style="height:500px">
-        <h2 class="text-center py-4">Footer</h2>
+    <footer 
+    class="u-bg-cover u-bg-no-repeat py-5"
+    style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/footer-background.png)">
+        
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-3 mb-4">
+                    <a href="#">
+                        <img
+                        class="img-fluid w-100"
+                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/logo-footer.png"
+                        alt>
+                    </a>
+                </div>
+
+                <div class="col-12 mt-3">
+                    
+                    <div class="row">
+
+                        <div class="col-4">
+
+                            <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white pl-4">
+                                Cúria Provincial do Brasil
+                            </h4>
+
+                            <p class="d-flex">
+                                <span class="u-icon__free u-icon__local before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
+                                <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
+                                    Avenida L2 Sul, Quadra 615, Bloco D <br>
+                                    CEP 700200-750 <br>
+                                    Brasília – DF
+                                </span>
+                            </p>
+
+                            <p class="d-flex">
+                                <span class="u-icon__free u-icon__phone before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
+                                <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
+                                    61 3346 3890
+                                </span>
+                            </p>
+
+                            <p class="d-flex">
+                                <span class="u-icon__free u-icon__envelope before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
+                                <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
+                                    faleconosco@mercedarios.com.br
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="col-4">
+
+                            <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white">
+                                Nossas áreas
+                            </h4>
+
+                            <div class="d-flex">
+                                <ul class="mb-0 pl-0">
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="mb-0">
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                            Institucional
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white">
+                                Links
+                            </h4>
+
+                            <ul class="mb-0 pl-0">
+                                <li class="u-list-style-none mb-2">
+                                    <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                        Política de privacidade
+                                    </a>
+                                </li>
+
+                                <li class="u-list-style-none mb-2">
+                                    <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                        Política de Cookies
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-end">
+
+                <div class="col-4">
+                    <ul class="d-flex mb-0 pl-0">
+                                    
+                        <li class="u-list-style-none mr-2">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                                Facebook
+                            </a>
+                        </li>
+
+                        <li class="u-list-style-none mr-2">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                                Instagram
+                            </a>
+                        </li>
+
+                        <li class="u-list-style-none mr-2">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                                Youtube
+                            </a>
+                        </li>
+
+                        <li class="u-list-style-none">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                                Whatsapp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
 <?php endif; ?>

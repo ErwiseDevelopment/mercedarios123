@@ -59,10 +59,10 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'newsletter' ) ?>
 <!-- end newsletter -->
 
-<img
+<!-- <img
 class="img-fluid"
-data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
-alt="Single Temas">
+data-src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
+alt="Single Temas"> -->
 
 <?php endwhile; ?>
 

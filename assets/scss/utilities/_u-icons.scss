@@ -31,6 +31,12 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__local {
+        &::before {
+            content: '\f3c5';
+        }
+    }
+
     &__map {
         &::before {
             content: '\f3c5';

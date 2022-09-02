@@ -1543,6 +1543,8 @@ button.swiper-pagination-bullet {
   content: '\f39e'; }
 .u-icon__instagram::before {
   content: '\f16d'; }
+.u-icon__local::before {
+  content: '\f3c5'; }
 .u-icon__map::before {
   content: '\f3c5'; }
 .u-icon__phone::before {
