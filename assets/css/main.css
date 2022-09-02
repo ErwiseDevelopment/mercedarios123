@@ -611,6 +611,20 @@ button.swiper-pagination-bullet {
 .swiper-button-next-months {
   right: 5rem; }
 
+.swiper-container-months {
+  position: relative; }
+  .swiper-container-months::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 50%;
+    position: absolute;
+    background-color: #A50311; }
+
 .u-bg-cover {
   background-size: cover !important; }
 .u-bg-no-repeat {
@@ -1082,6 +1096,10 @@ button.swiper-pagination-bullet {
   font-size: 1.75rem !important; }
 .u-font-size-32 {
   font-size: 2rem !important; }
+.u-font-size-34 {
+  font-size: 2.125rem !important; }
+.u-font-size-52 {
+  font-size: 3.25rem !important; }
 
 .before\:\:u-font-size-0::before {
   font-size: 0 !important; }

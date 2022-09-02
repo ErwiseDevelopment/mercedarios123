@@ -16,7 +16,7 @@
             <div class="col-12">
 
                 <!-- swiper -->
-                <div class="swiper-container js-swiper-months">
+                <div class="swiper-container swiper-container-months js-swiper-months">
 
                     <div class="swiper-wrapper">
 
