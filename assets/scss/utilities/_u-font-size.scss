@@ -41,6 +41,10 @@ $utility-name: 'u-font-size';
         font-size: .9375rem !important;
     }
 
+    &-16 {
+        font-size: 1rem !important;
+    }
+
     &-17 {
         font-size: 1.0625rem !important;
     }
@@ -79,6 +83,10 @@ $utility-name: 'u-font-size';
 
     &-52 {
         font-size: 3.25rem !important;
+    }
+
+    &-64 {
+        font-size: 4rem !important;
     }
 }
 
@@ -535,6 +543,12 @@ $utility-name: 'u-font-size';
                 font-size: .9375rem !important;
             }
         }
+
+        &-16 {
+            @media screen and (min-width: 1200px) {
+                font-size: 1rem !important;
+            }
+        }
     
         &-17 {
             @media screen and (min-width: 1200px) {
@@ -545,6 +559,18 @@ $utility-name: 'u-font-size';
         &-18 {
             @media screen and (min-width: 1200px) {
                 font-size: 1.125rem !important;
+            }
+        }
+
+        &-60 {
+            @media screen and (min-width: 1200px) {
+                font-size: 3.75rem !important;
+            }
+        }
+
+        &-64 {
+            @media screen and (min-width: 1200px) {
+                font-size: 4rem !important;
             }
         }
     }    
@@ -622,6 +648,24 @@ $utility-name: 'u-font-size';
         &-18 {
             @media screen and (min-width: 1600px) {
                 font-size: 1.125rem !important;
+            }
+        }
+
+        &-20 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        &-22 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.375rem !important;
+            }
+        }
+
+        &-28 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.75rem !important;
             }
         }
 

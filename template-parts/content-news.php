@@ -1,4 +1,4 @@
-<section class="l-news">
+<section class="l-news py-5">
 
     <div class="container">
 

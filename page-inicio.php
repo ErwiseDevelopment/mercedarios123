@@ -31,6 +31,10 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'news' ) ?>
 <!-- end news -->
 
+<!-- about -->
+<?php echo get_template_part( 'template-parts/content', 'about' ) ?>
+<!-- end about -->
+
 <!-- blog -->
 <?php echo get_template_part( 'template-parts/content', 'blog' ) ?>
 <!-- end blog -->
@@ -54,6 +58,10 @@ get_header(); ?>
 <!-- banners -->
 <?php echo get_template_part( 'template-parts/content', 'banners' ) ?>
 <!-- end banners -->
+
+<!-- our presence -->
+<?php echo get_template_part( 'template-parts/content', 'our-presence' ) ?>
+<!-- end our presence -->
 
 <!-- newsletter -->
 <?php echo get_template_part( 'template-parts/content', 'newsletter' ) ?>

@@ -1,0 +1,43 @@
+$layout-name: 'l-shortcut';
+
+.#{$layout-name} {
+    &__item {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: linear-gradient(to right, #A50311, #6B0101);
+
+        @media screen and (min-width: 1600px) {
+            width: 220px;
+            height: 220px;
+        }
+
+        &--center {
+            &::before,
+            &::after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                background-color: $color-folk-bold-marron;
+
+                @media screen and (max-width: 991px) {
+                    display: none;
+                }
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+}

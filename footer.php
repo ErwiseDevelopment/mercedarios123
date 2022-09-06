@@ -33,7 +33,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-3 mb-4">
+                <div class="col-6 col-lg-3 mb-4">
                     <a href="#">
                         <img
                         class="img-fluid w-100"
@@ -46,7 +46,7 @@
                     
                     <div class="row">
 
-                        <div class="col-4">
+                        <div class="col-lg-4 my-2 my-lg-0">
 
                             <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white pl-4">
                                 Cúria Provincial do Brasil
@@ -76,7 +76,7 @@
                             </p>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 my-2 my-lg-0">
 
                             <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white">
                                 Nossas áreas
@@ -137,7 +137,7 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 my-2 my-lg-0">
                             <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white">
                                 Links
                             </h4>
@@ -162,8 +162,8 @@
 
             <div class="row justify-content-end">
 
-                <div class="col-4">
-                    <ul class="d-flex mb-0 pl-0">
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <ul class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
                                     
                         <li class="u-list-style-none mr-2">
                             <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">

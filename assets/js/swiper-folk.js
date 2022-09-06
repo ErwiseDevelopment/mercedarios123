@@ -39,6 +39,18 @@ const swiperBlogs = new Swiper( '.js-swiper-blogs', {
     slidesPerView: 3,
     spaceBetween: 30,
 
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
+    },
+
     navigation: {
         prevEl: '.js-swiper-button-prev-blogs',
         nextEl: '.js-swiper-button-next-blogs'
@@ -70,4 +82,60 @@ const swiperCalendar = new Swiper( '.js-swiper-calendar', {
         prevEl: '.js-swiper-button-prev-months',
         nextEl: '.js-swiper-button-next-months'
     },
+})
+
+/* editorial news */
+const swiperEditorialNews = new Swiper( '.js-swiper-editorial-news', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 30
+        }
+    },
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-editorial-news',
+        nextEl: '.js-swiper-button-next-editorial-news'
+    }
+})
+
+const swiperOurConstruction = new Swiper( '.js-swiper-our-construction', {
+    slidesPerView: 3,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        992: {
+            slidesPerView: 3,
+        }
+    },
+
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-our-construction',
+        nextEl: '.js-swiper-button-next-our-construction'
+    }
 })

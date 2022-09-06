@@ -1,0 +1,36 @@
+$layout-name: 'l-our-presence';
+
+.#{$layout-name} {
+    &__item {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__column-child {
+        &:nth-of-type(odd) {
+            .#{$layout-name} {
+                &__item {
+                    background-image: linear-gradient(to right, #A50311, #6B0101);
+
+                    &__title {
+                        color: $color-folk-bold-marron;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(even) {
+            .#{$layout-name} {
+                &__item {
+                    background-image: linear-gradient(to right, #D99D31, #946918);
+
+                    &__title {
+                        color: $color-folk-dark-golden;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -56,3 +56,21 @@
         background-color: $color-folk-bold-marron;
     }
 }
+
+.swiper-button-prev-editorial-news,
+.swiper-button-next-editorial-news {
+    width: 40px;
+    height: 40px;
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-prev-editorial-news {
+    left: -.5rem;
+}
+
+.swiper-button-next-editorial-news {
+    right: -.5rem;
+}
