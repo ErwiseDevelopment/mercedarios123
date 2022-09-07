@@ -12,6 +12,10 @@ $layout-name: 'l-news';
             right: 0;
             position: absolute;
             background-color: $color-folk-white;
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
@@ -19,6 +23,10 @@ $layout-name: 'l-news';
         &__title {
             font-size: 2.375rem;
 
+            @media screen and (min-width: 1600px) {
+                font-size: 2.875rem;
+            }
+            
             &::before {
                 content: '';
                 width: calc(100% - 50px);

@@ -88,3 +88,7 @@ function mytheme_admin_bar_render() {
     $wp_admin_bar->remove_menu('comments');
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+register_nav_menus(array(
+	'caridade' => 'Menu Caridade',
+));
