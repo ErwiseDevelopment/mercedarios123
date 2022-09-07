@@ -75,14 +75,14 @@
                 </div>
 
                 <!-- arrows -->
-                <div class="swiper-button-prev swiper-button-prev-blogs js-swiper-button-prev-blog">
+                <div class="swiper-button-prev swiper-button-prev-blogs d-none d-xl-flex js-swiper-button-prev-blog">
                     <img
                     class="img-fluid w-100 h-100"
                     src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/arrow-left.png"
                     alt="Seta Esquerda">
                 </div>
 
-                <div class="swiper-button-next swiper-button-next-blogs js-swiper-button-next-editorial-blog">
+                <div class="swiper-button-next swiper-button-next-blogs d-none d-xl-flex js-swiper-button-next-blog">
                     <img
                     class="img-fluid"
                     src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/arrow-right.png"
@@ -96,19 +96,19 @@
 
             <div class="col-12 mt-5">
 
-                <div class="row">
+                <div class="row justify-content-center">
 
-                    <div class="col-9 d-flex justify-content-center align-items-center">
+                    <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
                         <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-9 col-xl-3">
 
                         <div class="row">
 
                             <div class="col-12">
                                 <a
-                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
+                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden hover:u-bg-folk-dark-marron py-2"
                                 href="#">
                                     Todas os conteúdos
                                 </a>
