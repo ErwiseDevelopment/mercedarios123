@@ -19,8 +19,8 @@
 
                         <div class="row">
 
-                            <!-- loop -->
-                            <?php for( $i = 0; $i < 8; $i++ ) { ?>
+                            <!-- loop <php for( $i = 0; $i < 8; $i++ ) { ?>-->
+                            
                                 <div class="col-3 my-1">
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
@@ -47,8 +47,8 @@
                                         institucional
                                     </a>
                                 </div>
-                            <?php } ?>
-                            <!-- end loop -->
+                            
+                            <!--<php } ?> end loop -->
                         </div>
                     </div>
 
