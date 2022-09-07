@@ -25,7 +25,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/institucional')?>">
                                         institucional
                                     </a>
                                  </div>
@@ -33,7 +33,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/vocacional')?>">
                                         vocacional
                                     </a>
                                  </div>
@@ -41,7 +41,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/educacao')?>">
                                         educação
                                     </a>
                                  </div>
@@ -49,7 +49,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/paroquias')?>">
                                         paróquias
                                     </a>
                                  </div>
@@ -57,7 +57,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/caridade')?>">
                                         caridade
                                     </a>
                                  </div>
@@ -65,7 +65,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/dom-inocencio')?>">
                                         dom inocêncio
                                     </a>
                                  </div>
@@ -81,7 +81,7 @@
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
                                     style="background-color:#AF0101"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/pastoral-do-empreendedor')?>">
                                         pastoral do empreendedor
                                     </a>
                                  </div>
