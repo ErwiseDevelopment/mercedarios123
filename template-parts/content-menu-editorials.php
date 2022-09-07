@@ -28,6 +28,24 @@
                                     href="#">
                                         institucional
                                     </a>
+                                    <a
+                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                    style="background-color:#AF0101"
+                                    href="#">
+                                        Vocacional
+                                    </a>
+                                    <a
+                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                    style="background-color:#AF0101"
+                                    href="#">
+                                        institucional
+                                    </a>
+                                    <a
+                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                    style="background-color:#AF0101"
+                                    href="#">
+                                        institucional
+                                    </a>
                                 </div>
                             <?php } ?>
                             <!-- end loop -->
