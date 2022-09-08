@@ -12,7 +12,7 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+// get_header(); ?>
 
 <section id="primary">
 <main id="main" class="site-main" role="main">
@@ -23,7 +23,7 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'menu-editorials' ) ?>
 <!-- end menu -->
 
-<section class="w-100" style="">
+<section class="w-100">
 <?php echo do_shortcode( '[rev_slider alias="home"][/rev_slider]' ); ?>
 </section>
 
