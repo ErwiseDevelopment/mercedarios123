@@ -48,7 +48,7 @@
 
         <div class="container">
 
-            <nav class="navbar navbar-expand-xl p-0">
+            <nav class="d-none navbar navbar-expand-xl p-0">
 
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>

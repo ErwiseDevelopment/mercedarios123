@@ -18,6 +18,10 @@ $component-name: 'c-title';
             font-size: 2.625rem;
         }
 
+        @media screen and (max-width: 575px) {
+            font-size: 1.75rem;
+        }
+
         &::before,
         &::after {
             content: '';

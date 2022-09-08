@@ -6,7 +6,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
         <div class="row">
 
-            <div class="col-12 py-5">
+            <div class="col-12 py-0 py-xl-5">
 
                 <div class="row">
 

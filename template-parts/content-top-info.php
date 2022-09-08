@@ -8,7 +8,7 @@
 
                 <div class="row justify-content-between">
 
-                    <div class="col-4">
+                    <div class="col-xl-4 order-2 order-xl-1 mt-3 mt-xl-0">
 
                         <ul class="mb-0 pl-0">
                             <li class="u-list-style-none mb-2">
@@ -79,7 +79,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-4 d-flex justify-content-center align-items-center">
+                    <div class="col-xl-4 order-1 order-xl-2 d-flex justify-content-center align-items-center">
 
                         <a href="#">
                             <img
@@ -89,7 +89,7 @@
                         </a>
                     </div>
 
-                    <div class="col-4 d-flex justify-content-center align-items-center px-5">
+                    <div class="col-xl-4 order-3 d-flex justify-content-center align-items-center mt-3 mt-xl-0 px-5">
 
                         <ul 
                         class="w-100 px:u-border-radius-24 overflow-hidden d-flex justify-content-around align-items-center u-bg-cover u-bg-no-repeat mb-0 p-3"

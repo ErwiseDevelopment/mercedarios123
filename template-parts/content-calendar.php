@@ -98,13 +98,13 @@
 
             <div class="col-12 mt-5">
 
-                <div class="row">
+                <div class="row justify-content-center">
 
-                    <div class="col-9 d-flex justify-content-center align-items-center">
+                    <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
                         <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-9 col-xl-3">
 
                         <div class="row">
 
