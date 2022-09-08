@@ -23,9 +23,13 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'menu-editorials' ) ?>
 <!-- end menu -->
 
-<!-- banner -->
-<?php echo get_template_part( 'template-parts/content', 'banner' ) ?>
-<!-- end banner -->
+<section class="w-100" style="">
+<?php echo do_shortcode( '[rev_slider alias="home"][/rev_slider]' ); ?>
+</section>
+
+<!-- banner 
+<php echo get_template_part( 'template-parts/content', 'banner' ) ?>
+end banner -->
 
 <!-- news -->
 <?php echo get_template_part( 'template-parts/content', 'news' ) ?>

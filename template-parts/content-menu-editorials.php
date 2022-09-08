@@ -18,19 +18,78 @@
                     <div class="col-xl-8 mt-3 mt-xl-0 px-0">
 
                         <div class="row">
+                            
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/institucional')?>">
+                                    institucional
+                                </a>
+                            </div>
 
-                            <!-- loop -->
-                            <?php for( $i = 0; $i < 8; $i++ ) { ?>
-                                <div class="col-6 col-xl-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="#">
-                                        institucional
-                                    </a>
-                                </div>
-                            <?php } ?>
-                            <!-- end loop -->
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/vocacional')?>">
+                                    vocacional
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/educacao')?>">
+                                    educação
+                                </a>
+                            </div>
+                            
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/paroquias')?>">
+                                    paróquias
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/caridade')?>">
+                                    caridade
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/dom-inocencio')?>">
+                                    dom inocêncio
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="#">
+                                    revista mercê
+                                </a>
+                            </div>
+                            
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/pastoral-do-empreendedor')?>">
+                                    pastoral do empreendedor
+                                </a>
+                            </div>
                         </div>
                     </div>
 
