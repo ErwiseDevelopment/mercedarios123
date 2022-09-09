@@ -224,7 +224,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <?php the_title() ?>
                                         </h4>
 
-                                        <p class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                        <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
                                             <!-- Lorem ipsum dolor sit amet, consectetur 
                                             adipiscing elit. Mauris lectus dolor, semper 
                                             vitae libero se,d, ornare tempus dui. Donec 
@@ -232,7 +232,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             massa mollis nisi, ornare egestas lectus 
                                             turpis tempus dolor. Aliquam.[...] -->
                                             <?php the_excerpt()?>
-                                        </p>
+                                        </span>
                                     </div>
 
                                     <div class="c-card-footer-absolute card-footer">
