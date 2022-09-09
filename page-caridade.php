@@ -243,7 +243,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </a>
                             </div>
-                            </div>
                             <?php 
                               endwhile;
                             endif;
@@ -251,7 +250,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             ?>
 
                             <!--  <php } ?>end slide -->
-                    
+                    </div>
                 </div>
 
                 <!-- arrows -->
