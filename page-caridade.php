@@ -64,7 +64,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-6 col-xl-4">
                                 <a
                                 class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-2"
-                                href="<?php echo get_home_url( null) .  get_field('btn_saiba_mais')?>">
+                                href="<?php echo get_home_url( null,'/') .  get_field('btn_saiba_mais')?>">
                                     Saiba mais
                                 </a>
                             </div>
