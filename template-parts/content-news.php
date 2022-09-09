@@ -163,7 +163,7 @@
                                             </h3>
                                             <?php 
                                             $args = array(
-                                            'post_per_page' => 3,
+                                            'post_per_page' => -1,
                                             'post_type'     => 'post',
                                             'category_name' => 'noticia-caridade',
                                             'order'         => 'DESC',
