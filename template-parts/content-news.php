@@ -32,7 +32,8 @@
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
-                                    
+                                    $posts_current = array();
+
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
                                         array_push($posts_current, get_the_ID());
