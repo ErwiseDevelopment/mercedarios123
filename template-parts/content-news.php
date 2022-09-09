@@ -26,7 +26,7 @@
                     
                     <?php 
                                  $args = array(
-                                    'post_per_page' => -1,
+                                    'posts_per_page' => -1,
                                     'post_type'     => 'post',
                                     'category_name' => 'noticia-destaque',
                                     'order'         => 'DESC',
@@ -109,7 +109,7 @@
                                     </h3>
                                     <?php 
                                  $args = array(
-                                    'post_per_page' => 3,
+                                    'posts_per_page' => 3,
                                     'post_type'     => 'post',
                                     'category_name' => 'noticia-educacao',
                                     'order'         => 'DESC',
@@ -145,7 +145,7 @@
                                     </h3>
                                             <?php 
                                             $args = array(
-                                            'post_per_page' => 3,
+                                            'posts_per_page' => 3,
                                             'post_type'     => 'post',
                                             'category_name' => 'noticia-institucional',
                                             'order'         => 'DESC',
@@ -181,7 +181,7 @@
                                             </h3>
                                             <?php 
                                             $args = array(
-                                            'post_per_page' => 3,
+                                            'posts_per_page' => 3,
                                             'post_type'     => 'post',
                                             'category_name' => 'noticia-caridade',
                                             'order'         => 'DESC',
@@ -221,7 +221,7 @@
 
                         <?php 
                                  $args = array(
-                                    'post_per_page' => 4,
+                                    'posts_per_page' => 4,
                                     'post_type'     => 'post',
                                     'category_name' => 'noticia-destaque',
                                     'order'         => 'DESC',
