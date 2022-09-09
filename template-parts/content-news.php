@@ -23,34 +23,45 @@
 
                 <div class="col-12">
 
+                    
+                    <?php 
+                                 $args = array(
+                                    'post_per_page' => 1,
+                                    'post_type'     => 'post',
+                                    'category_name' => 'noticia-destaque',
+                                    'order'         => 'DESC',
+                                 );
+                                    $contents = new WP_Query( $args );
+                                    
+                                    if( $contents->have_posts()):
+                                        while ($contents->have_posts()) : $contents->the_post();
+                                        array_push($posts_current, get_the_ID());
+                                ?>
                     <div class="row">
-
                         <div class="col-xl-7">
-                            <img
-                            class="img-fluid w-100"
-                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/news-photo-1.png"
-                            alt="Notícias">
+                            <?php
+                            $alt_title = get_the_title();
+                            the_post_thumbnail('post-thumbnail', 
+                            array(
+                                'class' => 'img-fluid w-100 h-100',
+                                'alt'   => $alt_title
+                                ))
+                            ?>
                         </div>
 
                         <div class="col-xl-5 mt-3 mt-xl-0">
                             
                             <p class="u-line-height-100 u-font-size-19 xxl:u-font-size-22 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-4">
-                                <span class="u-font-weight-medium u-font-family-lato">por</span> Redação <br>
-                                06 de Maio de 2021
+                                <span class="u-font-weight-medium u-font-family-lato">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
+                                <?php echo get_date_format('d/m/Y', $post)?>
                             </p>
 
                             <h3 class="u-font-size-20 xl:u-font-size-26 xxl:u-font-size-32 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
-                                Sequência da Solenidade
-                                de São Pedro Nolasco    
+                               <?php echo the_title() ?> 
                             </h3>
 
                             <p class="u-font-size-16 xl:u-font-size-20 xxl:u-font-size-26 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-white">
-                                Lorem ipsum dolor sit amet, consectetur 
-                                adipiscing elit. Mauris lectus dolor, semper 
-                                vitae libero se,d, ornare tempus dui. Donec 
-                                efficitur, dui et facilisis commodo, mauris 
-                                massa mollis nisi, ornare egestas lectus 
-                                turpis tempus dolor. Aliquam.[...]
+                                <?php the_excerpt() ?>
                             </p>
 
                             <div class="row">
@@ -58,13 +69,19 @@
                                 <div class="col-8 col-xl-6 mt-3">
                                     <a
                                     class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-3"
-                                    href="#">
+                                    href="<?php the_permalink() ?>">
                                         Ler mais
                                     </a>    
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php 
+                    endwhile;
+                endif;
+                wp_reset_query();
+                
+                    ?>
                 </div>
             </div>
         </div>
@@ -97,7 +114,7 @@
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
-                                    $cats = array();
+                                   
 
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
@@ -133,7 +150,7 @@
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
-                                            $cats = array();
+                                            
 
                                             if( $contents->have_posts()):
                                                 while ($contents->have_posts()) : $contents->the_post();
@@ -163,13 +180,13 @@
                                             </h3>
                                             <?php 
                                             $args = array(
-                                            'post_per_page' => -1,
+                                            'post_per_page' => 3,
                                             'post_type'     => 'post',
                                             'category_name' => 'noticia-caridade',
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
-                                            $cats = array();
+                                            
 
                                             if( $contents->have_posts()):
                                                 while ($contents->have_posts()) : $contents->the_post();
@@ -201,39 +218,51 @@
                         
                         <div class="row">
 
-                            <?php for( $i = 0; $i < 4; $i++ ) { ?>
+                        <?php 
+                                 $args = array(
+                                    'post_per_page' => 4,
+                                    'post_type'     => 'post',
+                                    'category_name' => 'noticia-destaque',
+                                    'order'         => 'DESC',
+                                    'post__not_in'   => $posts_current,
+                                 );
+                                    $contents = new WP_Query( $args );
+                                    $posts_current = array();
+
+                                    if( $contents->have_posts()):
+                                        while ($contents->have_posts()) : $contents->the_post();
+                                        
+                                ?>
                                 <div class="col-md-6 mb-5">
 
                                     <a 
                                     class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                    href="#">
+                                    href="<?Php the_permalink()?>">
 
                                         <div class="card-img">
-                                            <img
-                                            class="img-fluid w-100"
-                                            src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/news-post-1.png"
-                                            alt="">
+                                        <?php
+                                            $alt_title = get_the_title();
+                                            the_post_thumbnail('post-thumbnail', 
+                                            array(
+                                                'class' => 'img-fluid w-100 h-100',
+                                                'alt'   => $alt_title
+                                                ))
+                                            ?>
                                         </div>
 
                                         <div class="card-body">
 
                                             <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                                <span class="u-font-weight-medium">por</span> Redação <br>
-                                                06 de Maio de 2021
+                                                <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
+                                                <?php echo get_date_format('d/m/Y', $post)?>
                                             </p>
 
                                             <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                                Mensagem do Provincial
-                                                Dia de São Pedro Nolasco
+                                                <?php echo the_title()?>
                                             </h4>
 
                                             <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                                Lorem ipsum dolor sit amet, consectetur 
-                                                adipiscing elit. Mauris lectus dolor, semper 
-                                                vitae libero se,d, ornare tempus dui. Donec 
-                                                efficitur, dui et facilisis commodo, mauris 
-                                                massa mollis nisi, ornare egestas lectus 
-                                                turpis tempus dolor. Aliquam.[...]
+                                                <?php the_excerpt()?>
                                             </p>
                                         </div>
 
@@ -250,7 +279,9 @@
                                         </div>
                                     </a>
                                 </div>
-                            <?php } ?>
+                            <?php endwhile;
+                            endif;
+                            wp_reset_query(); ?>
                         </div>
                     </div>
                 </div>
