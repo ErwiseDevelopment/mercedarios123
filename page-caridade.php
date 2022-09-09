@@ -171,7 +171,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- slide <php for( $i = 0; $i < 8; $i++ ) { ?> -->
                         
-                            <div class="swiper-slide">
+                            
                                 <?php 
                                  $args = array(
                                     'post_per_page' => 21,
@@ -185,6 +185,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
                                 ?>
+                                <div class="swiper-slide">
                                 <a 
                                 class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
                                 href="<?php the_permalink() ?>">
