@@ -174,7 +174,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="swiper-slide">
                                 <?php 
                                  $args = array(
-                                    'post_per_page' => 3,
+                                    'post_per_page' => 21,
                                     'post_type'     => 'post',
                                     'category_name' => 'noticia-caridade',
                                     'order'         => 'DESC',
@@ -242,7 +242,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            
                             <?php 
                               endwhile;
                             endif;
@@ -250,6 +250,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             ?>
 
                             <!--  <php } ?>end slide -->
+                    </div>
+                            
                     </div>
                 </div>
 
