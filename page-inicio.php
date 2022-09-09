@@ -63,10 +63,6 @@ end banner -->
 <?php echo get_template_part( 'template-parts/content', 'our-presence' ) ?>
 <!-- end our presence -->
 
-<!-- newsletter -->
-<?php echo get_template_part( 'template-parts/content', 'newsletter' ) ?>
-<!-- end newsletter -->
-
 <!-- <img
 class="img-fluid"
 data-src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

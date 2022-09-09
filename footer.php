@@ -25,6 +25,16 @@
         </div>
     </footer> #colophon -->
 
+    <!-- newsletter -->
+    <?php 
+        if( $post->post_name == 'inicio' ) :
+            echo get_template_part( 'template-parts/content', 'newsletter' );
+        else :
+            echo get_template_part( 'template-parts/content', 'newsletter-general' );
+        endif; 
+    ?>
+    <!-- end newsletter -->
+
     <footer 
     class="u-bg-cover u-bg-no-repeat py-5"
     style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/footer-background.png)">
