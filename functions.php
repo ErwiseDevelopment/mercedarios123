@@ -9,3 +9,5 @@ require get_template_directory() . '/../wp-bootstrap-starter-child/inc/single-fu
 
 //single files
 require get_template_directory() . '/../wp-bootstrap-starter-child/inc/single-files.php';
+
+function my_excerpt_length ( $length ){ return 20; } add_filter ( 'excerpt_length', 'my_excerpt_length' ) ;
