@@ -85,16 +85,14 @@
                                  </div>
                     
 
-                                <div class="col-xl-2 py-1">
-                                    <a
-                                    class="w-100 h-100 d-flex justify-content-center align-items-center u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="#">
-                                        Acervo virtual <br>
-                                        (NOssa história)
-                                    </a>
-                                </div>
-                        </div>
+                                 <div class="col-2 py-1">
+                        <a
+                        class="w-100 h-100 d-flex justify-content-center align-items-center u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                        style="background-color:#AF0101"
+                        href="#">
+                            Acervo virtual <br>
+                            (NOssa história)
+                        </a>
                     </div>
                 </div>
             </div>
