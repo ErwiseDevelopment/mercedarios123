@@ -21,9 +21,8 @@ get_header(); ?>
 
 
 <!-- banner -->
-<section 
-class="w-100"
-style="height:100vh;background:red">
+<section class="w-100">
+<?php echo do_shortcode( '[rev_slider alias="caridade"][/rev_slider]' ); ?>
 </section>
 <!-- end banner -->
 
