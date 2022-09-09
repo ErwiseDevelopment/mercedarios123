@@ -58,7 +58,7 @@
                                         </p>
 
                                         <h4 class="u-font-size-18 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                            <?php the_title()?>
+                                            <?php echo the_title()?>
                                         </h4>
 
                                         <p class="u-font-size-14 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">

@@ -84,7 +84,7 @@
 
                             <!-- loop -->
                             
-                                <div class="col-12 mb-4">
+                                   <div class="col-12 mb-4">
 
                                     <h3 class="l-news__medium-post__title position-relative d-inline-block u-font-weight-bold u-font-family-cinzel-decorative text-uppercase u-color-folk-dark-golden pb-2">
                                         Colégios
@@ -106,43 +106,7 @@
                                         class="d-block text-decoration-none"
                                         href="<?php the_permalink()?>">
                                             <p class="u-font-size-18 xxl:u-font-size-24 u-font-weight-semibold u-font-family-lato u-color-folk-dark-gray mt-2 mb-0">
-                                                <?php get_the_title() ?>
-                                            </p>
-
-                                            <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-bold u-font-style-italic u-font-family-lato hover:u-text-decoration-underline u-color-folk-dark-golden mb-0">
-                                                Ler mais
-                                            </p>
-                                        </a>
-                                    <?php 
-                                        endwhile;
-                                    endif;
-                                    wp_reset_query();
-                                    ?>
-                                    <!-- end loop -->
-                                </div>
-                                 <div class="col-12 mb-4">
-
-                                    <h3 class="l-news__medium-post__title position-relative d-inline-block u-font-weight-bold u-font-family-cinzel-decorative text-uppercase u-color-folk-dark-golden pb-2">
-                                        Colégios
-                                    </h3>
-                                    <?php 
-                                 $args = array(
-                                    'post_per_page' => 3,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'noticia-educacao',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $cats = array();
-
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                ?>                                     
-                                        <a  
-                                        class="d-block text-decoration-none"
-                                        href="<?php the_permalink()?>">
-                                            <p class="u-font-size-18 xxl:u-font-size-24 u-font-weight-semibold u-font-family-lato u-color-folk-dark-gray mt-2 mb-0">
-                                                <?php get_the_title() ?>
+                                                <?php echo get_the_title() ?>
                                             </p>
 
                                             <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-bold u-font-style-italic u-font-family-lato hover:u-text-decoration-underline u-color-folk-dark-golden mb-0">
@@ -178,7 +142,7 @@
                                                     class="d-block text-decoration-none"
                                                     href="<?php the_permalink()?>">
                                                         <p class="u-font-size-18 xxl:u-font-size-24 u-font-weight-semibold u-font-family-lato u-color-folk-dark-gray mt-2 mb-0">
-                                                            <?php get_the_title() ?>
+                                                            <?php echo get_the_title() ?>
                                                         </p>
 
                                                         <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-bold u-font-style-italic u-font-family-lato hover:u-text-decoration-underline u-color-folk-dark-golden mb-0">
@@ -214,7 +178,7 @@
                                                 class="d-block text-decoration-none"
                                                 href="<?php the_permalink()?>">
                                                     <p class="u-font-size-18 xxl:u-font-size-24 u-font-weight-semibold u-font-family-lato u-color-folk-dark-gray mt-2 mb-0">
-                                                        <?php get_the_title() ?>
+                                                        <?php echo get_the_title() ?>
                                                     </p>
 
                                                     <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-bold u-font-style-italic u-font-family-lato hover:u-text-decoration-underline u-color-folk-dark-golden mb-0">
