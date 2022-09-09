@@ -26,7 +26,7 @@
                     
                     <?php 
                                  $args = array(
-                                    'post_per_page' => 1,
+                                    'post_per_page' => -1,
                                     'post_type'     => 'post',
                                     'category_name' => 'noticia-destaque',
                                     'order'         => 'DESC',
