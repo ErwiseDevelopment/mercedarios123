@@ -365,7 +365,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             </p>
 
                                             <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                                <?php get_the_title()?>
+                                                <?php echo get_the_title()?>
                                             </h4>
 
                                             <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
