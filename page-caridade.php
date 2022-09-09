@@ -196,17 +196,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         alt=""> -->
 
                                         <?php 
-
                                         $alt_title = get_the_title();
-
                                         the_post_thumbnail('post-thumbnail', 
-                                        
                                         array(
                                             'class' => 'img-fluid w-100 h-100',
                                             'alt'   => $alt_title
                                             ))
-
-
                                         ?>
                                     </div>
 
@@ -329,39 +324,53 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <?php for( $i = 0; $i < 8; $i++ ) { ?>
+                                <?php 
+                                 $args = array(
+                                    'post_per_page' => 3,
+                                    'post_type'     => 'post',
+                                    'category_name' => 'blog-caridade',
+                                    'order'         => 'DESC',
+                                 );
+                                    $contents = new WP_Query( $args );
+                                    $cats = array();
+
+                                    if( $contents->have_posts()):
+                                        while ($contents->have_posts()) : $contents->the_post();
+                                ?>
                             <div class="swiper-slide">
                                 <a 
                                 class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                href="#">
+                                href="<?php the_permalink()?>">
 
                                     <div class="card-img">
-                                        <img
+                                        <!-- <img
                                         class="img-fluid w-100"
                                         src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/news-post-1.png"
-                                        alt="">
+                                        alt=""> -->
+                                        <?php
+                                           $alt_title = get_the_title();
+                                           the_post_thumbnail('post-thumbnail', 
+                                           array(
+                                               'class' => 'img-fluid w-100 h-100',
+                                               'alt'   => $alt_title
+                                               ))
+                                           ?>
                                     </div>
 
                                     <div class="card-body">
 
                                         <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                            <span class="u-font-weight-medium">por</span> Redação <br>
-                                            06 de Maio de 2021
+                                            <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?>  <br>
+                                            <?php echo get_date_format('d/m/Y', $post)?>
                                         </p>
 
                                         <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                            Mensagem do Provincial
-                                            Dia de São Pedro Nolasco
+                                            <?php get_the_title()?>
                                         </h4>
 
-                                        <p class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                            Lorem ipsum dolor sit amet, consectetur 
-                                            adipiscing elit. Mauris lectus dolor, semper 
-                                            vitae libero se,d, ornare tempus dui. Donec 
-                                            efficitur, dui et facilisis commodo, mauris 
-                                            massa mollis nisi, ornare egestas lectus 
-                                            turpis tempus dolor. Aliquam.[...]
-                                        </p>
+                                        <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                        <?php the_excerpt()?>
+                                        </span>
                                     </div>
 
                                     <div class="c-card-footer-absolute card-footer">
@@ -377,7 +386,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </a>
                             </div>
-                        <?php } ?>
+                        <?php 
+                        endwhile;
+                    endif;
+                    wp_reset_query();
+                        ?>
                         <!-- end slide -->
                     </div>
                 </div>
