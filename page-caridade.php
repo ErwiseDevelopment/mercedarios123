@@ -243,18 +243,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </a>
                             </div>
-                            <?php 
+                            
+
+                            <!--  <php } ?>end slide -->
+                    </div>
+                </div>
+                <?php 
                               endwhile;
                             endif;
 
                             wp_reset_query();
                             
                             ?>
-
-                            <!--  <php } ?>end slide -->
-                    </div>
-                </div>
-
                 <!-- arrows -->
                 <div class="swiper-button-prev swiper-button-prev-editorial-news d-none d-xl-flex js-swiper-button-prev-editorial-news">
                     <img
@@ -326,7 +326,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <!-- slide -->
                                 <?php 
                                  $args = array(
-                                    'post_per_page' => 3,
+                                    'post_per_page' =>  9,
                                     'post_type'     => 'post',
                                     'category_name' => 'blog-caridade',
                                     'order'         => 'DESC',
