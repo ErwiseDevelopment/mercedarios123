@@ -243,18 +243,17 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </a>
                             </div>
-                            
-
-                            <!--  <php } ?>end slide -->
-                    </div>
-                </div>
-                <?php 
+                            </div>
+                            <?php 
                               endwhile;
                             endif;
-
                             wp_reset_query();
-                            
                             ?>
+
+                            <!--  <php } ?>end slide -->
+                    
+                </div>
+
                 <!-- arrows -->
                 <div class="swiper-button-prev swiper-button-prev-editorial-news d-none d-xl-flex js-swiper-button-prev-editorial-news">
                     <img
