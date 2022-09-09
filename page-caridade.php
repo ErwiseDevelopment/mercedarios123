@@ -467,7 +467,20 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="swiper-wrapper">
                         
                         <!-- slide -->
-                        <?php for( $i = 0; $i < 6; $i++ ) { ?>
+                        <?php 
+                                    
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type'      => 'obras',
+                                        'order'          => 'DESC',
+                                    
+                                    );
+
+                                    $communities = new WP_Query( $args );
+
+                                    if( $communities->have_posts() ) :  
+                                        while( $communities->have_posts() ) : $communities->the_post();
+                                ?>
                             <div class="swiper-slide">
 
                                 <a 
@@ -475,22 +488,27 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 href="#">
 
                                     <div class="card-img">
-                                        <img
-                                        class="img-fluid w-100"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/our-construction-photo-1.png"
-                                        alt="">
+                                    <?php
+                                                    $alt_title = get_the_title();
+
+                                                    the_post_thumbnail( 'post-thumbnail',
+                                                        array(
+                                                            'class' => 'img-fluid w-100',
+                                                            'alt'   => $alt_title
+                                                    ));
+                                                ?>
                                     </div>
 
                                     <div class="card-body mt-n5">
                                         <div class="u-bg-folk-dark-marron py-3">
                                             <h3 class="u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                                Recanto Mercê
+                                                <?php echo get_the_title()?>
                                             </h3>
 
                                             <div class="u-bg-folk-golden mx-auto" style="width:calc(100% - 150px);height:2px"></div>
 
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                                Recuperação de dependentes
+                                                <?php echo get_field('tipo_da_obra')?>
                                             </p>
 
                                             <p 
@@ -502,7 +520,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </a>
                             </div>
-                        <?php } ?>
+                            <?php 
+                                        endwhile;
+                                    endif;
+                                ?>
                         <!-- end slide -->
                     </div>
                 </div>
