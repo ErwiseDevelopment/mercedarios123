@@ -8,7 +8,7 @@
 
                 <div class="row">
 
-                    <div class="col-6">
+                    <div class="col-xl-6">
 
                         <div class="row">
 
@@ -23,7 +23,7 @@
 
                             <!-- loop -->
                             <?php for( $i = 0; $i < 3; $i++ ) { ?>
-                                <div class="l-our-presence__column-child col-4 d-flex flex-column align-items-center">
+                                <div class="l-our-presence__column-child col-xl-4 d-flex flex-column align-items-center my-3 my-xl-0">
                                     <div class="l-our-presence__item rounded-circle">
                                         <p class="u-font-size-64 u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white mb-0">
                                             04
@@ -49,7 +49,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 pt-5">
+                    <div class="col-xl-6 pt-5">
                         
                         <p class="u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-bold-marron">
                             Brasil

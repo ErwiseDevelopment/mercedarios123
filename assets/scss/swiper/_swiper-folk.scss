@@ -35,10 +35,18 @@
 
 .swiper-button-prev-months {
     left: 5rem;
+
+    @media screen and (max-width: 991px) {
+        left: .5rem;
+    }
 }
 
 .swiper-button-next-months {
     right: 5rem;
+
+    @media screen and (max-width: 991px) {
+        right: .5rem;
+    }
 }
 
 .swiper-container-months {
@@ -54,6 +62,10 @@
         border-radius: 50%;
         position: absolute;
         background-color: $color-folk-bold-marron;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
     }
 }
 

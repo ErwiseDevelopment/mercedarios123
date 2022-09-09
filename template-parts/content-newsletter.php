@@ -19,7 +19,7 @@ style="background-image: linear-gradient(to right, #D99D31, #946918)">
 
                 <div class="row justify-content-center">
 
-                    <div class="col-7">
+                    <div class="col-xl-7">
 
                         <form>
 
@@ -39,7 +39,7 @@ style="background-image: linear-gradient(to right, #D99D31, #946918)">
                                     placeholder="E-mail">
                                 </div>
 
-                                <div class="col-4 my-2">
+                                <div class="col-6 col-xl-4 my-2">
                                     <input 
                                     class="w-100 border-0 d-block u-font-size-20 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron p-2"
                                     type="submit"

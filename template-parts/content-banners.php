@@ -8,7 +8,7 @@
 
                 <div class="row">
 
-                    <div class="col-6">
+                    <div class="col-xl-6">
 
                         <div class="row">
 
@@ -34,11 +34,11 @@
                         </div>
                     </div>
 
-                    <div class="col-6 d-flex flex-column justify-content-center">
+                    <div class="col-xl-6 d-flex flex-column justify-content-center">
 
-                        <h5 class="text-center pt-4">
-                            <span class="d-block u-font-size-34 u-font-weight-regular u-font-family-cinzel u-color-folk-dark-marron">Baixe agora mesmo a</span>
-                            <span class="u-font-size-52 u-font-family-cinzel-decorative u-color-folk-dark-golden">Revista Mercê</span>
+                        <h5 class="text-center mb-3 mb-xl-0 pt-4">
+                            <span class="d-block u-font-size-28 xl:u-font-size-34 u-font-weight-regular u-font-family-cinzel u-color-folk-dark-marron">Baixe agora mesmo a</span>
+                            <span class="u-font-size-42 xl:u-font-size-52 u-font-family-cinzel-decorative u-color-folk-dark-golden">Revista Mercê</span>
                         </h5>
 
                         <a href="#">
@@ -50,7 +50,7 @@
 
                         <div class="row justify-content-center">
 
-                            <div class="col-5 mt-2">
+                            <div class="col-8 col-5 mt-5 mt-xl-2">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-1"
                                 href="">

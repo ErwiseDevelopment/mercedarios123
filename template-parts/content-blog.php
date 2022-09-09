@@ -4,7 +4,7 @@
 
         <div class="row">
 
-            <div class="col-12 d-flex justify-content-center my-5">
+            <div class="col-12 d-flex justify-content-center mb-5 my-xl-5">
                 
                 <h2 class="c-title-pattern pb-2">
                     Blog    

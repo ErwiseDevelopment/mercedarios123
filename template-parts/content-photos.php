@@ -8,7 +8,7 @@
 
                 <div class="row">
 
-                    <div class="col-8">
+                    <div class="col-xl-8">
 
                         <div class="row">
 
@@ -24,7 +24,7 @@
 
                             <!-- loop -->
                             <?php for( $i = 0; $i < 6; $i++ ) { ?>
-                                <div class="col-6 my-2">
+                                <div class="col-xl-6 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
                                     href="#">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-xl-4 my-3 my-xl-0">
 
                         <div class="row">
 
@@ -79,13 +79,13 @@
 
             <div class="col-12 mt-5">
 
-                <div class="row">
+                <div class="row justify-content-center">
 
-                    <div class="col-9 d-flex justify-content-center align-items-center">
+                    <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
                         <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-9 col-xl-3">
 
                         <div class="row">
 
