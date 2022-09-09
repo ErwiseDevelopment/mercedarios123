@@ -18,35 +18,7 @@
                     <div class="col-xl-8 mt-3 mt-xl-0 px-0">
 
                         <div class="row">
-                            
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/institucional')?>">
-                                    institucional
-                                </a>
-                            </div>
 
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/vocacional')?>">
-                                    vocacional
-                                </a>
-                            </div>
-
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/educacao')?>">
-                                    educação
-                                </a>
-                            </div>
-                            
-<<<<<<< HEAD
                                 <div class="col-3 my-1">
                                     <a
                                     class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
