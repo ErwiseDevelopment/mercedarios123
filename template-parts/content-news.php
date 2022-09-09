@@ -60,9 +60,9 @@
                                <?php echo the_title() ?> 
                             </h3>
 
-                            <p class="u-font-size-16 xl:u-font-size-20 xxl:u-font-size-26 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-white">
+                            <span class="u-font-size-16 xl:u-font-size-20 xxl:u-font-size-26 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-white">
                                 <?php the_excerpt() ?>
-                            </p>
+                            </span>
 
                             <div class="row">
 
@@ -227,7 +227,7 @@
                                     'post__not_in'   => $posts_current,
                                  );
                                     $contents = new WP_Query( $args );
-                                    $posts_current = array();
+                                   
 
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
@@ -261,9 +261,9 @@
                                                 <?php echo the_title()?>
                                             </h4>
 
-                                            <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                            <span class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
                                                 <?php the_excerpt()?>
-                                            </p>
+                                            </span>
                                         </div>
 
                                         <div class="c-card-footer-absolute card-footer">
