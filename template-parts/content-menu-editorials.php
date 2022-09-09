@@ -83,53 +83,6 @@
                                         pastoral do empreendedor
                                     </a>
                                  </div>
-
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/paroquias')?>">
-                                    paróquias
-                                </a>
-                            </div>
-
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/caridade')?>">
-                                    caridade
-                                </a>
-                            </div>
-
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/dom-inocencio')?>">
-                                    dom inocêncio
-                                </a>
-                            </div>
-
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="#">
-                                    revista mercê
-                                </a>
-                            </div>
-
-                            
-                            <div class="col-3 my-1">
-                                <a
-                                class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                style="background-color:#AF0101"
-                                href="<?php echo get_home_url( null, '/pastoral-do-empreendedor')?>">
-                                    pastoral do empreendedor
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="col-xl-2 py-1 px-0 px-xl-3">

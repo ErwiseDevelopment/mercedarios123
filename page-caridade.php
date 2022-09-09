@@ -213,7 +213,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <div class="card-body">
 
                                         <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                            <span class="u-font-weight-medium">por</span> Redação <br>
+                                            <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?> <br>
                                             <!-- 06 de Maio de 2021 -->
                                             <?php echo get_date_format('d/m/Y', $post)?>
                                         </p>
