@@ -485,7 +485,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                 <a 
                                 class="card border-0 text-decoration-none"
-                                href="<?php get_field('ir_para_obra') ?>" <?php if(get_sub_field( 'nova_guia') == '1') : ?>
+                                href="<?php echo get_field('ir_para_obra') ?>" <?php if(get_sub_field( 'nova_guia') == '1') : ?>
                                                 target="_blank"
                                             <?php endif; ?>>
 
