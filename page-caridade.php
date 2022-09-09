@@ -242,16 +242,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <?php 
-                              endwhile;
-                            endif;
-                            wp_reset_query();
-                            ?>
-
-                            <!--  <php } ?>end slide -->
-                    </div>
                             
+                                    <?php 
+                                    endwhile;
+                                    endif;
+                                    wp_reset_query();
+                                    ?>
+                            </div>
+                            <!--  <php } ?>end slide -->
                     </div>
                 </div>
 
