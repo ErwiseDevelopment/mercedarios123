@@ -23,9 +23,8 @@
             <div class="col-12">
 
                 <div class="row">
-
-                    <!-- loop -->
-                    <?php
+                                       <!-- loop -->
+                        <?php
                             if( have_rows( 'outros_videos' ) ) :
                                 while( have_rows( 'outros_videos' ) ) : the_row();
                         ?>
