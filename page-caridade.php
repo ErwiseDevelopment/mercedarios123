@@ -86,20 +86,19 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-11">
 
                 <div class="row">
-
+                   
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
-                        href="#">
+                        href="<?php echo get_field('botao1')?>" <?php if (get_field('nova_guia1') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
                                 class="img-fluid"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-seja-voluntario.png"
+                                src="<?php echo get_field('icone1')?>"
                                 alt="Seja Voluntário">
                             </div>
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                Seja <br>
-                                Voluntário
+                            <?php echo get_field('escrita1')?>
                             </p>
                         </a>
                     </div>
@@ -107,16 +106,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item l-shortcut__item--center d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
-                        href="#">
+                        href="<?php echo get_field('botao2')?>"  <?php if (get_field('nova_guia2') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
                                 class="img-fluid"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-seja-voluntario.png"
+                                src="<?php echo get_field('icone2')?>"
                                 alt="Seja Voluntário">
                             </div>
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                Seja <br>
-                                Voluntário
+                            <?php echo get_field('escrita2')?>
                             </p>
                         </a>
                     </div>
@@ -124,16 +122,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
-                        href="#">
+                        href="<?php echo get_field('botao3')?>"  <?php if (get_field('nova_guia3') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
                                 class="img-fluid"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-seja-voluntario.png"
+                                src="<?php echo get_field('icone3')?>"
                                 alt="Seja Voluntário">
                             </div>
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                Seja <br>
-                                Voluntário
+                            <?php echo get_field('escrita3')?>
                             </p>
                         </a>
                     </div>
@@ -602,7 +599,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-md-4 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
-                                    href="#">
+                                    href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
                                         src="<?php echo $photo['url'] ?>"
