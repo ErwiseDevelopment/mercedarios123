@@ -91,4 +91,5 @@ add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 register_nav_menus(array(
 	'caridade' => 'Menu Caridade',
+    'menu-exemplo' => 'Menu Exemplo'
 ));
