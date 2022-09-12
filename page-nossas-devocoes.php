@@ -63,24 +63,24 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <li class="u-list-style-none mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
-                                href="#">
-                                    Home >
+                                href="<?php echo get_home_url( null, '/' ) ?>">
+                                    Home
                                 </a>
                             </li>
 
                             <li class="u-list-style-none mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
-                                href="#">
-                                    Vocacional >
+                                href="<?php echo get_home_url( null, 'vocacional' ) ?>">
+                                    > Vocacional
                                 </a>
                             </li>
 
                             <li class="u-list-style-none mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
-                                href="#">
-                                    Nossas Devoções >
+                                href="<?php echo get_home_url( null, 'nossas-devocoes' ) ?>">
+                                    > Nossas Devoções
                                 </a>
                             </li>
 
@@ -89,7 +89,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                                 href="<?php echo $category_current ? get_home_url( null, 'nossas-devocoes/?id=' . $category_current->term_id ) : '#'; ?>">
                                     <!-- Santos da Ordem > -->
-                                    <?php echo $category_current->name . ' >'; ?>
+                                    <?php echo '> ' . $category_current->name; ?>
                                 </a>
                             </li>
                         </ul>
