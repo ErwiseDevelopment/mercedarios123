@@ -513,22 +513,19 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             </p>
                                             <?php
 								$cats = array();
-								$count = 0;
-
+								
 								foreach (get_the_category( get_the_ID() ) as $c) {
 									$cat = get_category($c);
 									array_push($cats, $cat);
 								}
 
 								foreach( $cats as $cat ) :
-									$count++;
+									
 							?>
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                            <?php echo $cat->name; ?>
-</p> 
+                                            <?php echo $cat->name; ?></p> 
 <?php 
-									if( $count == 2 )
-										break;
+									
 								endforeach; 
 							?>
                                                  
