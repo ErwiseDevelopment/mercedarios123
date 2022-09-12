@@ -32,7 +32,7 @@ function erwise_create_post_type() {
 		'public' 		=> true,
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-images-alt2',
-		'supports' 		=> array( 'title', 'thumbnail' ) 
+		'supports' 		=> array( 'title' ) 
 	) );
 	register_post_type( 'obras', array(
 		'labels' 		=> array( 'name' => 'Nossas Obras', 'singular_name' => 'Nossa Obra', 'all_items' => 'Nossas Obras' ),
