@@ -572,7 +572,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                             <!-- loop -->
                             <?php 
-                        $editorial_slug_current = strtolower(get_the_title());
+                        $editorial_slug_current = 'caridade'
+                        //strtolower(get_the_title());
 
                         $args = array(
                             'posts_per_page' => 1,
