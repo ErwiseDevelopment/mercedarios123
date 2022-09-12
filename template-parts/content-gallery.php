@@ -15,7 +15,7 @@
 
             <div class="col-12">
 
-                <div>
+                <div class="l-gallery__video">
                     <?php echo get_field('video_destaque')?>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         ?>
                         <div class="col-xl-4 my-3">
                             
-                            <div>
+                            <div class="l-gallery__video">
                             <?php echo get_sub_field( 'outros_videos_repetidor' ) ?>
                             </div>
                         </div>
