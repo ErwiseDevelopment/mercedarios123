@@ -16,7 +16,7 @@
             <div class="col-12">
 
                 <div>
-                    <?php echo get_field('video-destaque')?>
+                    <?php echo get_field('video_destaque')?>
                 </div>
             </div>
 
