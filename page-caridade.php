@@ -573,7 +573,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <!-- loop -->
                             <?php
                             $args = array(
-                                'posts_per_page' => -1,
+                                'posts_per_page' => 12,
                                 'post_type'      => 'galeria',
                                 'order'          => 'DESC'
                             );
@@ -592,6 +592,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         src="<?php echo get_field( 'capa_do_album' ) ?>"
                                         alt="Foto 1">
                                     </a>
+                                    <div class="l-gallery__card-content px-3">
+                                                <p class="l-gallery__card-title u-font-weight-bold u-color-folk-white">
+                                                    <!-- Abertura do Postulado Scalabriniano
+                                                    em Passo Fundo, RS. -->
+
+                                                    <?php the_title() ?>
+                                                </p>
+                                            </div>
                                 </div>
                                 <?php
                                 endwhile;
