@@ -90,6 +90,11 @@ function mytheme_admin_bar_render() {
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 register_nav_menus(array(
-	'caridade' => 'Menu Caridade',
-    'menu-exemplo' => 'Menu Exemplo'
+	'caridade'       => 'Menu Caridade',
+    'educacao'       => 'Menu Educação',
+    'institucional'  => 'Menu Institucional',
+    'paroquias'      => 'Menu Paróquias',
+    'vocacional' => 'Menu Vocacional',
+    'dom-inocencio' => 'Menu Dom Inocencio',
+    'pastoral' => 'Menu pastoral',
 ));
