@@ -16,7 +16,7 @@
             <div class="col-12">
 
                 <div>
-                    <iframe class="l-gallery__video" src="https://www.youtube.com/embed/B4_ebHwysE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php echo get_field('video-destaque')?>
                 </div>
             </div>
 
@@ -25,14 +25,20 @@
                 <div class="row">
 
                     <!-- loop -->
-                    <?php for( $i = 0; $i < 3; $i++ ) { ?>
+                    <?php
+                            if( have_rows( 'videos', 'option' ) ) :
+                                while( have_rows( 'videos', 'option' ) ) : the_row();
+                        ?>
                         <div class="col-xl-4 my-3">
                             
                             <div>
-                                <iframe class="w-100" height="240" src="https://www.youtube.com/embed/B4_ebHwysE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <?php echo get_sub_field( 'outros_videos_repetidor' ) ?>
                             </div>
                         </div>
-                    <?php } ?>
+                        <?php
+                                endwhile;
+                            endif;
+                        ?>
                     <!-- end loop -->
                 </div>
             </div>

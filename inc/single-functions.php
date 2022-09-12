@@ -94,7 +94,7 @@ register_nav_menus(array(
     'educacao'       => 'Menu Educação',
     'institucional'  => 'Menu Institucional',
     'paroquias'      => 'Menu Paróquias',
-    'vocacional' => 'Menu Vocacional',
-    'dom-inocencio' => 'Menu Dom Inocencio',
-    'pastoral' => 'Menu pastoral',
+    'vocacional'     => 'Menu Vocacional',
+    'dom-inocencio'  => 'Menu Dom Inocencio',
+    'pastoral'       => 'Menu pastoral',
 ));
