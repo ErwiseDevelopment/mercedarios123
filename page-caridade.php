@@ -607,15 +607,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         src="<?php echo $photo['url'] ?>"
                                             alt="<?php echo $photo['title']; ?>">
                                     </a>
-                                    <div class="l-gallery__card-content px-3">
-                                                <p class="l-gallery__card-title u-font-weight-bold u-color-folk-white">
-                                                    <!-- Abertura do Postulado Scalabriniano
-                                                    em Passo Fundo, RS. -->
-
-                                                    <?php the_title() ?>
-                                                </p>
-                                            </div>
-                                </div>
+                                 </div>
                                 <?php
                                         if( $count == 12 )
                                             break;
