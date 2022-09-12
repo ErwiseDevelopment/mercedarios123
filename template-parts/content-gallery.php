@@ -30,7 +30,7 @@
                         ?>
                         <div class="col-xl-4 my-3">
                             
-                            <div class="l-gallery__video">
+                            <div style: height 240px>
                             <?php echo get_sub_field( 'outros_videos_repetidor' ) ?>
                             </div>
                         </div>
