@@ -601,7 +601,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-md-4 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
-                                    href="<?php the_permalink() ?>">
+                                    href="#">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
                                         src="<?php echo $photo['url'] ?>"
