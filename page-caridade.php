@@ -341,10 +341,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     href="<?php the_permalink()?>">
 
                                         <div class="card-img">
-                                            <!-- <img
-                                            class="img-fluid w-100"
-                                            src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/news-post-1.png"
-                                            alt=""> -->
                                             <?php
                                             $alt_title = get_the_title();
                                             the_post_thumbnail('post-thumbnail', 
@@ -575,18 +571,34 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div class="row">
 
                             <!-- loop -->
-                            <?php for( $i = 0; $i < 6; $i++ ) { ?>
+                            <?php
+                            $args = array(
+                                'posts_per_page' => -1,
+                                'post_type'      => 'galeria',
+                                'order'          => 'DESC'
+                            );
+
+                            $galeries = new WP_Query( $args );
+
+                            if( $galeries->have_posts() ) :
+                                while( $galeries->have_posts() ) : $galeries->the_post();
+                        ?>
                                 <div class="col-md-4 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
-                                    href="#">
+                                    href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                        src="<?php echo get_field( 'capa_do_album' ) ?>"
                                         alt="Foto 1">
                                     </a>
                                 </div>
-                            <?php } ?>
+                                <?php
+                                endwhile;
+                            endif;
+                            
+                            wp_reset_query();
+                        ?>
                             <!-- end loop -->
                         </div>
                     </div>
