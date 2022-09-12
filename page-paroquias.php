@@ -511,7 +511,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
                                                 <?php echo get_field('tipo_da_obra')?>
                                             </p>
-                                            <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
                                             <?php
 								$cats = array();
 								$count = 0;
@@ -524,7 +523,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 								foreach( $cats as $cat ) :
 									$count++;
 							?>
-                                            </p>       
+                                            <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
+                                            <?php echo $cat->name; ?>
+</p> 
+<?php 
+									if( $count == 2 )
+										break;
+								endforeach; 
+							?>
+                                                 
                                             <p 
                                             class="position-absolute u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden mb-0 py-2 px-5"
                                             style="bottom:0;left:50%;transform:translateX(-50%)">
