@@ -444,7 +444,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-12 d-flex justify-content-center my-5">
                 
                 <h2 class="c-title-pattern pb-2">
-                    Nossas obras   
+                    Comunidades   
 
                     <span class="c-title-pattern__underline"></span>
                 </h2>
@@ -459,7 +459,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         
                         <!-- slide -->
                         <?php 
-                                    $editorial_slug_current = 'comunidades';
+                                    $editorial_slug_current = 'paroquias';
                                     //$editorial_id_current = 27;
 
                                     $args = array(
