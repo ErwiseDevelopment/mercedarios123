@@ -571,27 +571,41 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div class="row">
 
                             <!-- loop -->
-                            <?php
-                            $args = array(
-                                'posts_per_page' => 12,
-                                'post_type'      => 'galeria',
-                                'order'          => 'DESC',
-                                'category_name' => 'caridade'
-                            );
+                            <?php 
+                        $editorial_slug_current = strtolower(get_the_title());
 
-                            $galeries = new WP_Query( $args );
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'post_type'      => 'Galeria',
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'galeria-categoria',
+                                    'field'    => 'slug',
+                                    'terms'    => array( $editorial_slug_current )
+                                )
+                            )
+                        );
 
-                            if( $galeries->have_posts() ) :
-                                while( $galeries->have_posts() ) : $galeries->the_post();
-                        ?>
+                        $gallery = new WP_Query( $args );
+                        $count = 0;
+
+                        if( $gallery->have_posts() ) :
+                            while( $gallery->have_posts() ) : $gallery->the_post();
+
+                                $photos = get_field( 'galeria' );
+
+                                if( $photos ) :
+                                    foreach( $photos as $photo ) :     
+                                        $count++;
+                    ?>
                                 <div class="col-md-4 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
                                     href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_field( 'capa_do_album' ) ?>"
-                                        alt="Foto 1">
+                                        src="<?php echo $photo['url'] ?>"
+                                            alt="<?php echo $photo['title']; ?>">
                                     </a>
                                     <div class="l-gallery__card-content px-3">
                                                 <p class="l-gallery__card-title u-font-weight-bold u-color-folk-white">
@@ -603,11 +617,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             </div>
                                 </div>
                                 <?php
-                                endwhile;
-                            endif;
-                            
-                            wp_reset_query();
-                        ?>
+                                        if( $count == 12 )
+                                            break;
+                                    endforeach;
+                                endif;
+                            endwhile;
+                        endif;
+
+                        wp_reset_query();
+                    ?>
                             <!-- end loop -->
                         </div>
                     </div>
