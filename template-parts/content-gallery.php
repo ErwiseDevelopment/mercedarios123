@@ -26,8 +26,8 @@
 
                     <!-- loop -->
                     <?php
-                            if( have_rows( 'videos', 'option' ) ) :
-                                while( have_rows( 'videos', 'option' ) ) : the_row();
+                            if( have_rows( 'outros_videos' ) ) :
+                                while( have_rows( 'outros_videos' ) ) : the_row();
                         ?>
                         <div class="col-xl-4 my-3">
                             
