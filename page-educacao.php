@@ -459,37 +459,38 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         
                         <!-- slide -->
                         <?php 
-                                    $editorial_slug_current = 'educacao';
-                                    //$editorial_id_current = 27;
+                            $editorial_slug_current = 'educacao';
+                            //$editorial_id_current = 27;
 
-                                    $args = array(
-                                        'posts_per_page' => -1,
-                                        'post_type'      => 'comunidades',
-                                        'order'          => 'DESC',
-                                        'tax_query'      => array(
-                                            array(
-                                                'taxonomy' => 'comunidades-categoria',
-                                                'field'    => 'slug',
-                                                'terms'    => array( $editorial_slug_current )
-                                            )
-                                        )
-                                    );
+                            $args = array(
+                                'posts_per_page' => -1,
+                                'post_type'      => 'comunidades',
+                                'order'          => 'DESC',
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'comunidades-categoria',
+                                        'field'    => 'slug',
+                                        'terms'    => array( $editorial_slug_current )
+                                    )
+                                )
+                            );
 
-                                    $communities = new WP_Query( $args );
+                            $communities = new WP_Query( $args );
 
-                                    if( $communities->have_posts() ) :  
-                                        while( $communities->have_posts() ) : $communities->the_post();
-                            ?>
-                            <div class="swiper-slide">
+                            if( $communities->have_posts() ) :  
+                                while( $communities->have_posts() ) : $communities->the_post();
+                        ?>
+                                    <div class="swiper-slide">
 
-                                <a 
-                                class="card border-0 text-decoration-none"
-                                href="<?php echo get_field('ir_para_comunidade') ?>" <?php if(get_field( 'nova_guia') == '1') : ?>
-                                                target="_blank"
-                                            <?php endif; ?>>
+                                        <a 
+                                        class="card border-0 text-decoration-none"
+                                        href="<?php echo get_field( 'ir_para_comunidade' ) ?>" 
+                                        <?php if(get_field( 'nova_guia') == '1') : ?>
+                                            target="_blank"
+                                        <?php endif; ?>>
 
-                                    <div class="card-img">
-                                    <?php
+                                            <div class="card-img">
+                                                <?php
                                                     $alt_title = get_the_title();
 
                                                     the_post_thumbnail( 'post-thumbnail',
@@ -498,53 +499,52 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                             'alt'   => $alt_title
                                                     ));
                                                 ?>
+                                            </div>
+
+                                            <div class="card-body mt-n5">
+
+                                                <div class="u-bg-folk-dark-marron py-3">
+
+                                                    <h3 class="u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
+                                                        <?php echo get_the_title()?>
+                                                    </h3>
+
+                                                    <div class="u-bg-folk-golden mx-auto" style="width:calc(100% - 150px);height:2px"></div>
+
+                                                    <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
+                                                        <?php
+                                                            $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
+                                                            $post_categories_current = array();
+
+                                                            $terms = get_terms( array(
+                                                                'taxonomy' => 'comunidades-estados',
+                                                                'hide_empty' => false,
+                                                            ));
+
+                                                            foreach( $post_categories as $post_category ) {
+                                                                foreach( $terms as $term ) {
+                                                                    if( $post_category->name == $term->name )
+                                                                        array_push( $post_categories_current, $post_category->name );
+                                                                }
+                                                            }
+                                                            echo $post_categories_current[0];
+                                                            //echo var_dump($post_category, $post_categories_current);
+                                                        ?>
+                                                    </p>
+
+                                                    <p 
+                                                    class="position-absolute u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden mb-0 py-2 px-5"
+                                                    style="bottom:0;left:50%;transform:translateX(-50%)">
+                                                        Conhecer
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-
-                                    <div class="card-body mt-n5">
-
-                                        <div class="u-bg-folk-dark-marron py-3">
-
-                                            <h3 class="u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                                <?php echo get_the_title()?>
-                                            </h3>
-
-                                            <div class="u-bg-folk-golden mx-auto" style="width:calc(100% - 150px);height:2px"></div>
-
-                                            <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                            <?php
-                                                $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
-                                                $post_categories_current = array();
-
-                                                $terms = get_terms( array(
-                                                    'taxonomy' => 'comunidades-estados',
-                                                    'hide_empty' => false,
-                                                ));
-
-                                                foreach( $post_categories as $post_category ) {
-                                                    foreach( $terms as $term ) {
-                                                        if( $post_category->name == $term->name )
-                                                            array_push( $post_categories_current, $post_category->name );
-                                                    }
-                                                }
-                                                echo $post_categories_current[0];
-                                                //echo var_dump($post_category, $post_categories_current);
-                                            ?>
-                                                
-                                            </p>
-                                            <p 
-                                            class="position-absolute u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden mb-0 py-2 px-5"
-                                            style="bottom:0;left:50%;transform:translateX(-50%)">
-                                                Conhecer
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
                             <?php 
-                                   
-                                        endwhile;
-                                    endif;
-                                ?>
+                                    endwhile;
+                                endif;
+                            ?>
                         <!-- end slide -->
                     </div>
                 </div>
