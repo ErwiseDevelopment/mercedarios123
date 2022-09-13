@@ -65,7 +65,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                             <div class="u-bg-folk-dark-marron">
                                 <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                      <?php  the_excerpt()?>
+                                      <?php  the_content();?>
                                  </h4>
                             </div>
                         </div>
