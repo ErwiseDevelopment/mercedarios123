@@ -84,7 +84,7 @@
 
                             <div class="col-3 my-1">
                                 <a
-                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-0"
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-0"
                                 style="background-color:#720302"
                                 href="<?php echo get_field('editoria_empreendedor', 'option')?>">
                                     pastoral do empreendedor
