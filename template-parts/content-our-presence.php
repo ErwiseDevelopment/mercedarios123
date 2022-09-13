@@ -22,8 +22,8 @@
                             </div>
 
                             <!-- loop -->
-                            <?php  if( have_rows('nossa_presenca_pelo_mundo')):
-                                        while(have_rows('nossa_presenca_pelo_mundo')) : the_row();    
+                            <?php  if( have_rows('nossa_presenca_pelo_mundo', 'option' )):
+                                        while(have_rows('nossa_presenca_pelo_mundo', 'option' )) : the_row();    
                                 
                             ?>
                                 <div class="l-our-presence__column-child col-xl-4 d-flex flex-column align-items-center my-3 my-xl-0">
