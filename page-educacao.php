@@ -522,7 +522,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
                                                 <?php echo $cat->name; ?>
                                             </p>
-                                            
+                             <?php endforeach; ?>               
 
                                             <p 
                                             class="position-absolute u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden mb-0 py-2 px-5"
@@ -534,7 +534,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </a>
                             </div>
                             <?php 
-                                    endforeach;
+                                   
                                         endwhile;
                                     endif;
                                 ?>
