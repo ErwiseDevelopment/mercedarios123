@@ -1408,6 +1408,9 @@ button.swiper-pagination-bullet {
 @media screen and (min-width: 1600px) {
   .xxl\:u-font-size-32 {
     font-size: 2rem !important; } }
+@media screen and (min-width: 1600px) {
+  .xxl\:u-font-size-45 {
+    font-size: 2.8125rem !important; } }
 
 .u-font-style-italic {
   font-style: italic !important; }
