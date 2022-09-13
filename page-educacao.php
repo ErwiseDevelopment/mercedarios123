@@ -514,7 +514,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             <?php
                                                 $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
                                                 $post_categories_current = array();
-                                                
+
                                                 $terms = get_terms( array(
                                                     'taxonomy' => 'comunidades-estados',
                                                     'hide_empty' => false,
