@@ -51,6 +51,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <div class="col-6 pt-3">
 
+                        <?php
+                            if( isset( $_GET[ 'id' ] ) ) {
+                                $category_current_id = $_GET[ 'id' ];
+                                $category_current = get_term( $category_current_id );
+                            }
+                        ?>
                         
                         <ul class="d-flex pl-0">
 
@@ -78,25 +84,31 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </a>
                             </li>
 
-                            <!-- <li class="u-list-style-none mr-1">
+                            <li class="u-list-style-none mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
-                                href="<php echo $category_current ? get_home_url( null, 'nossas-devocoes/?id=' . $category_current->term_id ) : '#'; ?>">
-                                    Santos da Ordem > 
-                                    <php echo '> ' . $category_current->name; ?>
+                                href="<?php echo $category_current ? get_home_url( null, 'nossas-devocoes/?id=' . $category_current->term_id ) : '#'; ?>">
+                                    <!-- Santos da Ordem > -->
+                                    <?php echo '> ' . $category_current->name; ?>
                                 </a>
-                            </li> -->
+                            </li>
                         </ul>
-                        <!-- <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
+                        <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
                             
-                            <php echo the_title() ?>
-                        </h2> -->
+                            <?php echo $category_current->name; ?>
+                        </h2>
 
                         <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
-                            <?php echo the_content()?>
+                            <?php echo get_field( 'descricao', $category_current ) ?>
                         </span>
                     </div>
 
+                    <div class="col-6">
+                        <img
+                        class="img-fluid w-100 u-object-fit-cover"
+                        src="<?php echo get_field( 'imagem_dev', $category_current ); ?>"
+                        alt="">
+                    </div>
                 </div>
             </div>
 
