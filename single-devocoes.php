@@ -108,7 +108,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <?php
                             $alt_title = get_the_title();
 
-                            the_post_thumbnail( 'post-thubmanil',
+                            the_post_thumbnail( 'post-thumbnail',
                                 array(
                                     'class' => 'img-fluid w-100 u-object-fit-cover',
                                     'alt'   => $alt_title
