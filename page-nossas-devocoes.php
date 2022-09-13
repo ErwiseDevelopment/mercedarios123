@@ -141,8 +141,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <img
                         class="img-fluid w-100 u-object-fit-cover"
                         style="height:234px"
-                        src="<?php echo get_field( 'imagem' ) ?>"
+                        src="<?php echo var_dump($other_posts) ?>"
                         alt="<?php the_title() ?>">
+
+                        
                     </a>
                 </div>
     <?php
