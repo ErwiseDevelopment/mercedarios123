@@ -109,6 +109,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             the_post_thumbnail( 'post-thumbnail',
                                 array(
                                     'class' => 'img-fluid w-100 u-object-fit-cover',
+                                    'style' => 'height:343px',
                                     'alt'   => $alt_title
                                 ));
                         ?>
@@ -150,6 +151,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <a href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
+                                        style="height:234px"
                                         src="<?php echo get_field( 'imagem' ) ?>"
                                         alt="<?php the_title() ?>">
                                     </a>
