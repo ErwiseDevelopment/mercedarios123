@@ -460,21 +460,20 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <!-- slide -->
                         <?php 
                                     $editorial_slug_current = 'educacao';
-                                    $editorial_id_current = get_taxonomy('comunidades-estados');
+                                    //$editorial_id_current = 27;
 
                                     $args = array(
-                                        
                                         'posts_per_page' => -1,
                                         'post_type'      => 'comunidades',
                                         'order'          => 'DESC',
                                         'tax_query'      => array(
                                             array(
-                                                'taxonomy' => 'comunidades-categoria', 'comunidades-estados',
+                                                'taxonomy' => 'comunidades-categoria',
                                                 'field'    => 'slug',
-                                                'terms'    => array( $editorial_slug_current)
+                                                'terms'    => array( $editorial_slug_current )
                                             )
                                         )
-                                            );
+                                    );
 
                                     $communities = new WP_Query( $args );
 
@@ -512,9 +511,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
                                                 <?php echo get_field('tipo_da_obra')?>
                                             </p>
-                                            <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                                <?php echo $editorial_id_current?>
-                                            </p>
+                                            
 
                                             <p 
                                             class="position-absolute u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden mb-0 py-2 px-5"
