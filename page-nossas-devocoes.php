@@ -123,7 +123,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
     $args = array(
         'posts_per_page' => -1,
-        'post_type'      => $post->post_type,
+        'post_type'      => 'devocoes',
         'order'          => 'DESC',
         
         'tax_query'      => array(
