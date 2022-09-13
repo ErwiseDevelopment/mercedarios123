@@ -518,7 +518,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     
                                                 }
 
-                                                echo  $post_category, $post_categories_current;
+                                                echo  var_dump($post_category, $post_categories_current)
                                             ?>
                                                 
                                             </p>
