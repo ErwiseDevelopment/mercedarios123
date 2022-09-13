@@ -1,22 +1,24 @@
 <?php
-
 /**
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
- * @package Fabio Melo Dev
+ * @link https://codex.wordpress.org/Template_Hierarchy 
  *
- * Template Name: Modelo Acervo
- * Template Post Type: page
+ * @package WP_Bootstrap_Starter
  */
 
-get_header();
-?>
+get_header(); ?>
 
-<div id="primary">
-<main id="main">
+<section id="primary">
+<main id="main" class="site-main" role="main">
 
-<!-- <php if (have_posts()) : while (have_posts()) : the_post(); ?> -->
+<?php while ( have_posts() ) : the_post(); ?>
+
 
 <!-- banner -->
 <section 
@@ -67,7 +69,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
 <!-- end banner materials -->
 
-<!-- <php endwhile; endif; ?> -->
+<?php endwhile; endif; ?>
 </main><!-- #main -->
 </div><!-- #primary -->
 
