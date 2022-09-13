@@ -19,75 +19,83 @@
 
                         <div class="row">
 
-                                <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/institucional')?>">
-                                        institucional
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/vocacional')?>">
-                                        vocacional
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/educacao')?>">
-                                        educação
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/paroquias')?>">
-                                        paróquias
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/caridade')?>">
-                                        caridade
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/dom-inocencio')?>">
-                                        dom inocêncio
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
-                                    style="background-color:#AF0101"
-                                    href="#">
-                                        revista mercê
-                                    </a>
-                                 </div>
-                                 <div class="col-3 my-1">
-                                    <a
-                                    class="w-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-0"
-                                    style="background-color:#AF0101"
-                                    href="<?php echo get_home_url( null, '/pastoral-do-empreendedor')?>">
-                                        pastoral do empreendedor
-                                    </a>
-                                 </div>
-                    
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/institucional' ) ?>">
+                                    institucional
+                                </a>
+                            </div>
 
-                                 <div class="col-2 py-1">
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/vocacional' ) ?>">
+                                    vocacional
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/educacao' ) ?>">
+                                    educação
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/paroquias' ) ?>">
+                                    paróquias
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/caridade' ) ?>">
+                                    caridade
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/dom-inocencio' ) ?>">
+                                    dom inocêncio
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
+                                style="background-color:#AF0101"
+                                href="#">
+                                    revista mercê
+                                </a>
+                            </div>
+
+                            <div class="col-3 my-1">
+                                <a
+                                class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-0"
+                                style="background-color:#AF0101"
+                                href="<?php echo get_home_url( null, '/pastoral-do-empreendedor' ) ?>">
+                                    pastoral do empreendedor
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 py-1">
                         <a
-                        class="w-100 h-100 d-flex justify-content-center align-items-center u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white py-2"
+                        class="w-100 h-100 d-flex justify-content-center align-items-center u-font-size-14 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
                         style="background-color:#AF0101"
                         href="#">
                             Acervo virtual <br>
