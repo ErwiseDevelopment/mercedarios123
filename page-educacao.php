@@ -513,7 +513,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 <?php echo get_field('tipo_da_obra')?>
                                             </p>
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                                <?php echo get_the_taxonomies('name')?>
+                                                <?php echo get_taxonomy($taxonomy)?>
                                             </p>
 
                                             <p 
