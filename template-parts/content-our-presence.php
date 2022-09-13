@@ -38,7 +38,8 @@
                                         </p>                                    
                                     </p>
                                 </div>
-                            
+                            <?php  endwhile;
+                            endif;?>
                             <!-- end loop -->
 
                             <div class="col-12">
