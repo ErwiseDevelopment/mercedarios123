@@ -147,7 +147,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     style="height:234px"
                     src="<?php echo get_field( 'imagem' ) ?>"
                     alt="<?php the_title() ?>">
-
+                <p class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
+                  <?php  echo var_dump($args) ?>
+                  <?php  echo var_dump($single_category) ?>
+                  <?php  echo var_dump($other_posts) ?>
+                </p>
                 </a>
             </div>
 <?php
