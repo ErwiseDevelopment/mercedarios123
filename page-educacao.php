@@ -513,13 +513,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 $post_categories_current = array();
 
                                                 foreach( $post_categories as $post_category ) {
-                                                    foreach( $terms as $term ) {
-                                                        
+                                                   
                                                             array_push( $post_categories_current, $post_category->name );
-                                                    }
+                                                    
                                                 }
 
-                                                echo  $post_category ;
+                                                echo  $post_category, $post_categories_current;
                                             ?>
                                                 
                                             </p>
