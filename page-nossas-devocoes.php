@@ -92,9 +92,23 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <php echo the_title() ?>
                         </h2> -->
 
-                        <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
-                            <?php echo the_content()?>
-                        </span>
+                       <!-- content -->
+<section class="mt-3 py-5">
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-12">
+
+            <span class="l-template-content__content d-block u-font-family-lato">
+                <?php the_content() ?>
+            </span>
+        </div>
+    </div>
+</div>
+</section>
+<!-- end content -->
                     </div>
 
                 </div>
