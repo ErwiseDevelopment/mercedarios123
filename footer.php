@@ -202,7 +202,7 @@
                         </li>
 
                         <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtuberounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
                             href="<?php echo get_field('youtube_redes', 'option')?>" <?php if (get_field('nova_guia_yt', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                 Youtube
                             </a>
