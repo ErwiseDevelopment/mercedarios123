@@ -93,55 +93,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </a>
                             </li>
                         </ul>
-
-                        <!--
-                            
-
-                            // $args = array(
-                            //     'posts_per_page' => -1,
-                            //     'post_type'      => 'devocoes',
-                            //     'order'          => 'DESC',
-                            //     'tax_query'      => array(
-                            //         array(
-                            //             'taxonomy' => 'santos',
-                            //             'field'    => 'slug',
-                            //             'terms'    => array( $category_current->slug )
-                            //         )
-                            //     )
-                            // );
-                        -->
-
                         <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
-                            <!-- Santos da Ordem -->
+                            
                             <?php echo $category_current->name; ?>
                         </h2>
-
-                        <!-- <p class="u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
-                            A espiritualidade mercedária, vivida intensamente dia 
-                            após dia nos conventos da Ordem, produziu frutos 
-                            extraordinários de santidade silenciosa e feitos heroicos 
-                            de martírio desde o início.
-                            
-                            <br><br>
-
-                            A redenção dos cativos em terras mouriscas colocava 
-                            constantemente os redentores mercedários em 
-                            situações iminentes de total comunhão com os 
-                            sofrimentos de Cristo Redentor.
-
-                            <br><br>
-
-                            São Pedro Nolasco proibiu categoricamente o uso dos 
-                            fundos da Ordem para qualquer outra coisa que não a 
-                            libertação de cativos cristãos. Fiel ao preceito de seu 
-                            Fundador, a Ordem da Mercês nunca labutou ou gastou 
-                            sua riqueza canonizando seus santos. E só os mártires 
-                            mercedários são numerosos demais para serem 
-                            contados! Os santos mercedários canonizados foram 
-                            aclamados pela primeira vez como santos pelos cristãos. 
-                            Só mais tarde a Sé Apostólica os elevou oficialmente 
-                            aos altares.
-                        </p> -->
 
                         <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                             <?php echo get_field( 'descricao', $category_current ) ?>
@@ -207,11 +162,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 </div><!-- #main -->
 </section><!-- #primary -->
-
-<img
-class="img-fluid"
-data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
-alt="Single Temas">
 
 <?php
 
