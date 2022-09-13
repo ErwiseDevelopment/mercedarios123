@@ -52,7 +52,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <!-- loop -->
                     <?php 
                                 $args = array(
-                                    'posts_per_page' => 99,
+                                    'posts_per_page' => 1,
                                     'post_type'      => 'acervo');
 
                                     $contents = new WP_Query( $args );
