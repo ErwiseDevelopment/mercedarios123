@@ -147,7 +147,7 @@
                                             $args = array(
                                             'posts_per_page' => 3,
                                             'post_type'     => 'post',
-                                            'category_name' => 'noticia+institucional',
+                                            'category_name' => 'institucional+noticias',
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
@@ -183,7 +183,7 @@
                                             $args = array(
                                             'posts_per_page' => 3,
                                             'post_type'     => 'post',
-                                            'category_name' => 'noticia+caridade',
+                                            'category_name' => 'caridade+noticias',
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
