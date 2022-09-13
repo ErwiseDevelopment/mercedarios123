@@ -22,19 +22,23 @@
                             </div>
 
                             <!-- loop -->
-                            <?php for( $i = 0; $i < 3; $i++ ) { ?>
+                            <?php  if( have_rows('nossa_presenca_pelo_mundo')):
+                                        while(have_rows('nossa_presenca_pelo_mundo')) : the_row();    
+                                
+                            ?>
                                 <div class="l-our-presence__column-child col-xl-4 d-flex flex-column align-items-center my-3 my-xl-0">
                                     <div class="l-our-presence__item rounded-circle">
                                         <p class="u-font-size-64 u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white mb-0">
-                                            04
+                                            <?php echo get_sub_field('valor')?>
                                         </p>                                    
                                     </div>
 
                                     <p class="l-our-presence__item__title u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center mt-3">
-                                        continentes
+                                        <?php echo get_sub_field('descricao')?>
+                                        </p>                                    
                                     </p>
                                 </div>
-                            <?php } ?>
+                            
                             <!-- end loop -->
 
                             <div class="col-12">
@@ -42,7 +46,7 @@
                                 class="w-100 d-flex justify-content-center align-items-center p-2"
                                 style="background-image: linear-gradient(to right, #D99D31, #946918)">
                                     <p class="u-font-size-20 u-font-family-cinzel text-center u-color-folk-white mb-0">
-                                        800 frades e estudantes de votos solenes
+                                    <?php echo get_field('frase_embaixo')?>
                                     </p>
                                 </div>
                             </div>
