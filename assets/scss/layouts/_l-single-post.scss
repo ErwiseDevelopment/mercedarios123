@@ -1,0 +1,16 @@
+$layout-name: 'l-single-post';
+
+.#{$layout-name} {
+    * {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    p, span, a {
+        font-size: 1.125rem;
+        color: #5B5B5B;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-folk-bold-marron;
+    }
+}

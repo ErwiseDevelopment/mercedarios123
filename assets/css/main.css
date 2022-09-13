@@ -2182,4 +2182,12 @@ button.swiper-pagination-bullet {
           transform: translateX(-50%);
   position: absolute; }
 
+.l-single-post * {
+  font-family: 'Lato', sans-serif; }
+.l-single-post p, .l-single-post span, .l-single-post a {
+  font-size: 1.125rem;
+  color: #5B5B5B; }
+.l-single-post h1, .l-single-post h2, .l-single-post h3, .l-single-post h4, .l-single-post h5, .l-single-post h6 {
+  color: #A50311; }
+
 /*# sourceMappingURL=main.css.map */
