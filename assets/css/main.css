@@ -2132,4 +2132,32 @@ button.swiper-pagination-bullet {
   .l-template-content__content h1 *, .l-template-content__content h2 *, .l-template-content__content h3 *, .l-template-content__content h4 *, .l-template-content__content h5 *, .l-template-content__content h6 * {
     font-family: 'Cinzel', sans-serif !important; }
 
+.l-collection__icon-download {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#CA932C), to(#966B19));
+  background-image: linear-gradient(to right, #CA932C, #966B19); }
+.l-collection__access {
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute; }
+
 /*# sourceMappingURL=main.css.map */
