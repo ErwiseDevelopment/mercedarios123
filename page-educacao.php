@@ -501,20 +501,25 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
 
                                     <div class="card-body mt-n5">
+
                                         <div class="u-bg-folk-dark-marron py-3">
+
                                             <h3 class="u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
                                                 <?php echo get_the_title()?>
                                             </h3>
 
                                             <div class="u-bg-folk-golden mx-auto" style="width:calc(100% - 150px);height:2px"></div>
+
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                             <?php
+                                            <?php
                                                 $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
                                                 $post_categories_current = array();
+                                                
                                                 $terms = get_terms( array(
                                                     'taxonomy' => 'comunidades-estados',
                                                     'hide_empty' => false,
                                                 ));
+
                                                 foreach( $post_categories as $post_category ) {
                                                     foreach( $terms as $term ) {
                                                         if( $post_category->name == $term->name )
