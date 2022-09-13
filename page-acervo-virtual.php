@@ -51,26 +51,47 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <!-- loop -->
                     <?php 
-                                $args = array(
-                                    'posts_per_page' => 1,
-                                    'post_type'      => 'acervo');
+                        $args = array(
+                            'posts_per_page' => -1,
+                            'post_type'      => 'acervo'
+                        );
 
-                                    $contents = new WP_Query( $args );
-                                   
-
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                ?>
-                        <div class="col-6">
-
-                            <div class="u-bg-folk-dark-marron">
-                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
-                                      <?php  echo get_field('descricao');?>
-                                 </h4>
-                            </div>
-                        </div>
+                        $collections = new WP_Query( $args );
                         
-                    <?php endwhile; endif; wp_reset_query();?>
+
+                        if( $collections->have_posts()):
+                            while ($collections->have_posts()) : $collections->the_post();
+                    ?>
+                                <div class="col-lg-6 my-4 py-4 py-lg-0">
+
+                                    <a 
+                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
+                                    href="<?php echo get_field( 'acessar' ) ?>"
+                                    target="<?php echo get_field( 'nova_guia' ) ?>"
+                                    rel="noreferrer noopener">
+                                        <span class="l-collection__icon-download">
+                                            <img
+                                            class="img-fluid"
+                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                            alt="Ícone download">
+                                        </span>
+
+                                        <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
+                                            <?php  echo get_field( 'descricao' ); ?>
+                                        </h4>
+
+                                        <p class="l-collection__access u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-golden hover:u-bg-folk-dark-marron mb-0 py-1 px-4">
+                                            Acessar
+                                        </p>
+                                    </a>
+                                </div>
+                        
+                    <?php 
+                            endwhile; 
+                        endif; 
+                        
+                        wp_reset_query();
+                    ?>
                     <!-- end loop -->
                 </div>
             </div>
