@@ -20,7 +20,7 @@
                                 <a href="<?php echo get_field('link_banner', 'option')?>" <?php if (get_field('nova_guia_banner', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                     <img
                                     class="img-fluid w-100"
-                                    src=<?php echo get_field('banner' ,'option')?>
+                                    src="<?php echo get_field('banner' ,'option')?>"
                                     alt="Banner Material">
                                 </a>
                             </div>
