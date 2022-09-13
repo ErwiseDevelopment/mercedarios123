@@ -519,7 +519,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     }
                                                 }
 
-                                                echo  $post_categories_current;
+                                                echo  $post_category ;
                                             ?>
                                                 
                                             </p>
