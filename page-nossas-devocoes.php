@@ -91,7 +91,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             
                             <php echo the_title() ?>
                         </h2> -->
-
+                        </div>
                        <!-- content -->
 <section class="mt-3 py-5">
 
@@ -109,7 +109,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </div>
 </section>
 <!-- end content -->
-                    </div>
+                    
 
                 </div>
             </div>
