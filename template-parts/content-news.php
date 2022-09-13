@@ -111,7 +111,7 @@
                                  $args = array(
                                     'posts_per_page' => 3,
                                     'post_type'     => 'post',
-                                    'category_name' => 'noticia + educacao',
+                                    'category_name' => 'educacao+noticia',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
