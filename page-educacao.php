@@ -323,7 +323,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  $args = array(
                                     'post_per_page' =>  9,
                                     'post_type'     => 'post',
-                                    'category_name' => 'blog-educacao',
+                                    'category_name' => 'blog+educacao',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
@@ -463,12 +463,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     //$editorial_id_current = 27;
 
                                     $args = array(
+                                        
                                         'posts_per_page' => -1,
                                         'post_type'      => 'comunidades',
                                         'order'          => 'DESC',
                                         'tax_query'      => array(
                                             array(
-                                                'taxonomy' => 'comunidades-categoria',
+                                                'taxonomy' => 'comunidades-categoria', 'comunidades-estados',
                                                 'field'    => 'slug',
                                                 'terms'    => array( $editorial_slug_current )
                                             )
@@ -510,6 +511,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
                                                 <?php echo get_field('tipo_da_obra')?>
+                                            </p>
+                                            <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
+                                                <?php echo get_the_taxonomies('name')?>
                                             </p>
 
                                             <p 
