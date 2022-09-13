@@ -511,7 +511,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                              <?php
                                                 $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
                                                 $post_categories_current = array();
-                                                $term = 'rio-de-janeiro';
+                                                $terms = get_terms( array(
+                                                    'taxonomy' => 'comunidades-estados',
+                                                    'hide_empty' => false,
+                                                ));
                                                 foreach( $post_categories as $post_category ) {
                                                     foreach( $terms as $term ) {
                                                         if( $post_category->name == $term->name )
