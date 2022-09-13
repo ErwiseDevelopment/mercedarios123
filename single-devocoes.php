@@ -99,11 +99,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <?php
-                        $post_thumbnail = get_the_post_thumbnail( 'post-thumbnail' );
-                    ?>
+                    <?php $post_thumbnail_url = get_the_post_thumbnail_url(); ?>
 
-                    <div class="col-lg-4">
+                    <div class="<?php echo $post_thumbnail_url ? 'col-lg-4' : 'd-none'; ?>">
 
                         <?php
                             $alt_title = get_the_title();
@@ -116,7 +114,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         ?>
                     </div>
 
-                    <div class="col-lg-8 mt-4 mt-lg-0">
+                    <div class="<?php echo $post_thumbnail_url ? 'col-lg-8 mt-4 mt-lg-0' : 'col-12'; ?>">
                         <span class="d-block u-font-size-18 xxl:u-font-size-20 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                             <?php the_content() ?>
                         </span>
