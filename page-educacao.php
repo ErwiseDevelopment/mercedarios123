@@ -511,11 +511,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                              <?php
                                                 $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
                                                 $post_categories_current = array();
-                                               
-                                              
+                                                
+                                                foreach( $post_categories as $post_category ) {
+                                                    
+                                                        if( $post_category->name == $post_categories->name )
                                                             array_push( $post_categories_current, $post_category->name );
-                                                                                                
-                                                echo $post_categories;
+                                                    
+                                                }
+                                                echo $post_categories_current[0];
                                                 //echo var_dump($post_category, $post_categories_current);
                                             ?>
                                                 
