@@ -56,7 +56,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     'post_type'      => 'acervo');
 
                                     $contents = new WP_Query( $args );
-                                    $cats = array();
+                                   
 
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
@@ -64,11 +64,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div class="col-6">
 
                             <div class="u-bg-folk-dark-marron">
-                                <?php the_excerpt()?>
+                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                                      <?php  the_excerpt()?>
+                                 </h4>
                             </div>
                         </div>
                         
-                    <?php endwhile; endif; ?>
+                    <?php endwhile; endif; wp_reset_query();?>
                     <!-- end loop -->
                 </div>
             </div>
