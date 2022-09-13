@@ -84,7 +84,7 @@
                         <a href="<?php echo get_home_url(); ?>">
                             <img
                             class="img-fluid"
-                            src="<?php echo get_field('logo', 'option')?>>"
+                            src="<?php echo get_field('logo', 'option')?>"
                             alt="">
                         </a>
                     </div>
