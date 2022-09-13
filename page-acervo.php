@@ -16,7 +16,7 @@ get_header();
 <div id="primary">
 <main id="main">
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<!-- <php if (have_posts()) : while (have_posts()) : the_post(); ?> -->
 
 <!-- banner -->
 <section 
@@ -67,7 +67,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
 <!-- end banner materials -->
 
-<?php endwhile; endif; ?>
+<!-- <php endwhile; endif; ?> -->
 </main><!-- #main -->
 </div><!-- #primary -->
 
