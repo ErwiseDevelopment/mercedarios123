@@ -111,7 +111,7 @@
                                  $args = array(
                                     'posts_per_page' => 3,
                                     'post_type'     => 'post',
-                                    'category_name' => 'noticia' + 'educacao',
+                                    'category_name' => 'noticia + educacao',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
@@ -147,7 +147,7 @@
                                             $args = array(
                                             'posts_per_page' => 3,
                                             'post_type'     => 'post',
-                                            'category_name' => 'noticia'+ 'institucional',
+                                            'category_name' => 'noticia+institucional',
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
@@ -183,7 +183,7 @@
                                             $args = array(
                                             'posts_per_page' => 3,
                                             'post_type'     => 'post',
-                                            'category_name' => 'noticia' + 'caridade',
+                                            'category_name' => 'noticia+caridade',
                                             'order'         => 'DESC',
                                             );
                                             $contents = new WP_Query( $args );
