@@ -171,7 +171,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  $args = array(
                                     'post_per_page' => 21,
                                     'post_type'     => 'post',
-                                    'category_name' => 'noticia-paroquias',
+                                    'category_name' => 'paroquias+noticias',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
@@ -282,7 +282,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="#">
+                                href="<?php echo get_home_url( null, 'noticias/?=paroquias' ) ?>">
                                     Todas os Notícias
                                 </a>
                             </div>
@@ -323,7 +323,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  $args = array(
                                     'post_per_page' =>  9,
                                     'post_type'     => 'post',
-                                    'category_name' => 'blog-paroquias',
+                                    'category_name' => 'blog+paroquias',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
@@ -422,7 +422,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
                                 href="<?php echo get_home_url( null, 'blog/?=caridade' ) ?>">
-                                    Todas os conteúdos
+                                    Todos os conteúdos
                                 </a>
                             </div>
                         </div>

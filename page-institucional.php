@@ -106,7 +106,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  $args = array(
                                     'post_per_page' => 21,
                                     'post_type'     => 'post',
-                                    'category_name' => 'noticia-educacao',
+                                    'category_name' => 'institucional+noticias',
                                     'order'         => 'DESC',
                                  );
                                     $contents = new WP_Query( $args );
@@ -217,7 +217,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="#">
+                                href="<?php echo get_home_url( null, 'noticias/?=institucional' ) ?>">
                                     Todas os Notícias
                                 </a>
                             </div>
