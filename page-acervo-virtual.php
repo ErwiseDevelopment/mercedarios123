@@ -17,7 +17,7 @@ get_header(); ?>
 <section id="primary">
 <main id="main" class="site-main" role="main">
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 <!-- banner -->
