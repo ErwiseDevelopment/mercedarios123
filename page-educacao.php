@@ -460,7 +460,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <!-- slide -->
                         <?php 
                                     $editorial_slug_current = 'educacao';
-                                    //$editorial_id_current = 27;
+                                    $editorial_id_current = get_taxonomy('comunidades-estados');
 
                                     $args = array(
                                         
@@ -471,10 +471,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             array(
                                                 'taxonomy' => 'comunidades-categoria', 'comunidades-estados',
                                                 'field'    => 'slug',
-                                                'terms'    => array( $editorial_slug_current )
+                                                'terms'    => array( $editorial_slug_current)
                                             )
                                         )
-                                    );
+                                            );
 
                                     $communities = new WP_Query( $args );
 
@@ -513,8 +513,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 <?php echo get_field('tipo_da_obra')?>
                                             </p>
                                             <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                                <?php $rental_features = get_taxonomy( 'comunidades-estados' );
-                                                echo $rental_features?>
+                                                <?php echo $editorial_id_current?>
                                             </p>
 
                                             <p 
