@@ -303,8 +303,8 @@
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="#">
-                                    Todas as Notícias
+                                href="<?php echo get_home_url( null, '/noticias' ) ?>">
+                                    Todos as Notícias
                                 </a>
                             </div>
                         </div>

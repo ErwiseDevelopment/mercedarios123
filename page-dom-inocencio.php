@@ -322,54 +322,54 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div class="row">
 
 <!-- loop -->
-<?php 
-$editorial_slug_current = 'paroquias';
-//strtolower(get_the_title());
+                <?php 
+                $editorial_slug_current = 'dom-inocencio';
+                //strtolower(get_the_title());
 
-$args = array(
-'posts_per_page' => 1,
-'post_type'      => 'Galeria',
-'tax_query'      => array(
-    array(
-        'taxonomy' => 'galeria-categoria',
-        'field'    => 'slug',
-        'terms'    => array( $editorial_slug_current )
-    )
-)
-);
+                $args = array(
+                'posts_per_page' => 1,
+                'post_type'      => 'Galeria',
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => 'galeria-categoria',
+                        'field'    => 'slug',
+                        'terms'    => array( $editorial_slug_current )
+                    )
+                )
+                );
 
-$gallery = new WP_Query( $args );
-$count = 0;
+                $gallery = new WP_Query( $args );
+                $count = 0;
 
-if( $gallery->have_posts() ) :
-while( $gallery->have_posts() ) : $gallery->the_post();
+                if( $gallery->have_posts() ) :
+                while( $gallery->have_posts() ) : $gallery->the_post();
 
-    $photos = get_field( 'galeria' );
+                    $photos = get_field( 'galeria' );
 
-    if( $photos ) :
-        foreach( $photos as $photo ) :     
-            $count++;
-?>
-    <div class="col-md-4 my-2">
-        <a 
-        class="l-photos__photo overflow-hidden position-relative d-block" 
-        href="<?php the_permalink() ?>">
-            <img
-            class="img-fluid w-100 u-object-fit-cover"
-            src="<?php echo $photo['url'] ?>"
-                alt="<?php echo $photo['title']; ?>">
-        </a>
-     </div>
-    <?php
-            if( $count == 12 )
-                break;
-        endforeach;
-    endif;
-endwhile;
-endif;
+                    if( $photos ) :
+                        foreach( $photos as $photo ) :     
+                            $count++;
+                ?>
+                    <div class="col-md-4 my-2">
+                        <a 
+                        class="l-photos__photo overflow-hidden position-relative d-block" 
+                        href="<?php the_permalink() ?>">
+                            <img
+                            class="img-fluid w-100 u-object-fit-cover"
+                            src="<?php echo $photo['url'] ?>"
+                                alt="<?php echo $photo['title']; ?>">
+                        </a>
+                    </div>
+                    <?php
+                            if( $count == 12 )
+                                break;
+                        endforeach;
+                    endif;
+                endwhile;
+                endif;
 
-wp_reset_query();
-?>
+                wp_reset_query();
+                ?>
 <!-- end loop -->
 </div>
 </div>

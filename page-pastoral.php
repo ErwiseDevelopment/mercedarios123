@@ -258,7 +258,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <!-- loop -->
                     <?php 
-                    $editorial_slug_current = 'paroquias';
+                    $editorial_slug_current = 'pastoral';
                     //strtolower(get_the_title());
 
                     $args = array(

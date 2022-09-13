@@ -259,7 +259,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         
                         <!-- slide -->
                         <?php 
-                                    $editorial_slug_current = 'paroquias';
+                                    $editorial_slug_current = 'institucional';
                                     //$editorial_id_current = 27;
 
                                     $args = array(

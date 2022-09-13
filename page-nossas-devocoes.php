@@ -159,19 +159,45 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
             <div class="col-12">
 
-                <div class="row justify-content-center">
+<div class="row">
 
-                    <?php for( $i = 0; $i < 7; $i++ ) { ?>
-                        <div class="col-4 my-2">
-                            <a href="#">
-                                <img
-                                class="img-fluid w-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/martires.png">
-                            </a>
-                        </div>
-                    <?php } ?>
-                </div>  
-            </div>
+    <?php
+        $args = array(
+            'posts_per_page' => -1,
+            'post_type'      => $post->post_type,
+            'order'          => 'DESC',
+            'post__not_in'   => array( $post->ID),
+            'tax_query'      => array(
+                array(
+                    'taxonomy' => 'santos',
+                    'field'    => 'slug',
+                    'terms'    => array( $single_category->slug )
+                )
+            )
+        );
+
+        $other_posts = new WP_Query( $args );
+
+        if( $other_posts->have_posts() ) :
+            while( $other_posts->have_posts() ) : $other_posts->the_post();
+    ?>
+                <div class="col-lg-4 my-2">
+                    <a href="<?php the_permalink() ?>">
+                        <img
+                        class="img-fluid w-100 u-object-fit-cover"
+                        style="height:234px"
+                        src="<?php echo get_field( 'imagem' ) ?>"
+                        alt="<?php the_title() ?>">
+                    </a>
+                </div>
+    <?php
+            endwhile;
+        endif;
+
+        wp_reset_query();
+    ?>
+</div>  
+</div>
         </div>
     </div>
 </section>
