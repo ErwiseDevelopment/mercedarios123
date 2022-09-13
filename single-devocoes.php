@@ -92,8 +92,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     </li>
                 </ul>
 
-                <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
-                    São Raimundo Nonato
+                <h2 class="u-font-size-34 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
+                    <!-- São Raimundo Nonato -->
+                    <?php the_title() ?>
                 </h2>
 
                 <div class="row">
@@ -102,7 +103,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         $post_thumbnail = get_the_post_thumbnail( 'post-thumbnail' );
                     ?>
 
-                    <div class="<?php echo $post_thumbnail ? 'col-4' : 'd-none'; ?>">
+                    <div class="col-lg-4">
 
                         <?php
                             $alt_title = get_the_title();
@@ -115,8 +116,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         ?>
                     </div>
 
-                    <div class="<?php echo $post_thumbnail ? 'col-8' : 'col-12'; ?>">
-                        <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
+                    <div class="col-lg-8 mt-4 mt-lg-0">
+                        <span class="d-block u-font-size-18 xxl:u-font-size-20 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                             <?php the_content() ?>
                         </span>
                     </div>
