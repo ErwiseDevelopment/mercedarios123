@@ -55,10 +55,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end content -->
 
-<!-- banner materials -->
-<?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
-<!-- end banner materials -->
-
 <?php endwhile; endif; ?>
 </main><!-- #main -->
 </div><!-- #primary -->

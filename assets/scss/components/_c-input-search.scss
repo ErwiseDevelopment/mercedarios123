@@ -1,0 +1,26 @@
+$component-name: 'c-input-search';
+
+.#{$component-name} {
+    width: 100%;
+    border: 1px solid $color-folk-dark-marron !important;
+    outline: none;
+    box-shadow: none;
+    display: block;
+
+    &__icon {
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        position: absolute;
+        font-size: 0;
+        cursor: pointer;
+        
+        &::before {
+            content: '\f002';
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Font Awesome 5 Free';
+            color: #0B2139;
+        }
+    }
+}

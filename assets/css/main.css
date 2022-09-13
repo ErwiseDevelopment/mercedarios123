@@ -15,7 +15,7 @@ body {
 a:focus,
 input:focus,
 button:focus {
-  border: 0 !important;
+  border: 0;
   outline: none !important; }
 
 /**
@@ -1912,6 +1912,28 @@ button.swiper-pagination-bullet {
   width: 30px !important; }
 .px\:u-w-32 {
   width: 32px !important; }
+
+.c-input-search {
+  width: 100%;
+  border: 1px solid #620000 !important;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: block; }
+  .c-input-search__icon {
+    top: 50%;
+    right: 2rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+    font-size: 0;
+    cursor: pointer; }
+    .c-input-search__icon::before {
+      content: '\f002';
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Font Awesome 5 Free';
+      color: #0B2139; }
 
 .c-card-footer-absolute {
   width: 100%;
