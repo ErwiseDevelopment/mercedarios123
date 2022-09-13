@@ -22,7 +22,7 @@ get_header(); ?>
 
 <!-- banner -->
 <section class="w-100">
-<?php echo do_shortcode( '[rev_slider alias="educacao"][/rev_slider]' ); ?>
+<?php echo do_shortcode( '[rev_slider alias="institucional"][/rev_slider]' ); ?>
 </section>
 <!-- end banner -->
 
