@@ -514,7 +514,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 
                                                 foreach( $post_categories as $post_category ) {
                                                     
-                                                        if( $post_category->name == $post_categories->name )
+                                                        if( $post_category->name)
                                                             array_push( $post_categories_current, $post_category->name );
                                                     
                                                 }
