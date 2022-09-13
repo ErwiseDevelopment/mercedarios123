@@ -23,65 +23,66 @@
 
                 <div class="col-12">
 
-                    
                     <?php 
-                                 $args = array(
-                                    'posts_per_page' => 1,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'noticia-destaque',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $posts_current = array();
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'post_type'      => 'post',
+                            'category_name'  => 'noticia-destaque',
+                            'order'          => 'DESC',
+                        );
 
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                        array_push($posts_current, get_the_ID());
-                                ?>
-                    <div class="row">
-                        <div class="col-xl-7">
-                            <?php
-                            $alt_title = get_the_title();
-                            the_post_thumbnail('post-thumbnail', 
-                            array(
-                                'class' => 'img-fluid w-100 h-100',
-                                'alt'   => $alt_title
-                                ))
-                            ?>
-                        </div>
+                        $contents = new WP_Query( $args );
+                        $posts_current = array();
 
-                        <div class="col-xl-5 mt-3 mt-xl-0">
-                            
-                            <p class="u-line-height-100 u-font-size-19 xxl:u-font-size-22 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-4">
-                                <span class="u-font-weight-medium u-font-family-lato">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                <?php echo get_date_format('d/m/Y', $post)?>
-                            </p>
+                        if( $contents->have_posts()):
+                            while ($contents->have_posts()) : $contents->the_post();
+                                array_push($posts_current, get_the_ID());
+                    ?>
+                                <div class="row">
 
-                            <h3 class="u-font-size-20 xl:u-font-size-26 xxl:u-font-size-32 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
-                               <?php echo the_title() ?> 
-                            </h3>
+                                    <div class="col-xl-7">
+                                        <?php
+                                            $alt_title = get_the_title();
+                                            the_post_thumbnail('post-thumbnail', 
+                                                array(
+                                                    'class' => 'img-fluid w-100 h-100',
+                                                    'alt'   => $alt_title
+                                                ));
+                                        ?>
+                                    </div>
 
-                            <span class="u-font-size-16 xl:u-font-size-20 xxl:u-font-size-26 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-white">
-                                <?php the_excerpt() ?>
-                            </span>
+                                    <div class="col-xl-5 mt-3 mt-xl-0">
+                                        
+                                        <p class="u-line-height-100 u-font-size-19 xxl:u-font-size-22 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-4">
+                                            <span class="u-font-weight-medium u-font-family-lato">por</span>  <?php echo get_the_author_meta( 'user_firstname' ) ?> <br>
+                                            <?php echo get_date_format( 'd/m/Y', $post )?>
+                                        </p>
 
-                            <div class="row">
+                                        <h3 class="u-font-size-20 xl:u-font-size-26 xxl:u-font-size-32 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
+                                            <?php echo the_title() ?> 
+                                        </h3>
 
-                                <div class="col-8 col-xl-6 mt-3">
-                                    <a
-                                    class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-3"
-                                    href="<?php the_permalink() ?>">
-                                        Ler mais
-                                    </a>    
+                                        <span class="u-font-size-16 xl:u-font-size-20 xxl:u-font-size-26 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-white">
+                                            <?php the_excerpt() ?>
+                                        </span>
+
+                                        <div class="row">
+
+                                            <div class="col-8 col-xl-6 mt-3">
+                                                <a
+                                                class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-3"
+                                                href="<?php the_permalink() ?>">
+                                                    Ler mais
+                                                </a>    
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
                     <?php 
-                    endwhile;
-                endif;
-                wp_reset_query();
-                
+                            endwhile;
+                        endif;
+
+                        wp_reset_query();
                     ?>
                 </div>
             </div>
@@ -219,70 +220,73 @@
                         
                         <div class="row">
 
-                        <?php 
-                                 $args = array(
+                            <?php 
+                                $args = array(
                                     'posts_per_page' => 4,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'noticia-destaque',
-                                    'order'         => 'DESC',
+                                    'post_type'      => 'post',
+                                    'category_name'  => 'noticia-destaque',
+                                    'order'          => 'DESC',
                                     'post__not_in'   => $posts_current,
-                                 );
-                                    $contents = new WP_Query( $args );
-                                   
+                                );
 
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
+                                $contents = new WP_Query( $args );
+
+                                if( $contents->have_posts()):
+                                    while ($contents->have_posts()) : $contents->the_post();
                                         
-                                ?>
-                                <div class="col-md-6 mb-5">
+                            ?>
+                                        <div class="col-md-6 mb-5">
 
-                                    <a 
-                                    class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                    href="<?Php the_permalink()?>">
+                                            <a 
+                                            class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
+                                            href="<?php the_permalink() ?>">
 
-                                        <div class="card-img">
-                                        <?php
-                                            $alt_title = get_the_title();
-                                            the_post_thumbnail('post-thumbnail', 
-                                            array(
-                                                'class' => 'img-fluid w-100 h-100',
-                                                'alt'   => $alt_title
-                                                ))
-                                            ?>
-                                        </div>
-
-                                        <div class="card-body">
-
-                                            <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                                <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                                <?php echo get_date_format('d/m/Y', $post)?>
-                                            </p>
-
-                                            <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                                <?php echo the_title()?>
-                                            </h4>
-
-                                            <span class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                                <?php the_excerpt()?>
-                                            </span>
-                                        </div>
-
-                                        <div class="c-card-footer-absolute card-footer">
-
-                                            <div class="row justify-content-center">
-
-                                                <div class="col-6">
-                                                    <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
-                                                        Ler mais
-                                                    </p>
+                                                <div class="card-img">
+                                                    <?php
+                                                        $alt_title = get_the_title();
+                                                        the_post_thumbnail('post-thumbnail', 
+                                                            array(
+                                                            'class' => 'img-fluid w-100 h-100',
+                                                            'alt'   => $alt_title
+                                                            ));
+                                                    ?>
                                                 </div>
-                                            </div>
+
+                                                <div class="card-body">
+
+                                                    <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
+                                                        <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
+                                                        <?php echo get_date_format('d/m/Y', $post)?>
+                                                    </p>
+
+                                                    <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                                                        <?php echo the_title()?>
+                                                    </h4>
+
+                                                    <span class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                                        <?php the_excerpt()?>
+                                                    </span>
+                                                </div>
+
+                                                <div class="c-card-footer-absolute card-footer">
+
+                                                    <div class="row justify-content-center">
+
+                                                        <div class="col-6">
+                                                            <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
+                                                                Ler mais
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
-                            <?php endwhile;
-                            endif;
-                            wp_reset_query(); ?>
+                            <?php 
+                                    endwhile;
+                                endif;
+                                
+                                wp_reset_query(); 
+                            ?>
                         </div>
                     </div>
                 </div>

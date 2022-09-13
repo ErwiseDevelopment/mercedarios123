@@ -30,6 +30,7 @@
         if( $post->post_name == 'inicio' ) :
             echo get_template_part( 'template-parts/content', 'newsletter' );
         else :
+            echo get_template_part( 'template-parts/content', 'banner-materials' );
             echo get_template_part( 'template-parts/content', 'newsletter-general' );
         endif; 
     ?>
