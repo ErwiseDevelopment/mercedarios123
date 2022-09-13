@@ -47,7 +47,7 @@
                                 class="w-100 d-flex justify-content-center align-items-center p-2"
                                 style="background-image: linear-gradient(to right, #D99D31, #946918)">
                                     <p class="u-font-size-20 u-font-family-cinzel text-center u-color-folk-white mb-0">
-                                    <?php echo get_field('frase_embaixo')?>
+                                    <?php echo get_field('frase_embaixo'), 'option' ?>
                                     </p>
                                 </div>
                             </div>

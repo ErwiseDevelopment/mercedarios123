@@ -58,30 +58,28 @@
 
                         <div class="col-lg-4 my-2 my-lg-0">
 
-                            <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white pl-4">
+                            <!-- <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-white pl-4">
                                 Cúria Provincial do Brasil
-                            </h4>
+                            </h4> -->
 
                             <p class="d-flex">
                                 <span class="u-icon__free u-icon__local before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
                                 <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
-                                    Avenida L2 Sul, Quadra 615, Bloco D <br>
-                                    CEP 700200-750 <br>
-                                    Brasília – DF
+                                    <?php echo get_field('endereco', 'option')?>
                                 </span>
                             </p>
 
                             <p class="d-flex">
                                 <span class="u-icon__free u-icon__phone before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
                                 <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
-                                    61 3346 3890
+                                     <?php echo get_field('telefone_cabecalho', 'option')?>
                                 </span>
                             </p>
 
                             <p class="d-flex">
                                 <span class="u-icon__free u-icon__envelope before::u-font-size-20 u-font-weight-semibold u-color-folk-white"></span>
                                 <span class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white pl-2">
-                                    faleconosco@mercedarios.com.br
+                                    <?php echo get_field('e-mail_cabecalho', 'option')?>
                                 </span>
                             </p>
                         </div>
@@ -95,52 +93,66 @@
                             <div class="d-flex">
                                 <ul class="mb-0 pl-0">
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_institucional', 'option')?>">
                                             Institucional
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_vocacional', 'option')?>">
+                                            Vocacional
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_educacao', 'option')?>">
+                                            Educação
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_paroquias', 'option')?>">
+                                             Paróquias
                                         </a>
                                     </li>
                                 </ul>
 
                                 <ul class="mb-0">
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_caridade', 'option')?>">
+                                            Caridade
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_dominocencio', 'option')?>">
+                                            Dom Inocêncio
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_revistamerce', 'option')?>">
+                                            Revista Mercê
                                         </a>
                                     </li>
 
                                     <li class="u-list-style-none mb-2">
-                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                            Institucional
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_empreendedor', 'option')?>">
+                                            Pastoral do Empreendedor
+                                        </a>
+                                    </li>
+                                    <li class="u-list-style-none mb-2">
+                                        <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
+                                        href="<?php echo get_field('editoria_acervo', 'option')?>">
+                                        Acervo Virtual
                                         </a>
                                     </li>
                                 </ul>
@@ -155,15 +167,15 @@
                             <ul class="mb-0 pl-0">
                                 <li class="u-list-style-none mb-2">
                                     <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
-                                        Política de privacidade
+                                       <?php echo get_field('links', 'option') ?>
                                     </a>
                                 </li>
 
-                                <li class="u-list-style-none mb-2">
+                                <!-- <li class="u-list-style-none mb-2">
                                     <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white">
                                         Política de Cookies
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -176,25 +188,29 @@
                     <ul class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
                                     
                         <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
+                            href="<?php echo get_field('facebook_redes', 'option')?>" <?php if (get_field('nova_guia_face', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                 Facebook
                             </a>
                         </li>
 
                         <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
+                            href="<?php echo get_field('instagram_redes', 'option')?>" <?php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                 Instagram
                             </a>
                         </li>
 
                         <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
+                            href="<?php echo get_field('youtube_redes', 'option')?>" <?php if (get_field('nova_guia_yt', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                 Youtube
                             </a>
                         </li>
 
                         <li class="u-list-style-none">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" href="#" target="_blank" rel="noreferrer noopener"
+                            href="<?php echo get_field('whatsapp_redes', 'option')?>" <?php if (get_field('nova_guia_wpp', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                                 Whatsapp
                             </a>
                         </li>

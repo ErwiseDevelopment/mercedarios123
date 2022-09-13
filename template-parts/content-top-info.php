@@ -27,7 +27,7 @@
                                         </span>
 
                                         <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            faleconosco@mercedarios.com.br
+                                            <?php echo get_field('e-mail_cabecalho', 'option')?>
                                         </span>
                                     </div>
                                 </a>
@@ -49,7 +49,7 @@
                                         </span>
 
                                         <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            61 3346 3890
+                                            <?php echo get_field('telefone_cabecalho', 'option')?>
                                         </span>
                                     </div>
                                 </a>
@@ -71,7 +71,7 @@
                                         </span>
 
                                         <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            Avenida L2 Sul, Quadra 615, Brasília - DF
+                                           <?php echo get_field('endereco-reduzido', 'option')?> 
                                         </span>
                                     </div>
                                 </a>
@@ -81,10 +81,10 @@
 
                     <div class="col-xl-4 order-1 order-xl-2 d-flex justify-content-center align-items-center">
 
-                        <a href="#">
+                        <a href="<?php echo get_home_url(); ?>">
                             <img
                             class="img-fluid"
-                            src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/cropped-logo1.png' ) ?>"
+                            src="<?php echo get_field('logo', 'option')?>>"
                             alt="">
                         </a>
                     </div>
@@ -98,8 +98,7 @@
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
+                                href="<?php echo get_field('facebook_redes', 'option')?>" <?php if (get_field('nova_guia_face', 'option') == '1') :?>  target="_blank" <?php endif; ?>
                                 rel="noreferrer noopener">
                                     Facebook
                                 </a>
@@ -108,8 +107,7 @@
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
+                                href="<?php echo get_field('instagram_redes', 'option')?>" <?php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <?php endif; ?>
                                 rel="noreferrer noopener">
                                     Instagram
                                 </a>
@@ -118,9 +116,7 @@
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
+                                href="<?php echo get_field('youtube_redes', 'option')?>" <?php if (get_field('nova_guia_yt', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
                                     Youtube
                                 </a>
                             </li>
@@ -128,9 +124,7 @@
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
+                                href="<?php echo get_field('whatsapp_redes', 'option')?>" <?php if (get_field('nova_guia_wpp', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
                                     Whatsapp
                                 </a>
                             </li>
