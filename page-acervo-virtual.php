@@ -17,7 +17,6 @@ get_header(); ?>
 <section id="primary">
 <main id="main" class="site-main" role="main">
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 <!-- banner -->
@@ -51,12 +50,25 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <!-- loop -->
+                    <?php 
+                                $args = array(
+                                    'posts_per_page' => 99,
+                                    'post_type'      => 'acervo');
+
+                                    $contents = new WP_Query( $args );
+                                    $cats = array();
+
+                                    if( $contents->have_posts()):
+                                        while ($contents->have_posts()) : $contents->the_post();
+                                ?>
                         <div class="col-6">
 
                             <div class="u-bg-folk-dark-marron">
-                                aa
+                                <?php the_excerpt()?>
                             </div>
                         </div>
+                        
+                    <?php endwhile; endif; ?>
                     <!-- end loop -->
                 </div>
             </div>
@@ -69,7 +81,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
 <!-- end banner materials -->
 
-<?php endwhile; endif; ?>
 </main><!-- #main -->
 </div><!-- #primary -->
 
