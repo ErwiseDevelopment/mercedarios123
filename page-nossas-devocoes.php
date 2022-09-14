@@ -126,8 +126,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     $args = array(
         'posts_per_page' => -1,
         'post_type'      => 'devocoes',
-        'order'          => 'DESC',
-        
+        'order'          => 'DESC',       
         'tax_query'      => array(
             array(
                 'taxonomy' => 'santos',
@@ -143,18 +142,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         while( $other_posts->have_posts() ) : $other_posts->the_post();
 ?>
             <div class="col-lg-4 my-2">
-                <a href="<?php the_permalink() ?>">
-                    <img
-                    class="img-fluid w-100 u-object-fit-cover"
-                    style="height:234px"
-                    src="<?php echo get_field( 'imagem' ) ?>"
-                    alt="<?php the_title() ?>">
+                
                 <p class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                   <?php  echo var_dump($args) ?>
                   <?php  echo var_dump($single_category) ?>
                   <?php  echo var_dump($other_posts) ?>
                 </p>
-                </a>
+               
             </div>
 <?php
         endwhile;
