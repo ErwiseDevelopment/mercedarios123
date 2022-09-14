@@ -2014,6 +2014,44 @@ button.swiper-pagination-bullet {
     position: absolute;
     background-color: #A50311; }
 
+.l-navbar .nav-item {
+  margin: 0 .2rem; }
+.l-navbar .nav-link {
+  line-height: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: #640000 !important; }
+.l-navbar .dropdown:hover .dropdown-menu {
+  top: 100%;
+  opacity: 1;
+  visibility: visible; }
+.l-navbar .dropdown-menu {
+  top: 50%;
+  padding-top: 1rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+  background-color: #A50311; }
+  .l-navbar .dropdown-menu .nav-item {
+    margin: 0; }
+  .l-navbar .dropdown-menu .dropdown-item {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #FFF !important; }
+    .l-navbar .dropdown-menu .dropdown-item:hover {
+      background-color: #D99E32; }
+
 .l-menu-editorial__item::before {
   content: '';
   width: 20px;

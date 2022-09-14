@@ -43,7 +43,7 @@
     <!-- top info -->
     <?php echo get_template_part( 'template-parts/content', 'top-info' ) ?>
     <!-- end top info -->
-    
+
     <!-- menu -->
     <?php 
         if( $post->post_title != 'Início' ) : 
@@ -52,13 +52,13 @@
     ?>
     <!-- end menu -->
 
-    <header id="masthead" class="header site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+    <header id="masthead" class="header site-header navbar-static-top py-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container">
 
-            <nav class="d-none navbar navbar-expand-xl p-0">
+            <nav class="l-navbar navbar navbar-expand-xl p-0">
 
-                <div class="navbar-brand">
+                <div class="navbar-brand d-none">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
                             <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
@@ -78,7 +78,7 @@
                 'theme_location'    => $post->post_name,
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'container_class' => 'collapse navbar-collapse justify-content-center',
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
