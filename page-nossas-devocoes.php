@@ -104,12 +104,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <span class="l-template-content__content d-block u-font-family-lato">
                                         <?php the_content() ?>
                                     </span>
-                                </div>
-                            </div>
-                        </div>
-                        </section>
-                        <!-- end content -->
-                        <?php
+                </div>                    
+            </div>
+            <div class="col-12">
+
+                <div class="row">
+
+                    <?php
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => $post->post_type,
@@ -144,12 +145,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         wp_reset_query();
                     ?>
-                </div>                                    
-            </div>               
+                </div>  
+            </div>
         </div>
     </div>
 </section>
-<!-- end content -->
+                        <!-- end content -->
+                    
 
 <?php endwhile; ?>
 
