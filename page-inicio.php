@@ -20,7 +20,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <!-- menu -->
-<?php echo get_template_part( 'template-parts/content', 'menu-editorials' ) ?>
+<?php echo get_template_part( 'template-parts/content', 'home-menu-editorials' ) ?>
 <!-- end menu -->
 
 

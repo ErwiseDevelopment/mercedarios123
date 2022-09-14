@@ -43,6 +43,14 @@
     <!-- top info -->
     <?php echo get_template_part( 'template-parts/content', 'top-info' ) ?>
     <!-- end top info -->
+    
+    <!-- menu -->
+    <?php 
+        if( $post->post_title != 'Início' ) : 
+            echo get_template_part( 'template-parts/content', 'menu-editorials' ) ;
+        endif;
+    ?>
+    <!-- end menu -->
 
     <header id="masthead" class="header site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
@@ -67,7 +75,7 @@
 
                 <?php
                 wp_nav_menu(array(
-                'theme_location'    => 'primary',
+                'theme_location'    => $post->post_name,
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
                 'container_class' => 'collapse navbar-collapse justify-content-end',

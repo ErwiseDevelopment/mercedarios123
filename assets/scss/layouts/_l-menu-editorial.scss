@@ -1,0 +1,31 @@
+$layout-name: 'l-menu-editorial';
+
+.#{$layout-name} {
+    &__item {
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            top: calc(100% - 10px);
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: $color-folk-golden !important;  
+            z-index: 99;
+        }
+
+        &:hover,
+        &.is-active {
+            background-color: $color-folk-golden !important;  
+        }
+
+        &.is-active {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

@@ -2014,6 +2014,25 @@ button.swiper-pagination-bullet {
     position: absolute;
     background-color: #A50311; }
 
+.l-menu-editorial__item::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: calc(100% - 10px);
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #D99D32 !important;
+  z-index: 99; }
+.l-menu-editorial__item:hover, .l-menu-editorial__item.is-active {
+  background-color: #D99D32 !important; }
+.l-menu-editorial__item.is-active::before {
+  opacity: 1;
+  visibility: visible; }
+
 .l-news__background {
   background-color: #A50311; }
   .l-news__background::before {
