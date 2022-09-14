@@ -14,7 +14,26 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section>
+<!-- banner -->
+<section 
+class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12 px-0">
+                <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
+                    Notícias
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner -->
+
+<section class="py-5">
 
 	<div class="container">
 
@@ -24,7 +43,7 @@ get_header(); ?>
 
 				<div class="row">
 
-					<div class="col-9">
+					<div class="col-8">
 						<?php
 							$alt_title = get_the_title();
 							the_post_thumbnail( 'post-thumbnail',
@@ -51,6 +70,109 @@ get_header(); ?>
 						<span class="l-single-post">
 							<?php the_content() ?>
 						</span>
+					</div>
+
+					<div class="col-4 pt-3">
+                
+						<div class="row">
+
+							<div class="col-12">
+
+								<div class="border py-4 px-3">
+
+									<div class="row">
+
+									<div class="col-12 mb-3">
+
+										<form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
+											<input
+											class="c-input-search py-3 px-2"
+											type="search"
+											name="s">
+											
+											<input 
+											class="d-none"
+											type="submit"
+											id="submit">
+
+											<label 
+											class="c-input-search__icon"
+											for="submit">
+												Ícone pesquisa
+											</label>
+										</form>
+									</div>
+
+									<div class="col-12 my-2">
+										<h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
+											Categorias
+										</h5>
+									</div>
+
+									<!-- loop -->
+									<?php for( $i = 0; $i < 8; $i++ ) { ?>
+										<div class="col-12 my-1">
+											<a
+											class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+											href="#">
+												Institucional
+											</a>
+										</div>
+									<?php } ?>
+									<!-- end loop -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+
+							<div class="col-12 mt-3">
+
+								<div class="border pt-5 px-3">
+
+									<div class="row mx-0">
+
+										<!-- loop -->
+										<?php for( $i = 0; $i < 3; $i++ ) { ?>
+											<a 
+											class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex text-decoration-none mb-3 pb-3"
+											href="#">
+
+												<div class="col-4 px-0">
+													<img
+													class="img-fluid w-100 u-object-fit-cover"
+													style="height:76px"
+													src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/09/cq5dam.thumbnail.cropped.1000.563-1.jpeg"
+													alt="Nome do post">
+												</div>
+
+												<div class="col-8">
+													<p class="u-font-size-9 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-0">
+														06 de maio de 2021
+													</p>
+
+													<h4 class="u-font-size-12 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+														Mensagem do Provincial
+														Dia de São Pedro Nolasco
+													</h4>
+
+													<div class="row justify-content-end">
+
+														<div class="col-7">
+															<p class="w-100 u-font-size-7 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-1">
+																Ler mais
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										<?php } ?>
+										<!-- end loop -->
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

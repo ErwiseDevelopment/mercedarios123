@@ -945,8 +945,13 @@ button.swiper-pagination-bullet {
   .xxl\: .u-border-r-2 {
     border-right: 2px solid; } }
 
+.last\:u-border-none:last-child {
+  border: none !important; }
+
 .u-border-color-black {
   border-color: #000 !important; }
+.u-border-color-light-gray {
+  border-color: #F3EBE3 !important; }
 .u-border-color-dark-golden {
   border-color: #D99E32 !important; }
 .u-border-color-dark-marron {

@@ -17,10 +17,10 @@
                                 while( have_rows( 'banners_materiais', 'option' ) ) : the_row();
                         ?>
                             <div class="swiper-slide">
-                                <a href="<?php echo get_sub_field('link_banner', 'option')?>" <?php if (get_field('nova_guia_banner', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
+                                <a href="<?php echo get_sub_field( 'link_banner' ) ?>" <?php if (get_sub_field( 'nova_guia_banner', 'option') == '1' ) : ?>  target="_blank" <?php endif; ?>>
                                     <img
                                     class="img-fluid w-100"
-                                    src="<?php echo get_sub_field('banner' ,'option')?>"
+                                    src="<?php echo get_sub_field( 'banner' )?>"
                                     alt="Banner Material">
                                 </a>
                             </div>

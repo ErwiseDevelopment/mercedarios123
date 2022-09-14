@@ -408,3 +408,13 @@ $utility-name: 'u-border';
         }
     }
 }
+
+.last\: {
+    &#{$utility-name} {
+        &-none {
+            &:last-child {
+                border: none !important;
+            }
+        }
+    }
+}
