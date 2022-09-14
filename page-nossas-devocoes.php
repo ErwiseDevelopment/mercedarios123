@@ -142,11 +142,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                        
                                             
                                        <span class="l-template-content__content d-block u-font-family-lato">
-                                                <?php  echo var_dump($args) ?>
-                                                <?php  echo var_dump($single_category) ?>
-                                                <?php  echo var_dump($other_posts) ?>
+                                              
                                                 <?php  echo var_dump($post_categories) ?>
-                                            </span>
+                                        </span>
                                         
                                         
                                                 <?php
