@@ -109,53 +109,41 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </div>
                         </section>
                         <!-- end content -->
-                    
+                        <?php
+                        $args = array(
+                            'posts_per_page' => -1,
+                            'post_type'      => $post->post_type,
+                            'order'          => 'DESC',
+                            
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'santos',
+                                    'field'    => 'slug',
+                                    'terms'    => array( $single_category->slug )
+                                )
+                            )
+                        );
 
-              
+                        $other_posts = new WP_Query( $args );
 
-                            <div class="col-12">
+                        if( $other_posts->have_posts() ) :
+                            while( $other_posts->have_posts() ) : $other_posts->the_post();
+                    ?>
                                 <div class="col-lg-4 my-2">
-
-                                            <?php
-
-                                            $post_categories = get_the_terms( $post->ID, 'santos' );
-                                            $single_category = $post_categories[0];
-
-                                                $args = array(
-                                                    'posts_per_page' => -1,
-                                                    'post_type'      => 'devocoes',
-                                                    'order'          => 'DESC',       
-                                                    'tax_query'      => array(
-                                                        array(
-                                                            'taxonomy' => 'santos',
-                                                            'field'    => 'slug',
-                                                            'terms'    => array( $single_category->slug )
-                                                        )
-                                                    )
-                                                );
-
-                                                $other_posts = new WP_Query( $args );
-
-                                                if( $other_posts->have_posts() ) :
-                                                    while( $other_posts->have_posts() ) : $other_posts->the_post();
-                                            ?>
-                                       
-                                            
-                                       <span class="l-template-content__content d-block u-font-family-lato">
-                                              
-                                                <?php  echo var_dump($post_categories) ?>
-                                        </span>
-                                        
-                                        
-                                                <?php
-                                                        endwhile;
-                                                    endif;
-
-                                                    wp_reset_query();
-                                                ?>
-                                
+                                    <a href="<?php the_permalink() ?>">
+                                        <img
+                                        class="img-fluid w-100 u-object-fit-cover"
+                                        style="height:234px"
+                                        src="<?php echo get_field( 'imagem' ) ?>"
+                                        alt="<?php the_title() ?>">
+                                    </a>
                                 </div>
-                            </div>                         
+                    <?php
+                            endwhile;
+                        endif;
+
+                        wp_reset_query();
+                    ?>
                 </div>                                    
             </div>               
         </div>
