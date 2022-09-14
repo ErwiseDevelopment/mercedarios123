@@ -104,7 +104,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <span class="l-template-content__content d-block u-font-family-lato">
                                         <?php the_content() ?>
                                     </span>
-                </div>                    
+                </div>       </div>             
             </div>
             <div class="col-12">
 
