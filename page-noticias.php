@@ -44,6 +44,16 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
         <div class="row">
 
+        <?php 
+                if( isset( $_GET['cat'] ) ) {
+                    foreach( get_categories() as $category) {
+                        if( $_GET['cat'] == $category->slug )
+                            $category_current = $category->slug; 
+                    }
+                } else {
+                    $category_current = 'noticia-destaque';
+                }
+        ?>
             <div class="col-9 pl-lg-0">
                 
                 <div class="h-100 u-bg-folk-bold-marron py-4">
@@ -54,7 +64,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $args = array(
                                 'posts_per_page' => 1,
                                 'post_type'      => 'post',
-                                'category_name'  => 'noticia-destaque',
+                                'category_name'  => $category_current,
                                 'order'          => 'DESC',
                             );
 
@@ -177,7 +187,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     <div class="container">
 
         <div class="row">
-
+        <?php 
+                
+                if( $_GET['cat'] == $category->slug )
+                    $category_current = $category->slug; 
+                    
+                 else {
+                    $category_current = 'noticia-destaque';
+                }
+        ?>                      
             <div class="col-12">
    
                 <div class="row">
@@ -186,7 +204,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         $args = array(
                             'posts_per_page' => 9,
                             'post_type'      => 'post',
-                            'category_name'  => 'noticia-destaque',
+                            'category_name'  => $category_current,
                             'order'          => 'DESC',
                             'post__not_in'   => $posts_current,
                         );
