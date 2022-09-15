@@ -217,7 +217,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="<?php echo get_home_url( null, 'noticias/?=pastoral' ) ?>">
+                                href="<?php echo get_home_url( null, '/noticias/?cat=pastoral' ) ?>">
                                     Todas os Notícias
                                 </a>
                             </div>
@@ -327,7 +327,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <div class="col-12">
     <a
     class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-    href="<?php echo get_home_url( null, 'galeria/?=caridade' ) ?>">
+    href="<?php echo get_home_url( null, '/fotos/?cat=pastoral' ) ?>">
         Todas as Fotos
     </a>
 </div>

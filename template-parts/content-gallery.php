@@ -57,7 +57,7 @@
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="#">
+                                href="https://www.youtube.com/c/OrdemMerced%C3%A1riaBrasil">
                                     Todos os Vídeos
                                 </a>
                             </div>
