@@ -112,6 +112,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="row">
 
                                     <?php
+                                    $category = get_the_terms( get_the_category(), 'santos' );
                                         $args = array(
                                             'posts_per_page' => -1,
                                             'post_type'      => 'devocoes',
@@ -121,13 +122,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 array(
                                                     'taxonomy' => 'santos',
                                                     'field'    => 'slug',
-                                                    'terms'    => array( $single_category->slug )
+                                                    'terms'    => array( $category->slug )
                                                 )
                                             )
                                         );
                                           
                                         $other_posts = new WP_Query( $args );
-                                        $category = get_the_terms( get_the_category(), 'santos' );
+                                        
                                         
                                         if( $other_posts->have_posts() ) :
                                             while( $other_posts->have_posts() ) : $other_posts->the_post();
@@ -139,8 +140,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         style="height:234px"
                                                         src="<?php echo get_field( 'imagem' ) ?>"
                                                         alt="<?php the_title() ?>">
-                                                        <?php echo  var_dump($category)?>
+                                                        
                                                     </a>
+                                                    <h1><?php echo  var_dump($category)?></h1>
                                                 </div>
                                     <?php
                                             endwhile;
