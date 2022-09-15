@@ -15,20 +15,17 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <!-- banner -->
-<section class="l-page-news__banner">
+<section 
+class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
 
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row">
 
             <div class="col-12 px-0">
-                <img
-                class="img-fluid"
-                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/single-background.png"
-                alt="Banner Notícias">
-
-                <h1 class="l-page-news__banner__title u-font-weight-bold text-center u-color-folk-white pb-3">
-					Galeria
+                <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
+                    GALERIA
                 </h1>
             </div>
         </div>
