@@ -199,7 +199,10 @@ foreach( $post_categories as $post_category ) {
                                         <?php echo  $post_categories_current[0]; ?>
                                     </a>
                                 </div>
-                        <?php endforeach; ?>
+                                <?php 
+                                    endwhile;
+                               
+                            ?>
                         <!-- end loop -->
                     </div>
                 </div>
@@ -209,7 +212,7 @@ foreach( $post_categories as $post_category ) {
 </section>
 <!-- end content -->
 
-<?php endwhile; ?>
+
 
 </div><!-- #main -->
 </section><!-- #primary -->
