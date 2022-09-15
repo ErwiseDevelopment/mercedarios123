@@ -188,14 +188,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
         <div class="row">
         <?php 
-                
-                if( $_GET['cat'] == $category->slug )
-                    $category_current = $category->slug; 
-                    
-                 else {
+                if( isset( $_GET['cat'] ) ) {
+                    foreach( get_categories() as $category) {
+                        if( $_GET['cat'] == $category->slug )
+                            $category_current = $category->slug; 
+                    }
+                } else {
                     $category_current = 'noticia';
                 }
-        ?>                      
+        ?>                     
             <div class="col-12">
    
                 <div class="row">
