@@ -62,6 +62,13 @@ function erwise_create_post_type() {
 		'menu_icon' 	=> 'dashicons-businessperson',
 		'supports' 		=> array( 'title',  'thumbnail',  )
 	) );
+	register_post_type( 'album', array(
+		'labels' 		=> array( 'name' => 'Galerias', 'singular_name' => 'Galeria', 'all_items' => 'Todas Galerias' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-images-alt2',
+		'supports' 		=> array( 'title' ) 
+	) );
 
 
 	
@@ -80,6 +87,7 @@ function erwise_create_taxonomy() {
 	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'santos', 'devocoes', array( 'labels' => array( 'name' => 'Tipo de devoção', 'singular_name' => 'Tipo de devoção' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'atuacoes', 'governo', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'categoria-foto', 'album', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
