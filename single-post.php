@@ -75,7 +75,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 										<?php echo $cat->name; ?>	
 									</span>
 							<?php 
-									if( $count == 2 )
+									if( $count == 3 )
 										break;
 								endforeach; 
 							?>
@@ -194,27 +194,42 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									<div class="row mx-0">
 
 										<!-- loop -->
-										<?php for( $i = 0; $i < 3; $i++ ) { ?>
+										<?php  $args = array(
+                            'posts_per_page' => 99,
+                            'post_type'      => 'post',
+                            'category_name'  => $c->name,
+                            'order'          => 'DESC',
+                           
+                        );
+
+                        $contents = new WP_Query( $args );
+
+                        if( $contents->have_posts()):
+                            while ($contents->have_posts()) : $contents->the_post();
+                                
+                    ?>
 											<a 
 											class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex text-decoration-none mb-3 pb-3"
-											href="#">
+											href="<?php the_permalink() ?>">
 
 												<div class="col-4 px-0">
-													<img
-													class="img-fluid w-100 u-object-fit-cover"
-													style="height:76px"
-													src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/09/cq5dam.thumbnail.cropped.1000.563-1.jpeg"
-													alt="Nome do post">
+													<?php
+														$alt_title = get_the_title();
+														the_post_thumbnail('post-thumbnail', 
+															array(
+															'class' => 'img-fluid w-100 h-100',
+															'alt'   => $alt_title
+														));
+													?>
 												</div>
 
 												<div class="col-8">
 													<p class="u-font-size-9 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-0">
-														06 de maio de 2021
+													<?php echo get_date_format('d/m/Y', $post)?>
 													</p>
 
 													<h4 class="u-font-size-12 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-														Mensagem do Provincial
-														Dia de São Pedro Nolasco
+													<?php echo the_title()?>
 													</h4>
 
 													<div class="row justify-content-end">
@@ -227,7 +242,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 													</div>
 												</div>
 											</a>
-										<?php } ?>
+										<?php 
+										endwhile;
+										endif;
+										wp_reset_query(); 
+										 ?>
 										<!-- end loop -->
 									</div>
 								</div>
