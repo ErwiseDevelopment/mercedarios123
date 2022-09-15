@@ -106,6 +106,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             <img
                                             class="img-fluid"
                                             src="<?php echo get_field( 'capa_do_album' ) ?>"
+                                            style="height:296px"
                                             alt="<?php the_title() ?> ">
                                         </div>
 

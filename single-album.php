@@ -70,6 +70,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <img
                                     class="img-fluid w-100 h-100 u-object-fit-cover"
                                     src="<?php echo $image[ 'url' ]; ?>"
+                                    style="height:296px"
                                     alt="<?php the_title() ?>">
                                 </div>
                     <?php
