@@ -57,7 +57,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 .l-communities__box {
                                     width: 540px;
                                     bottom: -40px;
-                                    right: -20%;
+                                    right: -270px;
                                     position: absolute;
                                 }
 
@@ -74,41 +74,124 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             </style>
 
                             <!-- loop -->
-                            <div class="col-12">
+                            <?php 
+                                if( isset( $_GET[ 'cat' ] ) ) {
+                                    $category_current = $_GET[ 'cat' ];
 
-                                <img
-                                class="img-fluid w-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/sal.png"
-                                alt="Single Temas">
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type'      => 'Comunidades',
+                                        'order'          => 'DESC',
+                                        'tax_query'      => array(
+                                            array(
+                                                'taxonomy' => 'comunidades-categoria',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $category_current )
+                                            )
+                                        )
+                                    );
+                                } else {
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type'      => 'Comunidades',
+                                        'order'          => 'DESC'
+                                    );
+                                }
 
-                                <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4">
-                                    <h4 class="l-communities__box__title position-relative d-inline-block u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-white pb-3">
-                                        PARÓQUIA NOSSA <br>
-                                        SENHORA DA LUZ
-                                    </h4>
+                                $posts_community = new WP_Query( $args );
 
-                                    <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
-                                        Pituba - BA
-                                    </p>
+                                if( $posts_community->have_posts() ) :
+                                    while( $posts_community->have_posts() ) : $posts_community->the_post();
+                            ?>
+                                        <div class="col-12 my-5">
 
-                                    <div class="w-100">
+                                            <!-- <img
+                                            class="img-fluid w-100 u-object-fit-cover"
+                                            src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/sal.png"
+                                            alt="Single Temas"> -->
 
-                                        <div class="row justify-content-center">
+                                            <?php
+                                                $alt_title = get_the_title();
 
-                                            <div class="col-5">
+                                                the_post_thumbnail( 'post-thumbnail',
+                                                    array(
+                                                        'class' => 'img-fluid w-100 u-object-fit-cover',
+                                                        'alt'   => $alt_title
+                                                    ));
+                                            ?>
 
-                                                <a
-                                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-dark-golden py-1"
-                                                href="#">
-                                                    Saiba mais
-                                                </a>
+                                            <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">
+                                                <h4 class="l-communities__box__title position-relative d-inline-block u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-white pb-3">
+                                                    <!-- PARÓQUIA NOSSA <br>
+                                                    SENHORA DA LUZ -->
+                                                    <?php the_title() ?>
+                                                </h4>
+
+                                                <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
+                                                    <?php
+                                                        $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
+
+                                                        foreach( $post_categories as $category ) :
+                                                            if( $category->parent > 0 )
+                                                                echo $category->name;
+                                                        endforeach;
+                                                    ?>
+                                                    <!-- Pituba - BA -->
+                                                </p>
+
+                                                <div class="w-100">
+
+                                                    <div 
+                                                    class="row w-100 position-absolute justify-content-center"
+                                                    style="left:0">
+
+                                                        <div class="col-5">
+
+                                                            <a
+                                                            class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden hover:u-bg-folk-dark-marron py-1"
+                                                            href="<?php echo get_field( 'ir_para_comunidade' ) ?>"
+                                                            target="<?php echo get_field( 'nova_guia' ) ? '_blank' : ''; ?>">
+                                                                Saiba mais
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php 
+                                    endwhile;
+                                endif;
+
+                                wp_reset_query();
+                            ?>
                             <!-- end loop -->
                         </div>
+                    </div>
+
+                    <div class="col-3 pt-4">
+                        
+                        <h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
+                            encontre-nos
+                        </h5>
+
+                        <!-- loop -->
+                        <?php 
+                            $terms = get_terms( 'comunidades-categoria', array(
+                                'hide_empty' => false,
+                            ) );
+
+                            foreach( $terms as $term ) :
+                        ?>
+                                <div class="col-12 my-1">
+                                    <a 
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
+                                    href="<?php echo get_home_url( null, 'comunidade/?cat=' . $term->slug ); ?>">
+                                        <!-- Institucional -->
+                                        <?php echo $term->name; ?>
+                                    </a>
+                                </div>
+                        <?php endforeach; ?>
+                        <!-- end loop -->
                     </div>
                 </div>
             </div>
@@ -121,11 +204,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 </div><!-- #main -->
 </section><!-- #primary -->
-
-<img
-class="img-fluid"
-data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
-alt="Single Temas">
 
 <?php
 
