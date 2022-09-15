@@ -176,30 +176,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- loop -->
                         <?php 
+                            $terms = get_terms( 'comunidades-estados', array(
+                                'hide_empty' => false,
+                            ) );
 
-$terms = get_terms( array(
-    'taxonomy' => 'comunidades-estados',
-    'hide_empty' => false,
-));
-
-foreach( $post_categories as $post_category ) {
-    foreach( $terms as $term ) {
-        if( $post_category->name == $term->name )
-            array_push( $post_categories_current, $post_category->name );
-    }
-}
-
-                            
+                            foreach( $terms as $term ) :
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
                                     href="<?php echo get_home_url( null, 'comunidade/?cat=' . $term->slug ); ?>">
                                         <!-- Institucional -->
-                                        <?php echo  $post_categories_current[0]; ?>
+                                        <?php echo var_dump($term) ?>
                                     </a>
                                 </div>
-                               
+                        <?php endforeach; ?>
                         <!-- end loop -->
                     </div>
                 </div>
