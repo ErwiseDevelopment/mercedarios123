@@ -111,28 +111,22 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                 <div class="row">
 
-                                    <?php
-                                    $category = get_the_terms( get_the_category(), 'santos' );
-                                        $args = array(
-                                            'posts_per_page' => -1,
-                                            'post_type'      => 'devocoes',
-                                            'order'          => 'DESC',
-                                            
-                                            'tax_query'      => array(
-                                                array(
-                                                    'taxonomy' => 'santos',
-                                                    'field'    => 'slug',
-                                                    'terms'    => array( $category->slug )
-                                                )
-                                            )
-                                        );
+                                  
+                                   <?php
+
+                                   if(have_posts()){
+                                       while(have_posts()){
+                                           the_post();
+                               
+                               
+                                           $categories = wp_get_object_terms( $postID , 'category' );
+                               
                                           
-                                        $other_posts = new WP_Query( $args );
-                                        
-                                        
-                                        if( $other_posts->have_posts() ) :
-                                            while( $other_posts->have_posts() ) : $other_posts->the_post();
+                                       }
+                                   }
                                     ?>
+
+                                    
                                                 <div class="col-lg-4 my-2">
                                                     <a href="<?php the_permalink() ?>">
                                                         <img
@@ -142,11 +136,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         alt="<?php the_title() ?>">
                                                         
                                                     </a>
-                                                    <h1><?php echo  var_dump($category)?></h1>
+                                                    <h1><?php  echo var_dump($categories);?></h1>
                                                 </div>
                                     <?php
+                                    
                                             endwhile;
-                                        endif;
+                                        
 
                                         wp_reset_query();
                                     ?>
@@ -160,7 +155,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <!-- end content -->
                     
 
-<?php endwhile; ?>
+
 
 </div><!-- #main -->
 </section><!-- #primary -->
