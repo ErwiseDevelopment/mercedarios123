@@ -57,6 +57,7 @@
                                     href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
+                                        style="height:296px"
                                         src="<?php echo $photo['url'] ?>"
                                         alt="<?php echo $photo['title']; ?>">
                                     </a>
@@ -108,6 +109,7 @@
                                     href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
+                                        style="height:296px"
                                         src="<?php echo get_field( 'capa_do_album' ) ?>"
                                             alt="<?php the_title() ?>">
 

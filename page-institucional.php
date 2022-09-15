@@ -401,10 +401,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         $args = array(
                             'posts_per_page' => 1,
-                            'post_type'      => 'Galeria',
+                            'post_type'      => 'album',
                             'tax_query'      => array(
                                 array(
-                                    'taxonomy' => 'galeria-categoria',
+                                    'taxonomy' => 'categoria-foto',
                                     'field'    => 'slug',
                                     'terms'    => array( $editorial_slug_current )
                                 )
@@ -429,6 +429,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
+                                        style="height:296px"
                                         src="<?php echo $photo['url'] ?>"
                                             alt="<?php echo $photo['title']; ?>">
                                     </a>

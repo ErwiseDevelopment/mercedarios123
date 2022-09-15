@@ -327,15 +327,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 //strtolower(get_the_title());
 
                 $args = array(
-                'posts_per_page' => 1,
-                'post_type'      => 'Galeria',
-                'tax_query'      => array(
-                    array(
-                        'taxonomy' => 'galeria-categoria',
-                        'field'    => 'slug',
-                        'terms'    => array( $editorial_slug_current )
+                    'posts_per_page' => 1,
+                    'post_type'      => 'album',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'categoria-foto',
+                            'field'    => 'slug',
+                            'terms'    => array( $editorial_slug_current )
+                        )
                     )
-                )
                 );
 
                 $gallery = new WP_Query( $args );
@@ -356,6 +356,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         href="<?php the_permalink() ?>">
                             <img
                             class="img-fluid w-100 u-object-fit-cover"
+                            style="height:296px"
                             src="<?php echo $photo['url'] ?>"
                                 alt="<?php echo $photo['title']; ?>">
                         </a>
