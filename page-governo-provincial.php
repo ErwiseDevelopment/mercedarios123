@@ -12,7 +12,25 @@
 
 get_header();
 ?>
+<style>
+                                .l-communities__box {
+                                    width: 540px;
+                                    bottom: -40px;
+                                    right: -270px;
+                                    position: absolute;
+                                }
 
+                                .l-communities__box__title::before {
+                                    content: '';
+                                    width: calc(100% - 1rem);
+                                    height: 4px;
+                                    top: 100%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    position: absolute;
+                                    background-color: #D99D32;
+                                }
+                            </style>
 <div id="primary">
 <main id="main">
 
@@ -90,7 +108,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 <div class="col-lg-4 my-3">
 
                                                     <div class="card border-0">
-
+                                                    <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">
                                                         <div class="card-img">
 
                                                             <?php
@@ -111,11 +129,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                                 <?php the_title() ?>
                                                             </h4>
 
-                                                            <p class="u-font-size-14 u-font-weight-semibold">
+                                                            <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
                                                                 <!-- Diretor Local -->
                                                                 <?php echo $term->name; ?>
                                                             </p>
                                                         </div>
+                                                    </div>
                                                     </div>
                                                 </div> 
                             <?php                                    
