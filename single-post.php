@@ -63,23 +63,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 								$cats = array();
 								//$count = 1;
 
-								foreach (get_the_category( get_the_ID() ) as $c) {
+								foreach (get_the_category( get_the_ID() ) as $c) 
 									$cat = get_category($c);
-									array_push($cats, $cat);
-								}
+									
 
-								foreach( $cats as $cat ) :
-									//$count++;
+							
 							?>
 									<span class="u-font-weight-regular u-color-folk-dark-golden">
 										<?php echo $cat->name; ?>
-										<?php var_dump($cat)?>
-										<?php var_dump($cats)?>
+										<?php var_dump($c)?>
+										
 									</span>
-							<?php 
 							
-								endforeach; 
-							?> 
 						</p>
 
 						<h1 class="u-font-size-32 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-4">
