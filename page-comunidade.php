@@ -179,7 +179,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
                             ) );
-
+                             $term = array();       
                             foreach( $terms as $term ) :
                         ?>
                                 <div class="col-12 my-1">
