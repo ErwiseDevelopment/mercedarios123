@@ -55,11 +55,30 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 						?>
 
 						<p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mt-4 mb-0">
-							15 de março, 2022
+							<?php echo get_date_format('d/m/Y', $post)?>
 						</p>
 
 						<p class="u-font-size-18 u-font-family-lato">
-							<span class="u-font-weight-bold u-color-folk-dark-gray">Categorias: </span><span class="u-font-weight-regular u-color-folk-dark-golden">Vocacional, Institucional</span>
+							<span class="u-font-weight-bold u-color-folk-dark-gray">Categorias: </span><span class="u-font-weight-regular u-color-folk-dark-golden"><?php
+								$cats = array();
+								$count = 0;
+
+								foreach (get_the_category( get_the_ID() ) as $c) {
+									$cat = get_category($c);
+									array_push($cats, $cat);
+								}
+
+								foreach( $cats as $cat ) :
+									$count++;
+							?>
+									<p class="u-line-height-100 u-border-1 u-border-color-persian-plum rounded u-font-size-12 u-font-weight-bold u-color-folk-persian-plum mr-3 py-1 px-3">
+										<?php echo $cat->name; ?>	
+									</p>
+							<?php 
+									if( $count == 1 )
+										break;
+								endforeach; 
+							?></span>
 						</p>
 
 						<h1 class="u-font-size-32 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-4">
