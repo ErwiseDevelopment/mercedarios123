@@ -65,10 +65,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         <div class="row">
         <?php 
                 if( isset( $_GET['cat'] ) ) {
-                    foreach( get_categories() as $category) {
-                        if( $_GET['cat'] == $category->slug )
-                            $image_current = $category->slug; 
-                    }
+                   $image_current = $_GET['cat'];
+                   
                 } else {
                     $image_current = 'home';
                 }
