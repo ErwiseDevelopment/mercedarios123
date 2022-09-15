@@ -55,7 +55,7 @@
                                         
                                         <p class="u-line-height-100 u-font-size-19 xxl:u-font-size-22 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-4">
                                             <span class="u-font-weight-medium u-font-family-lato">por</span>  <?php echo get_the_author_meta( 'user_firstname' ) ?> <br>
-                                            <?php echo get_date_format( 'd/m/Y', get_the_ID() )?>
+                                            <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
                                         </p>
 
                                         <h3 class="u-font-size-20 xl:u-font-size-26 xxl:u-font-size-32 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
@@ -256,7 +256,7 @@
 
                                                     <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
                                                         <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                                        <?php echo get_date_format('d/m/Y', $post)?>
+                                                        <?php echo get_the_date('d/m/Y', $post)?>
                                                     </p>
 
                                                     <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">

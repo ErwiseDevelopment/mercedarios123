@@ -55,10 +55,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                             <style>
                                 .l-communities__box {
+                                    width: 540px;
                                     bottom: -40px;
                                     right: -20%;
                                     position: absolute;
-                                    background: red;
+                                }
+
+                                .l-communities__box__title::before {
+                                    content: '';
+                                    width: calc(100% - 1rem);
+                                    height: 4px;
+                                    top: 100%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    position: absolute;
+                                    background-color: #D99D32;
                                 }
                             </style>
 
@@ -70,25 +81,28 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/sal.png"
                                 alt="Single Temas">
 
-                                <div class="l-communities__box">
-                                    <h4 class="l-communities__box__title u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                                        PARÓQUIA NOSSA
+                                <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4">
+                                    <h4 class="l-communities__box__title position-relative d-inline-block u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-white pb-3">
+                                        PARÓQUIA NOSSA <br>
                                         SENHORA DA LUZ
                                     </h4>
 
-                                    <p>
+                                    <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
                                         Pituba - BA
                                     </p>
 
-                                    <div class="row">
+                                    <div class="w-100">
 
-                                        <div class="col-12">
+                                        <div class="row justify-content-center">
 
-                                            <a
-                                            class=""
-                                            href="#">
-                                                Saiba mais
-                                            </a>
+                                            <div class="col-5">
+
+                                                <a
+                                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-dark-golden py-1"
+                                                href="#">
+                                                    Saiba mais
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
