@@ -70,8 +70,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 							
 							?>
 									<span class="u-font-weight-regular u-color-folk-dark-golden">
-										<?php echo $cat->name; ?>
-										<?php var_dump($c)?>
+										<?php echo $c->name; ?>
+										<!-- //<php var_dump($c)?> -->
 										
 									</span>
 							
