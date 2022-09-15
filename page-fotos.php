@@ -18,6 +18,23 @@ get_header(); ?>
 <div id="main" class="site-main" role="main">
 
 <?php while ( have_posts() ) : the_post(); ?>
+
+<section 
+class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12 px-0">
+                <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
+                    GALERIA
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="mb-5">
 
     <div class="container-fluid">
@@ -46,7 +63,14 @@ get_header(); ?>
     <div class="container">
 
         <div class="row">
-
+        <?php 
+                if( isset( $_GET['cat'] ) ) {
+                   $image_current = $_GET['cat'];
+                   
+                } else {
+                    $image_current = 'home';
+                }
+        ?>
             <div class="col-12">
 
                 <div class="row">   
@@ -56,7 +80,14 @@ get_header(); ?>
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => 'album',
-                            'order'          => 'DESC'
+                            'order'          => 'DESC',
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'categoria-foto',
+                                    'field'    => 'slug',
+                                    'terms'    => array($image_current)
+                                )
+                            )
                         );
 
                         $galleries = new WP_Query( $args );
