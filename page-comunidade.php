@@ -178,11 +178,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <?php 
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
-                                // 'parent' => 0,
+                                 'parent' => 0,
                             ) );
 
                             foreach( $terms as $term ) :
-                               if($terms->parent > 0)
+                               
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
