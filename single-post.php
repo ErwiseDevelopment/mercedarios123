@@ -197,7 +197,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 										<?php  $args = array(
                             'posts_per_page' => 5,
                             'post_type'      => 'post',
-                            'category_name'  => $c->name,
+                            'category_name'  => $cat->name,
                             'order'          => 'DESC',
                            
                         );
