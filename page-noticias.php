@@ -64,7 +64,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $args = array(
                                 'posts_per_page' => 1,
                                 'post_type'      => 'post',
-                                'category_name'  => $category_current,
+                                'category_name'  => $category_current. '+noticia',
                                 'order'          => 'DESC',
                             );
 
@@ -193,7 +193,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     $category_current = $category->slug; 
                     
                  else {
-                    $category_current = 'noticia-destaque';
+                    $category_current = 'noticia';
                 }
         ?>                      
             <div class="col-12">
@@ -204,7 +204,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         $args = array(
                             'posts_per_page' => 9,
                             'post_type'      => 'post',
-                            'category_name'  => $category_current,
+                            'category_name'  => $category_current . '+noticia',
                             'order'          => 'DESC',
                             'post__not_in'   => $posts_current,
                         );
