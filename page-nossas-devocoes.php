@@ -114,7 +114,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <?php
                                         $args = array(
                                             'posts_per_page' => -1,
-                                            'post_type'      => $post->post_type,
+                                            'post_type'      => 'devocoes',
                                             'order'          => 'DESC',
                                             
                                             'tax_query'      => array(
@@ -127,7 +127,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         );
                                           
                                         $other_posts = new WP_Query( $args );
-
+                                        $category = get_the_terms( get_the_category(), 'santos' );
+                                        
                                         if( $other_posts->have_posts() ) :
                                             while( $other_posts->have_posts() ) : $other_posts->the_post();
                                     ?>
@@ -138,7 +139,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         style="height:234px"
                                                         src="<?php echo get_field( 'imagem' ) ?>"
                                                         alt="<?php the_title() ?>">
-                                                        <?php echo get_the_terms( get_the_category(), 'santos' ); ?>
+                                                        <?php echo  var_dump($category)?>
                                                     </a>
                                                 </div>
                                     <?php
