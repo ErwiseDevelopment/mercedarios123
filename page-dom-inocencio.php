@@ -206,7 +206,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
                                             <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?> <br>
                                             <!-- 06 de Maio de 2021 -->
-                                            <?php echo get_date_format('d/m/Y', $post)?>
+                                            <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
                                         </p>
 
                                         <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
