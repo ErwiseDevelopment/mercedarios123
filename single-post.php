@@ -24,8 +24,23 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         <div class="row">
 
             <div class="col-12 px-0">
+				<?php
+					$categories_choose = array(
+						'Blog',
+						'Notícias',
+						'Noticias'
+					);
+
+					foreach ( get_the_category( get_the_ID() ) as $c) {
+						foreach( $categories_choose as $category_choose ) {
+							if( $c->name == $category_choose )
+								$predominant_category = $c->name;
+						}
+					}
+				?>
                 <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
-                    Notícias
+                    <!-- Notícias -->
+					<?php echo $predominant_category; ?>
                 </h1>
             </div>
         </div>
@@ -36,8 +51,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <section class="py-5">
 
 	<div class="container">
-	 <?php $posts_current = array();
- array_push($posts_current, get_the_ID()); ?>
+	
+	<?php $posts_current = array();
+ 		array_push($posts_current, get_the_ID()); 
+	?>
 		<div class="row">
 
 			<div class="col-12">
@@ -78,7 +95,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									</span>
 							<?php 
 								if( $count == 2 )
-								break;
+									break;
 								endforeach; 
 							?>
 						</p>
@@ -187,74 +204,78 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 							</div>
 						</div>
 
-						<div class="row">
+						<?php if( $predominant_category != 'Blog' ) : ?>
+							<div class="row">
 
-							<div class="col-12 mt-3">
+								<div class="col-12 mt-3">
 
-								<div class="border pt-5 px-3">
+									<div class="border pt-5 px-3">
 
-									<div class="row mx-0">
+										<div class="row mx-0">
 
-										<!-- loop -->
-										<?php  $args = array(
-                            'posts_per_page' => 5,
-                            'post_type'      => 'post',
-                            'category_name'  => $cats[1]->name. ',+noticias',
-                            'order'          => 'DESC',
-							'post__not_in' =>  $posts_current,
-                           
-                        );
+											<!-- loop -->
+											<?php  
+												$args = array(
+													'posts_per_page' => 5,
+													'post_type'      => 'post',
+													'category_name'  => $cats[1]->name. ',+noticias',
+													'order'          => 'DESC',
+													'post__not_in' =>  $posts_current,
+												
+												);
 
-                        $contents = new WP_Query( $args );
+												$contents = new WP_Query( $args );
 
-                        if( $contents->have_posts()):
-                            while ($contents->have_posts()) : $contents->the_post();
-                                
-                    ?>
-											<a 
-											class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex text-decoration-none mb-3 pb-3"
-											href="<?php the_permalink() ?>">
+												if( $contents->have_posts()):
+													while ($contents->have_posts()) : $contents->the_post();
+									
+											?>
+														<a 
+														class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex text-decoration-none mb-3 pb-3"
+														href="<?php the_permalink() ?>">
 
-												<div class="col-4 px-0">
-													<?php
-														$alt_title = get_the_title();
-														the_post_thumbnail('post-thumbnail', 
-															array(
-															'class' => 'img-fluid w-100 h-100',
-															'alt'   => $alt_title
-														));
-													?>
-												</div>
+															<div class="col-4 px-0">
+																<?php
+																	$alt_title = get_the_title();
+																	the_post_thumbnail('post-thumbnail', 
+																		array(
+																		'class' => 'img-fluid w-100 h-100',
+																		'alt'   => $alt_title
+																	));
+																?>
+															</div>
 
-												<div class="col-8">
-													<p class="u-font-size-9 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-0">
-													<?php echo get_date_format('d/m/Y', $post)?>
-													</p>
+															<div class="col-8">
+																<p class="u-font-size-9 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-0">
+																	<?php echo get_date_format('d/m/Y', $post)?>
+																</p>
 
-													<h4 class="u-font-size-12 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-													<?php echo the_title()?>
-													</h4>
+																<h4 class="u-font-size-12 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+																	<?php echo the_title()?>
+																</h4>
 
-													<div class="row justify-content-end">
+																<div class="row justify-content-end">
 
-														<div class="col-7">
-															<p class="w-100 u-font-size-7 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-1">
-																Ler mais
-															</p>
-														</div>
-													</div>
-												</div>
-											</a>
-										<?php 
-										endwhile;
-										endif;
-										wp_reset_query(); 
-										 ?>
-										<!-- end loop -->
+																	<div class="col-7">
+																		<p class="w-100 u-font-size-7 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-1">
+																			Ler mais
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</a>
+											<?php 
+													endwhile;
+												endif;
+
+												wp_reset_query(); 
+											?>
+											<!-- end loop -->
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
