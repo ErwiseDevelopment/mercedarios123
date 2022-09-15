@@ -98,3 +98,9 @@ register_nav_menus(array(
     'dom-inocencio'  => 'Menu Dom Inocencio',
     'pastoral'       => 'Menu pastoral',
 ));
+
+function mantenedora_cmp( $a, $b ) {
+    $t1 = strtotime($a['data']);
+    $t2 = strtotime($b['data']);
+    return $t1 - $t2;
+}

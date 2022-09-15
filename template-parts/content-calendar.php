@@ -16,32 +16,35 @@
             <div class="col-12">
 
                 <!-- swiper -->
+                <?php
+                    $year_current = date( "Y" );
+
+                    $array_meses = array (
+                        '01' => 'Janeiro',
+                        '02' => 'Fevereiro',
+                        '03' => 'Março',
+                        '04' => 'Abril',
+                        '05' => 'Maio',
+                        '06' => 'Junho',
+                        '07' => 'Julho',
+                        '08' => 'Agosto',
+                        '09' => 'Setembro',
+                        '10' => 'Outubro',
+                        '11' => 'Novembro',
+                        '12' => 'Dezembro'
+                    );
+                    
+                ?>
                 <div class="swiper-container swiper-container-months js-swiper-months">
 
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <?php 
-                            $all_months = array(
-                                '1'  => 'Janeiro',
-                                '2'  => 'Fevereiro',
-                                '3'  => 'Março',
-                                '4'  => 'Abril',
-                                '5'  => 'Maio',
-                                '6'  => 'Junho',
-                                '7'  => 'Julho',
-                                '8'  => 'Agosto',
-                                '9'  => 'Setembro',
-                                '10' => 'Outubro',
-                                '11' => 'Novembro',
-                                '12' => 'Dezembro',
-                            );
-
-                            foreach( $all_months as $key => $value ) :
-                        ?>
+                        <?php foreach ( $array_meses as $mes => $meses ) : ?>
                             <div class="swiper-slide">
                                 <h4 class="u-font-size-32 u-font-weight-regular u-font-family-cinzel text-uppercase text-center u-color-folk-dark-golden">
-                                    <?php echo $value; ?> | 2022
+                                    <!-- echo $value; ?> | 2022 -->
+                                    <?php echo $meses . ' | ' . $year_current; ?>
                                 </h4>
                             </div>  
                         <?php endforeach; ?>
@@ -74,22 +77,98 @@
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <?php foreach( $all_months as $key => $value ) : ?>
-                            <div class="swiper-slide flex-column align-items-start">
+                        <?php 
+                            setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                            date_default_timezone_set('America/Sao_Paulo');
+                                
+                            $post_agenda_count = wp_count_posts( 'agendas' );
+                            $post_agenda_count_current = intval( $post_agenda_count->publish );
+                            $count = -1;
 
-                                <?php for( $i = 0; $i < 6; $i++ ) { ?>
-                                    <div>
-                                        <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
-                                            02/<?php echo '0' . $key; ?>
-                                        </p>
+                            foreach ($array_meses as $mes => $meses): 
+                                $date_current = (string) $mes;
+                                $current_year = strftime('%Y', strtotime('today'));
+                                $data_inicio = date('Y'.$date_current.'01');
+                                $data_final = date('Y'.$date_current.'31');
 
-                                        <p class="u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-dark-gray">
-                                            Aniversário Frei Adilson Ribeiro | (31 anos de V.R.C.)
+                                $args = array (
+                                    'post_type'       	=> 'Evento',
+                                    'posts_per_page'	=> -1,
+                                    'orderby'			=> 'meta_value',
+                                    'order'				=> 'ASC',
+                                    'meta_key'          => 'data_custom_post_agenda_inicio',
+                                    'meta_query'		=> array (
+                                        'relation'			=> 'AND',
+                                        array (
+                                            'key'			=> 'data_custom_post_agenda_inicio',
+                                            'value'			=> $data_inicio,
+                                            'compare'		=> '>=',
+                                            'type'			=> 'DATE',
+                                        ),
+                                        array (
+                                            'key'			=> 'data_custom_post_agenda_inicio',
+                                            'value'			=> $data_final,
+                                            'compare'		=> '<=',
+                                            'type'			=> 'DATE',
+                                        ),
+                                    ),
+                                );
+                                
+                                $agendas = new WP_Query($args);
+                                
+				                while( $agendas->have_posts()) : $agendas->the_post();
+                                    $data = get_field( 'data_custom_post_agenda_inicio', get_the_ID() );
+				                    $title = get_the_title();
+				                    $excerpt = get_the_excerpt();
+				                    $cidades = get_the_terms(get_the_ID(), 'tipoevento');
+				                    list($data_day, $data_month, $data_year) = explode("/", $data);
+				                    $array_agendas[] = array ( 'data' => $current_year.'-'.$data_month.'-'.$data_day, 'title' => $title, 'excerpt' => $excerpt, 'cidades' => $cidades );
+                                endwhile; 
+                                
+                                wp_reset_postdata();
+
+                                if ( !empty ( $array_agendas ) ) :
+                                    usort ( $array_agendas, 'mantenedora_cmp' );
+                        ?>
+                                    <div class="swiper-slide flex-column align-items-start">
+
+                                        <?php 
+                                            foreach ( $array_agendas as $agenda ) :
+                                                list($data_year, $data_month, $data_day) = explode("-", $agenda['data']);
+
+                                                if ( $date_current == $data_month ) : 
+                                                    $count = 0;
+                                        ?>
+                                                    <div>
+                                                        <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
+                                                            <!-- 02/echo '02'; -->
+                                                            <?php echo $data_day . '/' . $data_month; ?>
+                                                        </p>
+
+                                                        <p class="u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-dark-gray">
+                                                            <!-- Aniversário Frei Adilson Ribeiro | (31 anos de V.R.C.) -->
+                                                            <?php echo $agenda["title"]; ?>
+                                                        </p>
+                                                    </div>
+                                        <?php 
+                                                else : $count++; 
+                                                    if( $count == $post_agenda_count_current ) {
+                                                        $count = 0;
+                                                        echo '<p>Não há eventos!</p>';
+                                                    }
+                                                endif;
+                                            endforeach; 
+                                        ?>
+                                    </div>
+                        <?php   else : ?>
+                                    <div class="swiper-slide justify-content-start">
+                                        <p class="u-color-folk-white">
+                                            Não tem nenhum evento!
                                         </p>
                                     </div>
-                                <?php } ?>
-                            </div>
-                        <?php endforeach; ?>
+                        <?php   endif;
+                            endforeach; 
+                        ?>
                         <!-- end slide -->
                     </div>
                 </div>
