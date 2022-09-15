@@ -18,27 +18,25 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<section>
 
-    <div class="container-fluid">
+<!-- banner -->
+<section 
+class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
+
+    <div class="container">
 
         <div class="row">
 
             <div class="col-12 px-0">
-
-                <?php
-                    $alt_title = get_the_title();
-
-                    the_post_thumbnail('post-thumbnail',
-                        array(
-                            'class' => 'img-fluid',
-                            'alt'   => $alt_title
-                    ));
-                ?>
+                <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
+                    <?php the_title() ?>
+                </h1>
             </div>
         </div>
     </div>
 </section>
+<!-- end banner -->
 
 <section class="py-5">
 
