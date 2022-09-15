@@ -77,7 +77,7 @@ function erwise_create_taxonomy() {
     register_taxonomy( 'ebook-categoria', 'ebook', array( 'labels' => array( 'name' => 'Editoria E-book', 'singular_name' => 'Editoria E-book' ), 'hierarchical' => true, 'show_admin_column' => true ) );
     register_taxonomy( 'comunidades-categoria', 'comunidades', array( 'labels' => array( 'name' => 'Tipo Comunidade', 'singular_name' => 'Tipo Comunidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'comunidades-estados', 'comunidades', array( 'labels' => array( 'name' => 'Estados', 'singular_name' => 'Estados' ), 'hierarchical' => true, 'show_admin_column' => true ) );
-	register_taxonomy( 'galeria-categoria', 'galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'galeria-categoria', 'Galeria', array( 'labels' => array( 'name' => 'Tipo Categoria', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'santos', 'devocoes', array( 'labels' => array( 'name' => 'Tipo de devoção', 'singular_name' => 'Tipo de devoção' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'atuacoes', 'governo', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
