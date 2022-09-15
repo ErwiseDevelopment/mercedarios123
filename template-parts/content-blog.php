@@ -53,7 +53,7 @@
                                     <div class="card-body">
 
                                         <p class="u-font-size-12 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                            <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?><<br>
+                                            <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?><br>
                                             <?php echo get_date_format('d/m/Y', $post)?>
                                         </p>
 
