@@ -61,20 +61,24 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 						<p class="u-font-size-18 u-font-family-lato">
 							<span class="u-font-weight-bold u-color-folk-dark-gray">Categorias: </span><?php
 								$cats = array();
-								//$count = 1;
+								$count = 0;
 
-								foreach (get_the_category( get_the_ID() ) as $c) 
+								foreach (get_the_category( get_the_ID() ) as $c) {
 									$cat = get_category($c);
-									
+									array_push($cats, $cat);
+								}
 
-							
+								foreach( $cats as $cat ) :
+									$count++;
 							?>
 									<span class="u-font-weight-regular u-color-folk-dark-golden">
-										<?php echo $c->name; ?>
-										<?php var_dump($c)?>
-										
+										<?php echo $cat->name; ?>	
 									</span>
-							
+							<?php 
+									if( $count == 2 )
+										break;
+								endforeach; 
+							?>
 						</p>
 
 						<h1 class="u-font-size-32 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-4">
