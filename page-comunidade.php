@@ -166,9 +166,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             ?>
                             <!-- end loop -->
                         </div>
+                        </br>
+                            </br>
                     </div>
-                            </br>
-                            </br>
+                            
                     <div class="col-3 pt-4">
                         
                         <h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
