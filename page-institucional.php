@@ -289,8 +289,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             target="_blank"
                                         <?php endif; ?>>
 
-                                            <div class="card-img"
-                                            style="height:296px">
+                                            <div class="card-img">
                                                 <?php
                                                     $alt_title = get_the_title();
 
