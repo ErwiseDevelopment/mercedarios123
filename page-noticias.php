@@ -163,15 +163,57 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             </div>
 
                             <!-- loop -->
-                            <?php for( $i = 0; $i < 8; $i++ ) { ?>
+                            
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="#">
+                                    href="<?php echo get_home_url( null, '/?cat=institucional' ) ?>">
                                         Institucional
                                     </a>
                                 </div>
-                            <?php } ?>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=vocacional' ) ?>">
+                                        Vocacional
+                                    </a>
+                                </div>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=educacao' ) ?>">
+                                        Educação
+                                    </a>
+                                </div>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=paroquias' ) ?>">
+                                        Paróquias
+                                    </a>
+                                </div>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=caridade' ) ?>">
+                                        Caridade
+                                    </a>
+                                </div>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=dom-inocencio' ) ?>">
+                                        Dom Inocêncio
+                                    </a>
+                                </div>
+                                <div class="col-12 my-1">
+                                    <a
+                                    class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/?cat=pastoral' ) ?>">
+                                        Pastoral
+                                    </a>
+                                </div>
+                            
                             <!-- end loop -->
                             </div>
                         </div>
@@ -203,7 +245,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <?php 
                         $args = array(
-                            'posts_per_page' => 9,
+                            'posts_per_page' => 99,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+noticias',
                             'order'          => 'DESC',
