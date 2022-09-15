@@ -62,7 +62,7 @@
                                     </a>
                                 </div>
                     <?php
-                                        if( $count == 12 )
+                                        if( $count == 6 )
                                             break;
                                     endforeach;
                                 endif;
