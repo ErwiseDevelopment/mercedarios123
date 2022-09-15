@@ -125,7 +125,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 )
                                             )
                                         );
-
+                                          
                                         $other_posts = new WP_Query( $args );
 
                                         if( $other_posts->have_posts() ) :
@@ -138,6 +138,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         style="height:234px"
                                                         src="<?php echo get_field( 'imagem' ) ?>"
                                                         alt="<?php the_title() ?>">
+                                                        <?php echo get_the_terms( get_the_category(), 'santos' ); ?>
                                                     </a>
                                                 </div>
                                     <?php
