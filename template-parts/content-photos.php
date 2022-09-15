@@ -23,18 +23,54 @@
                         <div class="row">
 
                             <!-- loop -->
-                            <?php for( $i = 0; $i < 6; $i++ ) { ?>
+                    <?php 
+                            $editorial_slug_current = 'home';
+                            //strtolower(get_the_title());
+
+                            $args = array(
+                                'posts_per_page' => 1,
+                                'post_type'      => 'album',
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'categoria-foto',
+                                        'field'    => 'slug',
+                                        'terms'    => array( $editorial_slug_current )
+                                    )
+                                )
+                            );
+
+                            $gallery = new WP_Query( $args );
+                            $count = 0;
+
+                            if( $gallery->have_posts() ) :
+                                while( $gallery->have_posts() ) : $gallery->the_post();
+
+                                    $photos = get_field( 'galeria' );
+
+                                    if( $photos ) :
+                                        foreach( $photos as $photo ) :     
+                                            $count++;
+                     ?>
                                 <div class="col-xl-6 my-2">
                                     <a 
                                     class="l-photos__photo overflow-hidden position-relative d-block" 
-                                    href="#">
+                                    href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
-                                        alt="Foto 1">
+                                        src="<?php echo $photo['url'] ?>"
+                                        alt="<?php echo $photo['title']; ?>">
                                     </a>
                                 </div>
-                            <?php } ?>
+                    <?php
+                                        if( $count == 12 )
+                                            break;
+                                    endforeach;
+                                endif;
+                            endwhile;
+                        endif;
+
+                        wp_reset_query();
+                    ?>
                             <!-- end loop -->
                         </div>
                     </div>
@@ -54,23 +90,38 @@
                         <div class="row">
 
                             <!-- loop -->
-                            <?php for( $i = 0; $i < 3; $i++ ) { ?>
+                            <?php
+                            $args = array(
+                                'posts_per_page' => 3,
+                                'post_type'      => 'album',
+                                'order'          => 'DESC'
+                            );
+
+                            $galeries = new WP_Query( $args );
+
+                            if( $galeries->have_posts() ) :
+                                while( $galeries->have_posts() ) : $galeries->the_post();
+                        ?>
                                 <div class="col-12 my-2">
                                     <a
                                     class="l-photos__album overflow-hidden position-relative d-block text-decoration-none"
-                                    href="#">
+                                    href="<?php the_permalink() ?>">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
-                                        alt="Foto 1">
+                                        src="<?php echo get_field( 'capa_do_album' ) ?>"
+                                            alt="<?php the_title() ?>">
 
                                         <p class="l-photos__album__name u-font-size-20 u-font-weight-bold u-font-style-italic u-font-family-lato u-color-folk-white">
-                                            Novo Governo
-                                            Provincial
+                                        <?php the_title() ?>
                                         </p>
                                     </a>
                                 </div>
-                            <?php } ?>
+                                <?php
+                                endwhile;
+                            endif;
+                            
+                            wp_reset_query();
+                        ?>
                             <!-- end loop -->
                         </div>
                     </div>
