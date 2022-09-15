@@ -19,7 +19,7 @@ function erwise_create_post_type() {
 		'supports' 		=> array( 'title', 'thumbnail', 'author' )
 	) );
 	
-		register_post_type( 'Evento', array(
+		register_post_type( 'evento', array(
 		'labels' 		=> array( 'name' => 'Eventos', 'singular_name' => 'Eventos', 'all_items' => 'Todos Eventos' ),
 		'public' 		=> true,
 		'has_archive'	=> true,

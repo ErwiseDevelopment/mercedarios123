@@ -92,7 +92,7 @@
                                 $data_final = date('Y'.$date_current.'31');
 
                                 $args = array (
-                                    'post_type'       	=> 'Evento',
+                                    'post_type'       	=> 'evento',
                                     'posts_per_page'	=> -1,
                                     'orderby'			=> 'meta_value',
                                     'order'				=> 'ASC',
