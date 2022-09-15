@@ -36,7 +36,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <section class="py-5">
 
 	<div class="container">
-
+	 <?php $posts_current = array();
+ array_push($posts_current, get_the_ID()); ?>
 		<div class="row">
 
 			<div class="col-12">
@@ -73,7 +74,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 							?>
 									<span class="u-font-weight-regular u-color-folk-dark-golden">
 										<?php echo $cat->name; ?>	
-										<?php echo var_dump($post)?>
+										
 									</span>
 							<?php 
 								if( $count == 2 )
@@ -200,7 +201,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             'post_type'      => 'post',
                             'category_name'  => $cats[1]->name. ',+noticias',
                             'order'          => 'DESC',
-							'post__not_in' =>  $posts->id,
+							'post__not_in' =>  $posts_current,
                            
                         );
 
