@@ -62,7 +62,13 @@ function erwise_create_post_type() {
 		'menu_icon' 	=> 'dashicons-businessperson',
 		'supports' 		=> array( 'title',  'thumbnail',  )
 	) );
-
+	register_post_type( 'galeria', array(
+		'labels' 		=> array( 'name' => 'Galerias', 'singular_name' => 'Galeria', 'all_items' => 'Todas Galerias' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-images-alt2',
+		'supports' 		=> array( 'title' ) 
+	) );
 
 	
 

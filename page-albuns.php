@@ -55,7 +55,7 @@ get_header(); ?>
                     <?php
                         $args = array(
                             'posts_per_page' => -1,
-                            'post_type'      => 'Galeria',
+                            'post_type'      => 'galeria',
                             'order'          => 'DESC'
                         );
 

@@ -56,7 +56,7 @@ get_header(); ?>
                 <div class="row">
 <!-- //test -->
                     <?php
-                        $images = get_field( 'Galeria' );
+                        $images = get_field( 'galeria' );
                         $count = -1;
 
                         if( $images ) :
