@@ -14,13 +14,6 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<?php
-    $post_categories = get_the_terms( get_the_ID(), 'categoria-foto' );
-
-    echo '<pre>';
-    var_dump( $post_categories );
-    echo '</pre>';
-?>
 <!-- banner -->
 <section 
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
@@ -47,8 +40,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 		<div class="row justify-content-lg-end">
                 
             <div class="col-md-4 mb-3">
-                <a class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
-                href="<?php echo get_home_url( null, '/fotos/?cat='.$image_current ) ?>">
+                <?php
+                    $post_categories = get_the_terms( get_the_ID(), 'categoria-foto' );
+                ?>
+
+                <a 
+                class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
+                href="<?php echo get_home_url( null, '/fotos/?cat=' . $post_categories[0]->slug ); ?>">
                     Voltar a Galeria
                 </a>
             </div>
