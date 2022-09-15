@@ -73,7 +73,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 							?>
 									<span class="u-font-weight-regular u-color-folk-dark-golden">
 										<?php echo $cat->name; ?>	
-										
+										<?php echo var_dump($post)?>
 									</span>
 							<?php 
 								if( $count == 2 )
@@ -200,6 +200,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             'post_type'      => 'post',
                             'category_name'  => $cats[1]->name. ',+noticias',
                             'order'          => 'DESC',
+							'post_not_in' =>  ,
                            
                         );
 
