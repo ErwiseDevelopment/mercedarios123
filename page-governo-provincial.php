@@ -181,21 +181,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </div>
 
                                         <div class="card-body pl-0">
+                                                        <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">      
+                                                            <h4 class=" l-communities__box__title u-font-size-25 u-font-weight-regular u-font-family-cinzel text-center u-color-folk-white ">
+                                                                <!-- Padre Paulo Manoel de Souza Profilo -->
+                                                                <?php the_title() ?>
+                                                            </h4>
 
-                                            <h4 class="u-font-weight-bold u-color-folk-theme">
-                                                <!-- Padre Paulo Manoel de Souza Profilo -->
-                                                <?php the_title() ?>
-                                            </h4>
-
-                                            <p class="u-font-size-14 u-font-weight-semibold">
-                                                <!-- Diretor Local -->
-
-                                                <?php
-                                                    $terms = get_the_terms( get_the_ID(), 'atuacoes' );
-                                                    echo $terms[0]->name;
-                                                ?>
-                                            </p>
-                                        </div>
+                                                            <p class="u-font-size-20 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
+                                                                <!-- Diretor Local -->
+                                                                <?php echo $term->name; ?>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                     </div>
                                 </div> 
                     <?php                                  
