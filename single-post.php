@@ -97,6 +97,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 								if( $count == 2 )
 									break;
 								endforeach; 
+
+								$category = 'blog'
 							?>
 						</p>
 
@@ -148,11 +150,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									</div>
 
 									<!-- loop -->
-									  
+									$category
 									<div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/'.$categpry.'/?cat=institucional' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$category.'/?cat=institucional' ) ?>">
                                         Institucional
                                     </a>
                                 </div>
