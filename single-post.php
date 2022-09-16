@@ -161,42 +161,42 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=vocacional' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=vocacional' ) ?>">
                                         Vocacional
                                     </a>
                                 </div>
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=educacao' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=educacao' ) ?>">
                                         Educação
                                     </a>
                                 </div>
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=paroquias' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=paroquias' ) ?>">
                                         Paróquias
                                     </a>
                                 </div>
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=caridade' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=caridade' ) ?>">
                                         Caridade
                                     </a>
                                 </div>
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=dom-inocencio' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=dom-inocencio' ) ?>">
                                         Dom Inocêncio
                                     </a>
                                 </div>
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=pastoral' ) ?>">
+                                    href="<?php echo get_home_url( null, '/'.$predominant_category.'/?cat=pastoral' ) ?>">
                                         Pastoral
                                     </a>
                                 </div>
@@ -206,7 +206,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 							</div>
 						</div>
 
-						<?php if( $predominant_category != 'Blog' ) : ?>
+						<!-- //<php if( $predominant_category != 'Blog' ) : ?> -->
 							<div class="row">
 
 								<div class="col-12 mt-3">
@@ -277,7 +277,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									</div>
 								</div>
 							</div>
-						<?php endif; ?>
+						<!-- <?php endif; ?> -->
 					</div>
 				</div>
 			</div>
