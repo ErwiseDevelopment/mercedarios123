@@ -31,6 +31,14 @@ get_header();
                                     background-color: #D99D32;
                                 }
                                 
+                                .l-areas__box {
+                                    
+                                    bottom: 10px;
+                                    right: 17px;
+                                    left: 17px;
+                                    position: absolute;
+                                }
+                                
                                 .l-areas__box__title::before {
                                 content: '';
                                 width: calc(44% - 1rem);
@@ -193,7 +201,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </div>
 
                                          <div class="card-body pl-0">
-                                                        <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">      
+                                                        <div class="l-areas__box  d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">      
                                                             <h5 class=" l-areas__box__title u-font-size-25 u-font-weight-regular u-font-family-cinzel text-center u-color-folk-white ">
                                                                 <!-- Padre Paulo Manoel de Souza Profilo -->
                                                                 <?php the_title() ?>
