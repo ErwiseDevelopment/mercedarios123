@@ -125,7 +125,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             if( preg_match("/{$category_priority}/i", $term->name)) :
                                                 array_push( $posts_priority, get_the_ID() );
                             ?>
-                                                <div class="col-lg-4 my-3">
+                                                <div class="col-lg-5 my-3">
 
                                                     <div class="card border-0">
                                                     
