@@ -183,7 +183,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $teams->have_posts() ) :
                             while( $teams->have_posts() ) : $teams->the_post();
                     ?>
-                                <div class="col-lg-4 my-3">
+                                <div class="col-lg-5 my-3">
 
                                     <div class="card border-0">
 
