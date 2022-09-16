@@ -119,7 +119,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                            the_post();
                                
                                
-                                           $categories = wp_get_object_terms( $taxonomies , 'category' );
+                                           $categories = wp_get_object_terms( $taxonomies , 'santos' );
                                
                                           
                                        }
