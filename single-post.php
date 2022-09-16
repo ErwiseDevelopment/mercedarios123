@@ -277,7 +277,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									</div>
 								</div>
 							</div>
-						<!-- <?php endif; ?> -->
+						<!-- <php endif; ?> -->
 					</div>
 				</div>
 			</div>
