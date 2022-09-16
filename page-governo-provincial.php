@@ -33,7 +33,7 @@ get_header();
                                 
                                 .l-areas__box {
                                     
-                                    bottom: 10px;
+                                    bottom: -30px;
                                     right: 17px;
                                     left: 17px;
                                     position: absolute;
@@ -216,6 +216,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     </div>
                                     </div>
                                 </div> 
+
+                                            </br>
+                                            </br>
+                                                
                     <?php                                  
                             endwhile;
                         endif;
