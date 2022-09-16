@@ -124,7 +124,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                                         <div class="card-body pl-0">
                                                         <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">      
-                                                            <h4 class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
+                                                            <h4 class="u-font-size-25 u-font-weight-regular u-font-family-cinzel text-center u-color-folk-white  l-communities__box__title">
                                                                 <!-- Padre Paulo Manoel de Souza Profilo -->
                                                                 <?php the_title() ?>
                                                             </h4>

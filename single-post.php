@@ -98,7 +98,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									break;
 								endforeach; 
 
-								$category = 'blog'
 							?>
 						</p>
 

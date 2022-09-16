@@ -167,7 +167,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
-                                    href="<?php echo get_home_url( null, '/noticias/?cat=institucional' ) ?>">
+                                    href="<?php echo get_home_url( null, '/blog/?cat=institucional' ) ?>">
                                         Institucional
                                     </a>
                                 </div>
