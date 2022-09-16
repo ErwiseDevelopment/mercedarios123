@@ -22,7 +22,7 @@ get_header();
 
                                 .l-communities__box__title::before {
                                     content: '';
-                                    width: calc(100% - 1rem);
+                                    width: calc(44% - 1rem);
                                     height: 4px;
                                     top: 39%;
                                     left: 50%;
@@ -129,7 +129,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                                 <?php the_title() ?>
                                                             </h4>
 
-                                                            <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
+                                                            <p class="u-font-size-20 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
                                                                 <!-- Diretor Local -->
                                                                 <?php echo $term->name; ?>
                                                             </p>
