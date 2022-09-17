@@ -20,11 +20,24 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <!-- banner -->
-<section class="u-bg-folk-extrabold-electric-blue py-5">
+<section 
+class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
 
     <div class="container">
 
         <div class="row">
+
+            <div class="col-12 px-0">
+                <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
+                    <?php the_title() ?>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner -->
+
         <?php 
                 if( isset( $_GET['cat'] ) ) {
                     foreach( get_categories() as $category) {
@@ -41,19 +54,6 @@ get_header(); ?>
                     );
                 }
         ?>
-
-            <div class="col-12 my-5">
-
-                <h1 class="l-banner-full__title u-font-weight-bold text-center u-color-folk-white mb-4">
-                    Nossos Materiais
-                </h1>
-
-                <div class="rounded u-bg-folk-golden mx-auto" style="width:320px;height:9px"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end banner -->
 
 <section class="my-5 pt-4">
 
