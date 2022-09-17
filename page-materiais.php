@@ -72,75 +72,46 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         alt="destaque"></a>
                     </div>
                     
-                    <div class="col-md-3 mt-3 mt-md-0">
-
-                        <div>
-                            <form class="js-search-form" method="GET" action="/">
-
-                                <div class="row">
-
-                                    <div class="col-12">
-                                        <input
-                                        class="w-100 border-0 d-block u-font-size-14 u-font-weight-semibold u-color-folk-bold-eletric-blue u-bg-folk-light-gray py-4 pl-3 pr-5"
-                                        type="search"
-                                        name="s"
-                                        placeholder="Procurar">
-                                        <span class="l-page-news__icon js-search-submit"></span>
-                                    </div>
-                                </div>
-                            </form>                            
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-12">
-
-                                <div class="border mt-4 p-4">
-
-                                    <h6 class="xxl:u-font-size-20 u-font-weight-bold u-color-folk-medium-electric-blue">
-                                        Categorias
-                                    </h6>
-
-                                    <div class="col-4 pt-3">
+                    <div class="col-3 pt-3">
                 
-						<div class="row">
+                <div class="row">
 
-							<div class="col-12">
+                    <div class="col-12">
 
-								<div class="border py-4 px-3">
+                        <div class="border py-4 px-3">
 
-									<div class="row">
+                            <div class="row">
 
-									<div class="col-12 mb-3">
+                            <div class="col-12 mb-3">
 
-										<form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
-											<input
-											class="c-input-search py-3 px-2"
-											type="search"
-											name="s">
-											
-											<input 
-											class="d-none"
-											type="submit"
-											id="submit">
+                                <form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
+                                    <input
+                                    class="c-input-search py-3 px-2"
+                                    type="search"
+                                    name="s">
+                                    
+                                    <input 
+                                    class="d-none"
+                                    type="submit"
+                                    id="submit">
 
-											<label 
-											class="c-input-search__icon"
-											for="submit">
-												Ícone pesquisa
-											</label>
-										</form>
-									</div>
+                                    <label 
+                                    class="c-input-search__icon"
+                                    for="submit">
+                                        Ícone pesquisa
+                                    </label>
+                                </form>
+                            </div>
 
-									<div class="col-12 my-2">
-										<h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
-											Categorias
-										</h5>
-									</div>
+                            <div class="col-12 my-2">
+                                <h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
+                                    Categorias
+                                </h5>
+                            </div>
 
-									<!-- loop -->
-									
-									<div class="col-12 my-1">
+                            <!-- loop -->
+                            
+                            <div class="col-12 my-1">
                                     <a
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2"
                                     href="<?php echo get_home_url( null, '/materiais/?cat=institucional' ) ?>">
@@ -189,17 +160,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         Pastoral
                                     </a>
                                 </div>
-									<!-- end loop -->
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-                                        
-                                
-                                </div>
+                            <!-- end loop -->
                             </div>
                         </div>
                     </div>
