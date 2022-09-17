@@ -39,20 +39,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end banner -->
 
         <?php 
-                if( isset( $_GET['cat'] ) ) {
+                if( isset( $_GET['cat'] ) ) 
                     foreach( get_categories() as $category) {
                         if( $_GET['cat'] == $category->slug )
                             $category_current = $category->slug; 
                     }
-                } else {
-                    $category_current = array(
-                        'institucional',
-                        'vocacional',
-                        'educacao',
-                        'paroquias',
-                        'dom-inocencio'
-                    );
-                }
+               
         ?>
 
 <section class="my-5 pt-4">
