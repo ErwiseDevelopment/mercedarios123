@@ -181,11 +181,30 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php 
-                        $args = array(
-                            'posts_per_page' => 24,
-                            'post_type'      => 'ebook',
-                            'order'          => 'DESC'
-                        );
+                       
+                       if( isset( $_GET[ 'cat' ] ) ) {
+                           $category_current = $_GET[ 'cat' ];
+
+                           $args = array(
+                               'posts_per_page' => -1,
+                               'post_type'      => 'ebook',
+                               'order'          => 'DESC',
+                               'tax_query'      => array(
+                                   array(
+                                       'taxonomy' => 'comunidades-estados',
+                                       'field'    => 'slug',
+                                       'terms'    => array( $category_current )
+                                   )
+                               )
+                           );
+                       } else {
+                           $args = array(
+                               'posts_per_page' => -1,
+                               'post_type'      => 'ebook',
+                               'order'          => 'DESC'
+                           );
+                       }
+
 
                         $ebooks = new WP_Query( $args );
 
