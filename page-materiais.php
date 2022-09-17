@@ -183,7 +183,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                'order'          => 'DESC',
                                'tax_query'      => array(
                                    array(
-                                       'taxonomy' => 'comunidades-estados',
+                                       'taxonomy' => 'ebook-categoria',
                                        'field'    => 'slug',
                                        'terms'    => array( $category_current )
                                    )
