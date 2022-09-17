@@ -66,9 +66,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <div class="col-md-9">
-                       <a href="<?php echo get_field('link_banner_materiais', 'option') ?>"> <img
+                       <a href="<?php echo get_field('link_imagem_destaque', 'option') ?>"> <img
                         class="img-fluid"
-                        src="<?php echo get_field('banner_materiais','option') ?>"
+                        src="<?php echo get_field('imagem_destaque','option') ?>"
                         alt="destaque"></a>
                     </div>
                     
