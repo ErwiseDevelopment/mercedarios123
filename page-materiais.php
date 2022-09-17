@@ -207,7 +207,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                     <a 
                                     class="card border-0 text-decoration-none"
-                                    href="<?php echo get_field( 'link' ) ?>" target="_blank">
+                                    href="<?php echo get_field('link_ebook') ?>" 
+                                                    <?php if('nova_guia_mat' == '1'):?> target="_blank"
+                                                    <?php endif;?>>
 
                                         <div class="l-our-materials__card-img card-img d-flex justify-content-center align-items-center p-3">
                                             <!-- <img
@@ -243,13 +245,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 <div class="col-8 mt-3">
                                                     <a href="<?php echo get_field('link_ebook') ?>" 
                                                     <?php if('nova_guia_mat' == '1'):?> target="_blank"
-                                                    <?php endif;?>>
-                                                    <p class="w-100 u-box-shadow-pattern u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden hover:u-bg-folk-squid-ink py-2">
+                                                    <?php endif;?>
+                                                    
+                                                    class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-3">
                                                         Baixar
                                                     </p></a>
                                                 </div>
                                             </div>
-                                        </div>
+                                           
                                     </a>
                                 </div>
                     <?php 
