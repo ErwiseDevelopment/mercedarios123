@@ -51,7 +51,7 @@
         endif;
     ?>
     <!-- end menu -->
-
+    
     <header id="masthead" class="header site-header navbar-static-top py-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container">
