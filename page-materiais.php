@@ -205,9 +205,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     ?>
                                 <div class="col-md-6 col-lg-4 my-3">
 
-                                    <a 
+                                    <span
                                     class="card border-0 text-decoration-none"
-                                    href="<?php echo get_field( 'link' ) ?>" target="_blank">
+                                   >
 
                                         <div class="l-our-materials__card-img card-img d-flex justify-content-center align-items-center p-3">
                                             <!-- <img
@@ -251,8 +251,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             </div>
                                             
                                         </div>
-                                        </div>
-                                    </a>
+                                        
+                                        </span> 
                                 </div>
                     <?php 
                             endwhile;
