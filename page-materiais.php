@@ -249,15 +249,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     </p></a>
                                                 </div>
                                             </div>
-                                             <div class="row">
-
-                                            <div class="col-8 col-xl-6 mt-3">
-                                                <a
-                                                class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-3"
-                                                href="<?php the_permalink() ?>">
-                                                    Ler mais
-                                                </a>    
-                                            </div>
+                                            
                                         </div>
                                         </div>
                                     </a>
