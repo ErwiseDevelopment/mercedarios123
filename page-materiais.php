@@ -244,9 +244,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     <a href="<?php echo get_field('link_ebook') ?>" 
                                                     <?php if('nova_guia_mat' == '1'):?> target="_blank"
                                                     <?php endif;?>>
-                                                    <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
-                                                        Baixar
-                                                    </p></a>
+                                                        <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
+                                                            Baixar
+                                                        </p>
+                                                    </a>
                                                 </div>
                                             </div>
                                             
