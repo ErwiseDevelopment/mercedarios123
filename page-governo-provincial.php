@@ -183,6 +183,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $teams->have_posts() ) :
                             while( $teams->have_posts() ) : $teams->the_post();
                     ?>
+                    </br>
+                                            </br>
                                 <div class="col-lg-5 my-3">
 
                                     <div class="card border-0">
@@ -217,8 +219,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </div>
                                 </div> 
 
-                                            </br>
-                                            </br>
+                                            
                                                 
                     <?php                                  
                             endwhile;
