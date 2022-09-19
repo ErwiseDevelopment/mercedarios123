@@ -158,9 +158,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         <div class="row justify-content-center">
 
             <div class="col-12">
-
+                            
                 <span class="l-template-content__content d-block u-font-family-lato">
-                    <?php echo var_dump(the_content()) ?>
+                    <?php $conteudo = the_content();
+                     echo var_dump($conteudo) ?>
                 </span>
             </div>
 
