@@ -111,7 +111,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </div>
 
                                         <div class="card-body pt-2 pl-0">
-                                            <h6 class="l-news__small__card-title u-line-height-100 u-font-weight-extrabold mb-1">
+                                        <h6 class="u-font-size-26 u-font-weight-bold u-font-family-cinzel-decorative u-color-folk-bold-marron">
                                                 <?php the_title() ?>                                                           
                                             </h6>
                                         </div>
