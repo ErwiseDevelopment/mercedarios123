@@ -62,7 +62,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $collections->have_posts()):
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
-                                <div class="col-lg-6 my-4 py-4 py-lg-0">
+                                <div class="col-lg-6 my-4 py-3">
 
                                     <a 
                                     class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
