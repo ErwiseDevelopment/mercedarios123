@@ -129,6 +129,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <?php
                     $posts_current = array();
+                   array_push($posts_current, get_the_ID()); 
+              
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => $post->post_type,
@@ -147,7 +149,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         if( $other_posts->have_posts() ) :
                             while( $other_posts->have_posts() ) : $other_posts->the_post();
-                            array_push($posts_current, get_the_ID());
                     ?>
                                 <div class="col-lg-4 my-2">
                                     <a href="<?php the_permalink() ?>">
