@@ -45,7 +45,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
         <div class="row">
 
-            <div class="col-12 pb-5">
+            <div class="col-12 pb-3">
 
                 <div class="row">
 
@@ -76,11 +76,52 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     > Nossas Devoções
                                 </a>
                             </li>
+
+                            <?php
+                                $category_current = array();
+
+                                if( isset( $_GET[ 'id' ] ) ) :
+                                    $category_breadcrumb_id = $_GET[ 'id' ];
+                                    $category_breadcrumb = get_term( $category_breadcrumb_id, 'santos' );
+                                    array_push( $category_current, $category_breadcrumb );
+                            ?>
+                                    <li class="u-list-style-none mr-1">
+                                        <a
+                                        class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
+                                        href="<?php echo get_home_url( null, 'nossas-devocoes/?id=' . $category_breadcrumb->term_id ); ?>">
+                                            > <?php echo $category_breadcrumb->name; ?>
+                                        </a>
+                                    </li>
+                            <?php endif; ?>
                         </ul>
                     </div>    
                 </div>
             </div>    
             
+            <div class="col-12">
+
+                <div class="row">
+
+                    <div class="col-6">
+                        
+                        <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
+                            <?php echo $category_current[0] ? $category_current[0]->name : ''; ?>
+                        </h2>
+
+                        <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
+                            <?php echo $category_current[0] ? get_field( 'descricao', $category_current[0] ) : ''; ?>
+                        </span>
+                    </div>
+
+                    <div class="col-6">
+                        <img
+                        class="img-fluid w-100 u-object-fit-cover"
+                        src="<?php echo get_field( 'imagem_dev', $category_current[0] ); ?>"
+                        alt="<?php echo $category_current[0]->name; ?>">
+                    </div>
+                </div>
+            </div>
+
             <div class="col-12">
 
                 <div class="row">
