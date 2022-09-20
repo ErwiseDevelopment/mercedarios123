@@ -128,6 +128,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php
+                    $posts_current = array();
+                   array_push($posts_current, get_the_ID()); 
+              
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => $post->post_type,

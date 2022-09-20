@@ -100,6 +100,22 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             
             <div class="col-12">
 
+<section class="mt-3 py-5 d-none">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12">
+
+                <span class="l-template-content__content d-block u-font-family-lato">
+                    <?php the_content() ?>
+                </span>
+            </div>
+            
+<?php endwhile; ?>
+</section>
+
                 <div class="row">
 
                     <div class="col-6">
@@ -162,7 +178,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <?php
                                 endwhile;
                             endif;
-                        else :
+                        else:
                             $all_categories = get_terms( array(
                                 'taxonomy' => 'santos',
                                 'hide_empty' => false,
@@ -253,7 +269,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end other posts -->
 
-<?php endwhile; ?>
 
 </div><!-- #main -->
 </section><!-- #primary -->
