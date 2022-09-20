@@ -83,7 +83,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             
             <div class="col-12">
 
-            <section class="mt-3 py-5 d-none">
+<section class="mt-3 py-5 d-none">
 
     <div class="container">
 
@@ -95,6 +95,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <?php the_content() ?>
                 </span>
             </div>
+            
+<?php endwhile; ?>
 </section>
 
                 <div class="row">
@@ -226,7 +228,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end other posts -->
 
-<?php endwhile; ?>
 
 </div><!-- #main -->
 </section><!-- #primary -->
