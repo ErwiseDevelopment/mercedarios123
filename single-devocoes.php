@@ -128,11 +128,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php
+                    $posts_current = array();
                         $args = array(
                             'posts_per_page' => -1,
                             'post_type'      => $post->post_type,
                             'order'          => 'DESC',
-                            
+                            'post__not_in'   => $posts_current,
                             'tax_query'      => array(
                                 array(
                                     'taxonomy' => 'santos',
