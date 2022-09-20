@@ -121,7 +121,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <?php
                                 endwhile;
                             endif;
-                        else :
+                        else:
                             $all_categories = get_terms( array(
                                 'taxonomy' => 'santos',
                                 'hide_empty' => false,
@@ -158,14 +158,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         <div class="row justify-content-center">
 
             <div class="col-12">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>            
+
                 <span class="l-template-content__content d-block u-font-family-lato">
-                    <?php $conteudo = the_content();?>
+                    <?php the_content() ?>
                 </span>
             </div>
-                        <?php  
-                        endwhile;
-                    endif;?>
+
             <div class="col-12">
 
                 <div class="row">
