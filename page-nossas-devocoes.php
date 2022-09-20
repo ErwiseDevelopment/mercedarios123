@@ -83,6 +83,20 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             
             <div class="col-12">
 
+            <section class="mt-3 py-5 d-none">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12">
+
+                <span class="l-template-content__content d-block u-font-family-lato">
+                    <?php the_content() ?>
+                </span>
+            </div>
+</section>
+
                 <div class="row">
 
                     <!-- loop -->
