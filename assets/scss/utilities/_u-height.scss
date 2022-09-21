@@ -33,6 +33,12 @@ $utility-name: 'u-h';
 
     &px\: {
         &#{$utility-name} {
+            &-252 {
+                @media screen and (min-width: 992px) {
+                    height: 252px !important;
+                }
+            }
+
             &-264 {
                 @media screen and (min-width: 992px) {
                     height: 264px !important;
@@ -42,6 +48,12 @@ $utility-name: 'u-h';
             &-420 {
                 @media screen and (min-width: 992px) {
                     height: 420px !important;
+                }
+            }
+
+            &-488 {
+                @media screen and (min-width: 992px) {
+                    height: 488px !important;
                 }
             }
         }

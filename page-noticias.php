@@ -54,7 +54,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     $category_current = 'noticia-destaque';
                 }
         ?>
-            <div class="col-9 pl-lg-0">
+            <div class="col-lg-9 pl-lg-0">
                 
                 <div class="h-100 u-bg-folk-bold-marron py-4">
 
@@ -125,7 +125,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
             </div>
 
-            <div class="col-3 pt-3">
+            <div class="col-lg-3 pt-3">
                 
                 <div class="row">
 

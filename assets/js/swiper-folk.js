@@ -154,3 +154,21 @@ const swiperOurConstruction = new Swiper( '.js-swiper-our-construction', {
         nextEl: '.js-swiper-button-next-our-construction'
     }
 })
+
+const swiperPlacesImages = new Swiper( '.js-swiper-places-images', {
+    allowTouchMove: false,
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-places-content',
+        nextEl: '.js-swiper-button-next-places-content'
+    }
+})
+
+const swiperPlacesContent = new Swiper( '.js-swiper-places-content', {
+    allowTouchMove: false,
+    
+    navigation: {
+        prevEl: '.js-swiper-button-prev-places-content',
+        nextEl: '.js-swiper-button-next-places-content'
+    }
+})

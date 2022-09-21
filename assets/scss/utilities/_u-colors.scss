@@ -85,6 +85,12 @@ $utility-name: 'u-color-folk';
             }
         }
 
+        &-dark-golden {
+            &:hover {
+                color: $color-folk-dark-golden !important;
+            }
+        }   
+
         &-white {
             &:hover {
                 color: $color-folk-white !important;

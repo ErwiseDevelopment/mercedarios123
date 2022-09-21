@@ -22,7 +22,7 @@ get_header(); ?>
 
 <!-- banner -->
 <section class="w-100">
-<?php echo do_shortcode( '[rev_slider alias="vocacional"][/rev_slider]' ); ?>
+    <?php echo do_shortcode( '[rev_slider alias="vocacional"][/rev_slider]' ); ?>
 </section>
 <!-- end banner -->
 
@@ -90,6 +90,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
+                        style="background-image: linear-gradient(to right, #D99D31, #966B19);"
                         href="<?php echo get_field('botao1')?>" <?php if (get_field('nova_guia1') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
@@ -97,8 +98,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 src="<?php echo get_field('icone1')?>"
                                 alt="Seja Voluntário">
                             </div>
+
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                            <?php echo get_field('escrita1')?>
+                                <?php echo get_field('escrita1')?>
                             </p>
                         </a>
                     </div>
@@ -106,6 +108,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item l-shortcut__item--center d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
+                        style="background-image: linear-gradient(to right, #D99D31, #966B19);"
                         href="<?php echo get_field('botao2')?>"  <?php if (get_field('nova_guia2') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
@@ -113,8 +116,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 src="<?php echo get_field('icone2')?>"
                                 alt="Seja Voluntário">
                             </div>
+
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                            <?php echo get_field('escrita2')?>
+                                <?php echo get_field('escrita2')?>
                             </p>
                         </a>
                     </div>
@@ -122,6 +126,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-lg-4 d-flex justify-content-center my-3 my-lg-0">
                         <a
                         class="l-shortcut__item d-flex flex-column justify-content-center align-items-center text-decoration-none p-5"
+                        style="background-image: linear-gradient(to right, #D99D31, #966B19);"
                         href="<?php echo get_field('botao3')?>"  <?php if (get_field('nova_guia3') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div class="p-2">
                                 <img
@@ -129,8 +134,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 src="<?php echo get_field('icone3')?>"
                                 alt="Seja Voluntário">
                             </div>
+
                             <p class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center u-color-folk-white">
-                            <?php echo get_field('escrita3')?>
+                                <?php echo get_field('escrita3')?>
                             </p>
                         </a>
                     </div>
@@ -164,89 +170,73 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <div class="swiper-wrapper">
 
-                        <!-- slide <php for( $i = 0; $i < 8; $i++ ) { ?> -->
-                        
-                            
-                                <?php 
-                                 $args = array(
-                                    'post_per_page' => 21,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'noticia-vocacional',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $cats = array();
+                        <?php 
+                            $args = array(
+                                'post_per_page' => -1,
+                                'post_type'     => 'post',
+                                'category_name' => 'noticias+vocacional',
+                                'order'         => 'DESC',
+                            );
 
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                ?>
-                            <div class="swiper-slide">    
-                                <a 
-                                class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                href="<?php the_permalink() ?>">
+                            $contents = new WP_Query( $args );
+                            $cats = array();
 
-                                    <div class="card-img">
-                                        <!-- <img
-                                        class="img-fluid w-100"
-                                        src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/news-post-1.png"
-                                        alt=""> -->
+                            if( $contents->have_posts() ):
+                                while ( $contents->have_posts() ) : $contents->the_post();
+                        ?>
+                                    <div class="swiper-slide">    
+                                        <a 
+                                        class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
+                                        href="<?php the_permalink() ?>">
 
-                                        <?php 
-                                        $alt_title = get_the_title();
-                                        the_post_thumbnail('post-thumbnail', 
-                                        array(
-                                            'class' => 'img-fluid w-100 h-100',
-                                            'alt'   => $alt_title
-                                            ))
-                                        ?>
-                                    </div>
-
-                                    <div class="card-body">
-
-                                        <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                            <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                            <!-- 06 de Maio de 2021 -->
-                                            <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
-                                        </p>
-
-                                        <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                            <!-- Mensagem do Provincial
-                                            Dia de São Pedro Nolasco -->
-                                        <?php the_title() ?>
-                                        </h4>
-
-                                        <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                            <!-- Lorem ipsum dolor sit amet, consectetur 
-                                            adipiscing elit. Mauris lectus dolor, semper 
-                                            vitae libero se,d, ornare tempus dui. Donec 
-                                            efficitur, dui et facilisis commodo, mauris 
-                                            massa mollis nisi, ornare egestas lectus 
-                                            turpis tempus dolor. Aliquam.[...] -->
-                                            <?php the_excerpt()?>
-                                        </span>
-                                    </div>
-
-                                    <div class="c-card-footer-absolute card-footer">
-
-                                        <div class="row justify-content-center">
-
-                                            <div class="col-6">
-                                                <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
-                                                    Ler mais
-                                                </p>
+                                            <div class="card-img">
+                                             
+                                                <?php 
+                                                    $alt_title = get_the_title();
+                                                    the_post_thumbnail('post-thumbnail', 
+                                                        array(
+                                                            'class' => 'img-fluid w-100 u-h-100 lg:px:u-h-252 u-object-fit-cover',
+                                                            'alt'   => $alt_title
+                                                    ))
+                                                ?>
                                             </div>
-                                        </div>
+
+                                            <div class="card-body">
+
+                                                <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
+                                                    <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?> <br>
+                                                    <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
+                                                </p>
+
+                                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                                                    <?php the_title() ?>
+                                                </h4>
+
+                                                <span class="d-block u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                                    <?php echo limit_words( get_the_content(), 20) ?>
+                                                </span>
+                                            </div>
+
+                                            <div class="c-card-footer-absolute card-footer">
+
+                                                <div class="row justify-content-center">
+
+                                                    <div class="col-6">
+                                                        <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
+                                                            Ler mais
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
                             
-                                    <?php 
-                                    endwhile;
-                                    endif;
-                                    wp_reset_query();
-                                    ?>
-                            
-                            <!--  <php } ?>end slide -->
+                        <?php 
+                                endwhile;
+                            endif;
+
+                            wp_reset_query();
+                        ?>
                     </div>
                 </div>
 
@@ -319,69 +309,72 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                                <?php 
-                                 $args = array(
-                                    'post_per_page' =>  9,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'blog-vocacional',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $cats = array();
+                        <?php 
+                            $args = array(
+                                'post_per_page' =>  9,
+                                'post_type'     => 'post',
+                                'category_name' => 'blog+vocacional',
+                                'order'         => 'DESC',
+                            );
 
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                ?>
-                                <div class="swiper-slide">
-                                    <a 
-                                    class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                    href="<?php the_permalink()?>">
+                            $contents = new WP_Query( $args );
+                            $cats = array();
 
-                                        <div class="card-img">
-                                            <?php
-                                            $alt_title = get_the_title();
-                                            the_post_thumbnail('post-thumbnail', 
-                                            array(
-                                                'class' => 'img-fluid w-100 h-100',
-                                                'alt'   => $alt_title
-                                                ))
-                                            ?>
-                                        </div>
+                            if( $contents->have_posts()):
+                                while ($contents->have_posts()) : $contents->the_post();
+                        ?>
+                                    <div class="swiper-slide">
+                                        <a 
+                                        class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
+                                        href="<?php the_permalink()?>">
 
-                                        <div class="card-body">
+                                            <div class="card-img">
+                                                <?php
+                                                    $alt_title = get_the_title();
 
-                                            <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                                <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?>  <br>
-                                                <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
-                                            </p>
+                                                    the_post_thumbnail('post-thumbnail', 
+                                                        array(
+                                                            'class' => 'img-fluid w-100 u-h-100 lg:px:u-h-252 u-object-fit-cover',
+                                                            'alt'   => $alt_title
+                                                        ));
+                                                ?>
+                                            </div>
 
-                                            <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                                <?php echo get_the_title()?>
-                                            </h4>
+                                            <div class="card-body">
 
-                                            <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                            <?php the_excerpt()?>
-                                            </span>
-                                        </div>
+                                                <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
+                                                    <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?>  <br>
+                                                    <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
+                                                </p>
 
-                                        <div class="c-card-footer-absolute card-footer">
+                                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                                                    <?php echo get_the_title()?>
+                                                </h4>
 
-                                            <div class="row justify-content-center">
+                                                <span class="d-block u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                                    <?php echo limit_words( get_the_content(), 32); ?>
+                                                </span>
+                                            </div>
 
-                                                <div class="col-6">
-                                                    <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
-                                                        Ler mais
-                                                    </p>
+                                            <div class="c-card-footer-absolute card-footer">
+
+                                                <div class="row justify-content-center">
+
+                                                    <div class="col-6">
+                                                        <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
+                                                            Ler mais
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                        </a>
+                                    </div>
                         <?php 
-                        endwhile;
+                                endwhile;
                             endif;
+
                             wp_reset_query();
-                                ?>
+                        ?>
                         <!-- end slide -->
                     </div>
                 </div>
@@ -434,10 +427,137 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end blog -->
 
-<!-- campo etapas de formação -->
+<!-- places -->
+<style>
+    .l-places::before,
+    .l-places::after {
+        content: '';
+        width: 100%;        
+        left: 0;
+        position: absolute;
+        background-color: #FFF;
+    }
 
+    .l-places::before {
+        height: 30px;
+        top: 0;
+    }
 
-<!-- fim etapas -->
+    .l-places::after {
+        height: 140px;
+        bottom: 0;
+    }
+
+    @media screen and (max-width: 991px) {
+        .l-places::after {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        .l-places::before {
+            top: -1px;
+        }
+
+        .l-places::after {
+            bottom: -1px;
+        }
+    }
+</style>
+
+<section class="l-places position-relative u-bg-folk-dark-marron pb-5 pb-lg-0">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="row">
+
+                    <div class="col-lg-7 h-100">
+
+                        <!-- swiper -->
+                        <div class="swiper-container js-swiper-places-images">
+
+                            <div class="swiper-wrapper">
+
+                                <!-- slide -->
+                                <?php for( $i = 0; $i < 6; $i++ ) { ?>
+                                    <div class="swiper-slide">
+                                        <img
+                                        class="w-100 u-h-100 lg:px:u-h-488 u-object-fit-cover"
+                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/places-img-1.png"
+                                        alt="Foto 01">
+                                    </div>
+                                <?php } ?>
+                                <!-- end slide -->
+                            </div>
+                        </div>
+                        <!-- end swiper -->
+                    </div>
+
+                    <div class="col-lg-5 h-100 mt-5 pt-4">
+
+                        <!-- swiper -->
+                        <div class="swiper-container js-swiper-places-content">
+                            
+                            <div class="swiper-wrapper">
+
+                                <!-- slide -->
+                                <?php for( $i = 0; $i < 6; $i++ ) { ?>
+                                    <a 
+                                    class="swiper-slide text-decoration-none"
+                                    href="#">
+
+                                        <div>
+                                            <p class="u-font-size-14 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold u-font-family-lato u-color-folk-dark-golden mb-0">
+                                                Etapas de Formaçao
+                                            </p>
+
+                                            <h5 class="u-font-size-32 lg:u-font-size-38 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
+                                                Postulantado
+                                            </h5>
+
+                                            <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-26 u-font-weight-light u-font-family-lato u-font-style-italic u-color-folk-white">
+                                                Como o próprio nome já diz, aqui os jovens
+                                                postulam entrar na Ordem e se consagrarem.
+                                            </p>
+
+                                            <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato text-right u-color-folk-dark-golden mb-4">
+                                                Saiba mais > 
+                                            </p>
+                                        </div>
+                                    </a>
+                                <?php } ?>
+                                <!-- end slide -->
+                            </div>
+                        </div>
+
+                        <!-- navigation -->
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="w-100 u-font-size-18 lg:u-font-size-22 xxl:u-font-size-26 u-font-weight-bold u-font-family-lato text-center u-color-folk-white hover:u-color-folk-dark-golden u-bg-folk-dark-golden hover:u-bg-folk-white u-cursor-pointer py-2 js-swiper-button-prev-places-content">
+                                    Anterior
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="w-100 u-font-size-18 lg:u-font-size-22 xxl:u-font-size-26 u-font-weight-bold u-font-family-lato text-center u-color-folk-white hover:u-color-folk-dark-golden u-bg-folk-dark-golden hover:u-bg-folk-white u-cursor-pointer py-2 js-swiper-button-next-places-content">
+                                    Próximo
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end swiper -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end places -->
+
 <!-- photos -->
 <section class="py-5">
 

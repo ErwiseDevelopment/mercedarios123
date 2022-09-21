@@ -1041,6 +1041,8 @@ button.swiper-pagination-bullet {
 
 .hover\:u-color-folk-black:hover {
   color: #000 !important; }
+.hover\:u-color-folk-dark-golden:hover {
+  color: #D99E32 !important; }
 .hover\:u-color-folk-white:hover {
   color: #FFF !important; }
 
@@ -1303,6 +1305,9 @@ button.swiper-pagination-bullet {
 @media screen and (min-width: 992px) {
   .lg\:u-font-size-18 {
     font-size: 1.125rem !important; } }
+@media screen and (min-width: 992px) {
+  .lg\:u-font-size-38 {
+    font-size: 2.375rem !important; } }
 
 @media screen and (min-width: 1200px) {
   .xl\:u-font-size-0 {
@@ -1618,11 +1623,17 @@ button.swiper-pagination-bullet {
   .lg\:u-h-100 {
     height: 100% !important; } }
 @media screen and (min-width: 992px) {
+  .lg\:px\:u-h-252 {
+    height: 252px !important; } }
+@media screen and (min-width: 992px) {
   .lg\:px\:u-h-264 {
     height: 264px !important; } }
 @media screen and (min-width: 992px) {
   .lg\:px\:u-h-420 {
     height: 420px !important; } }
+@media screen and (min-width: 992px) {
+  .lg\:px\:u-h-488 {
+    height: 488px !important; } }
 
 .u-icon__brands::before {
   font-family: 'Font Awesome 5 Brands'; }
@@ -2219,6 +2230,9 @@ button.swiper-pagination-bullet {
   height: 280px; }
   .l-template-content__banner__title {
     font-size: 4rem; }
+    @media screen and (max-width: 991px) {
+      .l-template-content__banner__title {
+        font-size: 2.625rem; } }
     .l-template-content__banner__title::before {
       content: '';
       width: 280px;

@@ -1,4 +1,4 @@
-<section>
+<section class="mb-4 mb-lg-0">
 
     <div class="container-fluid">
 
@@ -8,7 +8,7 @@
                 
                 <div class="row">
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_institucional', 'option') ?>">
@@ -16,7 +16,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_vocacional', 'option') ?>">
@@ -24,7 +24,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_educacao', 'option') ?>">
@@ -32,7 +32,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_paroquias', 'option') ?>">
@@ -40,7 +40,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_caridade', 'option') ?>">
@@ -48,7 +48,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_dominocencio', 'option') ?>">
@@ -56,7 +56,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_revistamerce', 'option') ?>">
@@ -64,7 +64,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-6 col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_empreendedor', 'option') ?>">
@@ -72,7 +72,7 @@
                         </a>
                     </div>
 
-                    <div class="col px-0">
+                    <div class="col-lg my-1 my-lg-0 px-lg-0">
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_acervo', 'option') ?>">
