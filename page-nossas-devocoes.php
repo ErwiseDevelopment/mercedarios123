@@ -100,21 +100,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             
             <div class="col-12">
 
-<section class="mt-3 py-5 d-none">
+                <!-- <section class="mt-3 py-5 d-none">
 
-    <div class="container">
+                <div class="container">
 
-        <div class="row justify-content-center">
+                    <div class="row justify-content-center">
 
-            <div class="col-12">
+                        <div class="col-12">
 
-                <span class="l-template-content__content d-block u-font-family-lato">
-                    <?php the_content() ?>
-                </span>
-            </div>
-            
-<?php endwhile; ?>
-</section>
+                            <span class="l-template-content__content d-block u-font-family-lato">
+                                <php the_content() ?>
+                            </span>
+                        </div>
+                        
+            <php endwhile; ?>
+            </section> -->
 
                 <div class="row">
 
@@ -129,12 +129,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </span>
                     </div>
 
-                    <div class="col-6">
+                    <!-- <div class="col-6">
                         <img
                         class="img-fluid w-100 u-object-fit-cover"
-                        src="<?php echo get_field( 'imagem_dev', $category_current[0] ); ?>"
-                        alt="<?php echo $category_current[0]->name; ?>">
-                    </div>
+                        src="<php echo get_field( 'imagem_dev', $category_current[0] ); ?>"
+                        alt="<php echo $category_current[0]->name; ?>">
+                    </div> -->
                 </div>
             </div>
 
@@ -268,6 +268,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     </div>
 </section>
 <!-- end other posts -->
+
+<?php endwhile; ?>
 
 
 </div><!-- #main -->

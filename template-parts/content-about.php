@@ -1,6 +1,6 @@
 <!-- about -->
 <section
-class="u-bg-cover u-bg-no-repeat py-5"
+class="u-bg-cover u-bg-no-repeat pt-5 pb-0 pb-lg-5"
 style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/about-background.png);">
     
     <div class="container-fluid">
@@ -15,7 +15,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div>
                             <img
                             class="img-fluid w-100 u-object-fit-cover"
-                            src=" <?php echo get_field('imagem')?>"
+                            src=" <?php echo get_field( 'imagem' ) ?>"
                             alt="">
                         </div>
                     </div>
@@ -26,16 +26,16 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <?php echo get_field('titulo_mecedarios') ?>
                         </h3>
 
-                        <p class="u-font-size-14 xl:u-font-size-16 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato u-color-folk-white">
-                        <?php echo get_field('descricao_mecedarios') ?>
+                        <p class="u-font-size-12 sm:u-font-size-14 xl:u-font-size-16 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato u-color-folk-white">
+                            <?php echo get_field( 'descricao_mecedarios' ) ?>
                         </p>
 
                         <div class="row justify-content-end">
 
-                            <div class="col-6 col-xl-4">
+                            <div class="col-6 col-xl-4 mt-5 mt-lg-0">
                                 <a
                                 class="w-100 d-block u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-golden py-2"
-                                href="<?php echo get_home_url( null,'/') .  get_field('btn_saiba_mais')?>">
+                                href="<?php echo get_home_url( null, '/' ) .  get_field( 'btn_saiba_mais' ) ?>">
                                     Saiba mais
                                 </a>
                             </div>

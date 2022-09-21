@@ -51,8 +51,8 @@
         endif;
     ?>
     <!-- end menu -->
-    
-    <header id="masthead" class="header site-header navbar-static-top py-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+        
+    <header id="masthead" class="<?php echo $post->post_title == 'Início' ? 'd-none' : ''; ?> header site-header navbar-static-top py-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container">
 

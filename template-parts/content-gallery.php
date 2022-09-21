@@ -1,4 +1,17 @@
-<section>
+<style>
+    .l-gallery iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .l-gallery iframe {
+            height: 720px;
+        }
+    }
+</style>
+
+<section class="l-gallery">
     
     <div class="container">
 
@@ -23,21 +36,21 @@
             <div class="col-12">
 
                 <div class="row">
-                                       <!-- loop -->
-                        <?php
-                            if( have_rows( 'outros_videos' ) ) :
-                                while( have_rows( 'outros_videos' ) ) : the_row();
-                        ?>
-                        <div class="col-xl-4 my-3">
-                            
-                            <div>
-                            <?php echo get_sub_field( 'outros_videos_repetidor' ) ?>
-                            </div>
-                        </div>
-                        <?php
-                                endwhile;
-                            endif;
-                        ?>
+                    
+                    <!-- loop -->
+                    <?php
+                        if( have_rows( 'outros_videos' ) ) :
+                            while( have_rows( 'outros_videos' ) ) : the_row();
+                    ?>
+                                <div class="col-xl-4 my-3">
+                                    <div>
+                                        <?php echo get_sub_field( 'outros_videos_repetidor' ) ?>
+                                    </div>
+                                </div>
+                    <?php
+                            endwhile;
+                        endif;
+                    ?>
                     <!-- end loop -->
                 </div>
             </div>

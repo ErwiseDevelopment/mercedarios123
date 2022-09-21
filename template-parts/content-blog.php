@@ -103,7 +103,7 @@
                 </div>
 
                 <!-- pagination -->
-                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs"></div>
+                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs" style="left:0"></div>
                 <!-- end swiper -->
             </div>
 

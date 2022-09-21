@@ -1,5 +1,11 @@
 $utility-name: 'u-h'; 
 
+.#{$utility-name} {
+    &-100 {
+        height: 100% !important;
+    }
+}
+
 .px\: {
     &#{$utility-name} {
         &-30 {
@@ -8,6 +14,36 @@ $utility-name: 'u-h';
 
         &-32 {
             height: 32px !important;
+        }
+
+        &-420 {
+            height: 420px !important;
+        }
+    }
+}
+
+.lg\: {
+    &#{$utility-name} {
+        &-100 {
+            @media screen and (min-width: 992px) {
+                height: 100% !important;
+            }
+        }
+    }
+
+    &px\: {
+        &#{$utility-name} {
+            &-264 {
+                @media screen and (min-width: 992px) {
+                    height: 264px !important;
+                }
+            }
+
+            &-420 {
+                @media screen and (min-width: 992px) {
+                    height: 420px !important;
+                }
+            }
         }
     }
 }

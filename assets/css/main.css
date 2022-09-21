@@ -1604,10 +1604,25 @@ button.swiper-pagination-bullet {
   .xxl\:u-font-weight-black {
     font-weight: 900 !important; } }
 
+.u-h-100 {
+  height: 100% !important; }
+
 .px\:u-h-30 {
   height: 30px !important; }
 .px\:u-h-32 {
   height: 32px !important; }
+.px\:u-h-420 {
+  height: 420px !important; }
+
+@media screen and (min-width: 992px) {
+  .lg\:u-h-100 {
+    height: 100% !important; } }
+@media screen and (min-width: 992px) {
+  .lg\:px\:u-h-264 {
+    height: 264px !important; } }
+@media screen and (min-width: 992px) {
+  .lg\:px\:u-h-420 {
+    height: 420px !important; } }
 
 .u-icon__brands::before {
   font-family: 'Font Awesome 5 Brands'; }
@@ -2086,6 +2101,9 @@ button.swiper-pagination-bullet {
         display: none; } }
 .l-news__medium-post__title {
   font-size: 2.375rem; }
+  @media screen and (max-width: 575px) {
+    .l-news__medium-post__title {
+      font-size: 2rem; } }
   @media screen and (min-width: 1600px) {
     .l-news__medium-post__title {
       font-size: 2.875rem; } }
