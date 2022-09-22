@@ -136,8 +136,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                                 echo $category->name;
                                                         endforeach;
 
-                                                        
+                                                    "/n";
+                                                    
+                                                    echo var_dump($post_categories)
                                                     ?>
+
                                                     <!-- Pituba - BA -->
                                                 </p>
 
