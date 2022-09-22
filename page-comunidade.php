@@ -84,7 +84,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         'order'          => 'DESC',
                                         'tax_query'      => array(
                                             array(
-                                                'taxonomy' => 'comunidades-categoria',
+                                                'taxonomy' => 'comunidades-estados',
                                                 'field'    => 'slug',
                                                 'terms'    => array( $category_current )
                                             )
@@ -135,6 +135,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                             if( $category->parent > 0 )
                                                                 echo $category->name;
                                                         endforeach;
+
+                                                        
                                                     ?>
                                                     <!-- Pituba - BA -->
                                                 </p>
@@ -166,8 +168,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             ?>
                             <!-- end loop -->
                         </div>
+                        </br>
+                            </br>
                     </div>
-
+                            
                     <div class="col-3 pt-4">
                         
                         <h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
@@ -176,11 +180,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- loop -->
                         <?php 
-                            $terms = get_terms( 'comunidades-categoria', array(
+                            $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
+                                 'parent' => 0,
                             ) );
 
                             foreach( $terms as $term ) :
+                               
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
@@ -190,7 +196,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <?php echo $term->name; ?>
                                     </a>
                                 </div>
-                        <?php endforeach; ?>
+                        <?php  
+                        endforeach;
+                         ?>
                         <!-- end loop -->
                     </div>
                 </div>
