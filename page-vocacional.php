@@ -395,7 +395,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
 
                 <!-- pagination -->
-                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs"></div>
+                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs" style="left:0"></div>
                 <!-- end swiper -->
             </div>
 
@@ -483,14 +483,42 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="swiper-wrapper">
 
                                 <!-- slide -->
-                                <?php for( $i = 0; $i < 6; $i++ ) { ?>
-                                    <div class="swiper-slide">
-                                        <img
-                                        class="w-100 u-h-100 lg:px:u-h-488 u-object-fit-cover"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/places-img-1.png"
-                                        alt="Foto 01">
-                                    </div>
-                                <?php } ?>
+                                <?php
+                                    $page_parent_id = 305;
+
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type'      => 'page',
+                                        'post_parent'    => $page_parent_id,
+                                        'order'          => 'DESC'
+                                    );
+
+                                    $places_pages = new WP_Query( $args );
+
+                                    if( $places_pages->have_posts() ) :
+                                        while( $places_pages->have_posts() ) : $places_pages->the_post();
+                                ?>
+                                            <div class="swiper-slide">
+                                                <?php
+                                                    $alt_title = get_the_title();
+
+                                                    the_post_thumbnail( 'post-thubmnail',
+                                                        array(
+                                                            'class' => 'w-100 u-h-100 lg:px:u-h-488 u-object-fit-cover',
+                                                            'alt'   => $alt_title 
+                                                        )
+                                                    );
+                                                ?>
+
+                                                <!-- <img
+                                                class="w-100 u-h-100 lg:px:u-h-488 u-object-fit-cover"
+                                                src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/places-img-1.png"
+                                                alt="<php the_title() ?>"> -->
+                                            </div>
+                                <?php 
+                                        endwhile;
+                                    endif;
+                                ?>
                                 <!-- end slide -->
                             </div>
                         </div>
@@ -505,31 +533,42 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="swiper-wrapper">
 
                                 <!-- slide -->
-                                <?php for( $i = 0; $i < 6; $i++ ) { ?>
-                                    <a 
-                                    class="swiper-slide text-decoration-none"
-                                    href="#">
+                                <?php 
+                                    if( $places_pages->have_posts() ) :
+                                        while( $places_pages->have_posts() ) : $places_pages->the_post();
+                                ?>
+                                            <a 
+                                            class="swiper-slide text-decoration-none"
+                                            href="<?php the_permalink() ?>">
 
-                                        <div>
-                                            <p class="u-font-size-14 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold u-font-family-lato u-color-folk-dark-golden mb-0">
-                                                Etapas de Formaçao
-                                            </p>
+                                                <div>
+                                                    <p class="u-font-size-14 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold u-font-family-lato u-color-folk-dark-golden mb-0">
+                                                        Etapas de Formaçao
+                                                    </p>
 
-                                            <h5 class="u-font-size-32 lg:u-font-size-38 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
-                                                Postulantado
-                                            </h5>
+                                                    <h5 class="u-font-size-32 lg:u-font-size-38 xxl:u-font-size-45 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
+                                                        <!-- Postulantado -->
+                                                        <?php the_title() ?>
+                                                    </h5>
 
-                                            <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-26 u-font-weight-light u-font-family-lato u-font-style-italic u-color-folk-white">
-                                                Como o próprio nome já diz, aqui os jovens
-                                                postulam entrar na Ordem e se consagrarem.
-                                            </p>
+                                                    <!-- <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-26 u-font-weight-light u-font-family-lato u-font-style-italic u-color-folk-white">
+                                                        Como o próprio nome já diz, aqui os jovens
+                                                        postulam entrar na Ordem e se consagrarem.
+                                                    </p> -->
 
-                                            <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato text-right u-color-folk-dark-golden mb-4">
-                                                Saiba mais > 
-                                            </p>
-                                        </div>
-                                    </a>
-                                <?php } ?>
+                                                    <span class="d-block u-font-size-16 lg:u-font-size-18 xxl:u-font-size-26 u-font-weight-light u-font-family-lato u-font-style-italic u-color-folk-white">
+                                                        <?php echo limit_words( get_the_content(), 16); ?>
+                                                    </span>
+
+                                                    <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato text-right u-color-folk-dark-golden mb-4">
+                                                        Saiba mais > 
+                                                    </p>
+                                                </div>
+                                            </a>
+                                <?php 
+                                        endwhile;
+                                    endif;
+                                ?>
                                 <!-- end slide -->
                             </div>
                         </div>

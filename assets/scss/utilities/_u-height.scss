@@ -45,6 +45,12 @@ $utility-name: 'u-h';
                 }
             }
 
+            &-370 {
+                @media screen and (min-width: 992px) {
+                    height: 370px !important;
+                }
+            }
+
             &-420 {
                 @media screen and (min-width: 992px) {
                     height: 420px !important;
