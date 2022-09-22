@@ -135,6 +135,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                             if( $category->parent > 0 )
                                                                 echo $category->name;
                                                         endforeach;
+                                                            "/n";
+                                                        echo var_dump($category)
                                                     ?>
                                                     <!-- Pituba - BA -->
                                                 </p>
