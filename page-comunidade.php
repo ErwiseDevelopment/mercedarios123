@@ -129,7 +129,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                                 <p class="u-font-size-28 u-font-weight-regular u-font-family-lato text-center u-color-folk-white">
                                                     <?php
-                                                        $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
+                                                        $post_categories = get_the_terms( get_the_ID(), 'comunidades-categoria' );
 
                                                         foreach( $post_categories as $category ) :
                                                             if( $category->parent > 0 )
