@@ -49,11 +49,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <div class="col-6 pt-3">
+                    <div class="col-lg-6 pt-3">
 
-                        <ul class="d-flex pl-0">
+                        <ul class="d-lg-flex pl-0">
 
-                            <li class="u-list-style-none mr-1">
+                            <li class="u-list-style-none mb-2 mb-lg-0 mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                                 href="<?php echo get_home_url( null, '/' ) ?>">
@@ -61,7 +61,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </a>
                             </li>
 
-                            <li class="u-list-style-none mr-1">
+                            <li class="u-list-style-none mb-2 mb-lg-0 mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                                 href="<?php echo get_home_url( null, 'vocacional' ) ?>">
@@ -69,7 +69,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </a>
                             </li>
 
-                            <li class="u-list-style-none mr-1">
+                            <li class="u-list-style-none mb-2 mb-lg-0  mr-1">
                                 <a
                                 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                                 href="<?php echo get_home_url( null, 'nossas-devocoes' ) ?>">
@@ -85,7 +85,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     $category_breadcrumb = get_term( $category_breadcrumb_id, 'santos' );
                                     array_push( $category_current, $category_breadcrumb );
                             ?>
-                                    <li class="u-list-style-none mr-1">
+                                    <li class="u-list-style-none mb-2 mb-lg-0 mr-1">
                                         <a
                                         class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                                         href="<?php echo get_home_url( null, 'nossas-devocoes/?id=' . $category_breadcrumb->term_id ); ?>">
@@ -118,13 +118,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         
-                        <h2 class="u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
+                        <h2 class="u-font-size-24 xl:u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
                             <?php echo $category_current[0] ? $category_current[0]->name : ''; ?>
                         </h2>
 
-                        <span class="d-block u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
+                        <span class="d-block u-font-size-14 xl:u-font-size-18 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                             <?php echo $category_current[0] ? get_field( 'descricao', $category_current[0] ) : ''; ?>
                         </span>
                     </div>

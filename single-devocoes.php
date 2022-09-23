@@ -44,7 +44,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <ul class="d-lg-flex pl-0">
 
-                    <li class="u-list-style-none mr-1">
+                    <li class="u-list-style-none mb-2 mr-1">
                         <a
                         class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                         href="<?php echo get_home_url( null, '/' ) ?>">
@@ -52,7 +52,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </a>
                     </li>
 
-                    <li class="u-list-style-none mr-1">
+                    <li class="u-list-style-none mb-2 mr-1">
                         <a
                         class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                         href="<?php echo get_home_url( null, 'vocacional' ) ?>">
@@ -60,7 +60,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </a>
                     </li>
 
-                    <li class="u-list-style-none mr-1">
+                    <li class="u-list-style-none mb-2 mr-1">
                         <a
                         class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                         href="<?php echo get_home_url( null, 'nossas-devocoes' ) ?>">
@@ -68,7 +68,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </a>
                     </li>
 
-                    <li class="u-list-style-none mr-1">
+                    <li class="u-list-style-none mb-2 mr-1">
                         <?php
                             $post_categories = get_the_terms( $post->ID, 'santos' );
                             $single_category = $post_categories[0];
@@ -82,7 +82,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         </a>
                     </li>
 
-                    <li class="u-list-style-none mr-1">
+                    <li class="u-list-style-none mb-2 mr-1">
                         <a
                         class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-bold-gray"
                         href="<?php the_permalink() ?>">
@@ -116,7 +116,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     </div>
 
                     <div class="<?php echo $post_thumbnail_url ? 'col-lg-8 mt-4 mt-lg-0' : 'col-12'; ?>">
-                        <span class="d-block u-font-size-18 xxl:u-font-size-20 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
+                        <span class="d-block u-font-size-14 xl:u-font-size-18 xxl:u-font-size-20 u-font-weight-regular u-font-family-lato u-color-folk-bold-gray">
                             <?php the_content() ?>
                         </span>
                     </div>

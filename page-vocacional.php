@@ -213,7 +213,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 </h4>
 
                                                 <span class="d-block u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+<<<<<<< HEAD
                                                     <?php echo limit_words( get_the_excerpt(), 20) ?>
+=======
+                                                    <?php echo the_excerpt()?>
+>>>>>>> b741bbd0e0b521a2cfb4c8fb8bbbf6f5163e8808
                                                 </span>
                                             </div>
 
