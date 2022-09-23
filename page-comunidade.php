@@ -49,7 +49,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <div class="col-9">
+                    <div class="col-lg-9">
 
                         <div class="row">
 
@@ -59,6 +59,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     bottom: -40px;
                                     right: -270px;
                                     position: absolute;
+                                }
+
+                                @media screen and (max-width: 991px) {
+                                    .l-communities__box {
+                                        width: 100%;
+                                        position: unset;
+                                    }
                                 }
 
                                 .l-communities__box__title::before {
@@ -115,13 +122,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                                 the_post_thumbnail( 'post-thumbnail',
                                                     array(
-                                                        'class' => 'img-fluid w-100 u-object-fit-cover',
+                                                        'class' => 'img-fluid w-100 px:u-h-190 lg:px:u-h-550 u-object-fit-cover',
                                                         'alt'   => $alt_title
                                                     ));
                                             ?>
 
-                                            <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-5">
-                                                <h4 class="l-communities__box__title position-relative d-inline-block u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-white pb-3">
+                                            <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-3 px-lg-5">
+                                                <h4 class="l-communities__box__title position-relative d-inline-block u-font-size-22 xl:u-font-size-28 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-white pb-3">
                                                     <!-- PARÓQUIA NOSSA <br>
                                                     SENHORA DA LUZ -->
                                                     <?php the_title() ?>
@@ -150,7 +157,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     class="row w-100 position-absolute justify-content-center"
                                                     style="left:0">
 
-                                                        <div class="col-5">
+                                                        <div class="col-8 col-lg-5">
 
                                                             <a
                                                             class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden hover:u-bg-folk-dark-marron py-1"
@@ -175,7 +182,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             </br>
                     </div>
                             
-                    <div class="col-3 pt-4">
+                    <div class="col-lg-3 pt-4 pb-4 pb-lg-0">
                         
                         <h5 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-font-family-cinzel text-center text-uppercase u-color-folk-dark-golden">
                             encontre-nos

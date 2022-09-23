@@ -1349,6 +1349,9 @@ button.swiper-pagination-bullet {
   .xl\:u-font-size-18 {
     font-size: 1.125rem !important; } }
 @media screen and (min-width: 1200px) {
+  .xl\:u-font-size-28 {
+    font-size: 1.75rem !important; } }
+@media screen and (min-width: 1200px) {
   .xl\:u-font-size-34 {
     font-size: 2.125rem !important; } }
 @media screen and (min-width: 1200px) {
@@ -1616,6 +1619,8 @@ button.swiper-pagination-bullet {
   height: 30px !important; }
 .px\:u-h-32 {
   height: 32px !important; }
+.px\:u-h-190 {
+  height: 190px !important; }
 .px\:u-h-420 {
   height: 420px !important; }
 
@@ -1637,6 +1642,9 @@ button.swiper-pagination-bullet {
 @media screen and (min-width: 992px) {
   .lg\:px\:u-h-488 {
     height: 488px !important; } }
+@media screen and (min-width: 992px) {
+  .lg\:px\:u-h-550 {
+    height: 550px !important; } }
 
 .u-icon__brands::before {
   font-family: 'Font Awesome 5 Brands'; }
@@ -2236,6 +2244,9 @@ button.swiper-pagination-bullet {
     @media screen and (max-width: 991px) {
       .l-template-content__banner__title {
         font-size: 2.625rem; } }
+    @media screen and (max-width: 575px) {
+      .l-template-content__banner__title {
+        font-size: 2rem; } }
     .l-template-content__banner__title::before {
       content: '';
       width: 280px;

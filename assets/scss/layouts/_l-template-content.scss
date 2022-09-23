@@ -11,6 +11,10 @@ $layout-name: 'l-template-content';
                 font-size: 2.625rem;
             }
 
+            @media screen and (max-width: 575px) {
+                font-size: 2rem;
+            }
+
             &::before {
                 content: '';
                 width: 280px;
