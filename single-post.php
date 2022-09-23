@@ -61,13 +61,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 				<div class="row">
 
-					<div class="col-8">
+					<div class="col-lg-8">
 						<?php
 							$alt_title = get_the_title();
 							the_post_thumbnail( 'post-thumbnail',
 								array(
-									'class' => 'img-fluid w-100 u-object-fit-cover',
-									'style' => 'height:460px',
+									'class' => 'img-fluid w-100 u-h-auto lg:px:u-h-460 u-object-fit-cover',
 									'alt'   => $alt_title
 								));
 						?>
@@ -111,7 +110,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 						</span>
 					</div>
 
-					<div class="col-4 pt-3">
+					<div class="col-lg-4 pt-3">
                 
 						<div class="row">
 
@@ -232,10 +231,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									
 											?>
 														<a 
-														class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex text-decoration-none mb-3 pb-3"
+														class="col-12 u-border-b-1 last:u-border-none u-border-color-light-gray d-flex flex-wrap text-decoration-none mb-3 pb-3"
 														href="<?php the_permalink() ?>">
 
-															<div class="col-4 px-0">
+															<div class="col-lg-4 px-0">
 																<?php
 																	$alt_title = get_the_title();
 																	the_post_thumbnail('post-thumbnail', 
@@ -246,7 +245,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 																?>
 															</div>
 
-															<div class="col-8">
+															<div class="col-lg-8 mt-3 mt-lg-0">
 																<p class="u-font-size-9 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-0">
 																	<?php echo get_date_format('d/m/Y', $post)?>
 																</p>
