@@ -6,6 +6,10 @@
 
     @media screen and (min-width: 1200px) {
         .l-gallery iframe {
+            height: 320px;
+        }
+        
+        .l-gallery__video-detail iframe {
             height: 720px;
         }
     }
@@ -28,7 +32,7 @@
 
             <div class="col-12">
 
-                <div class="">
+                <div class="l-gallery__video-detail">
                     <?php echo get_field('video_destaque')?>
                 </div>
             </div>
