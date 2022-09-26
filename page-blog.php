@@ -54,7 +54,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     $category_current = 'blog-destaque';
                 }
         ?>
-            <div class="col-9 pl-lg-0">
+            <div class="col-lg-9 pl-lg-0">
                 
                 <div class="h-100 u-bg-folk-bold-marron py-4">
 
@@ -92,7 +92,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             
                                             <p class="u-line-height-100 u-font-size-19 xxl:u-font-size-22 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden mb-4">
                                                 <span class="u-font-weight-medium u-font-family-lato">por</span>  <?php echo get_the_author_meta( 'user_firstname' ) ?> <br>
-                                                <?php echo get_date_format( 'd/m/Y', $post )?>
+                                                <?php echo get_the_date( 'd/m/Y', $post )?>
                                             </p>
 
                                             <h3 class="u-font-size-20 xl:u-font-size-26 xxl:u-font-size-32 u-font-weight-bold u-font-family-cinzel u-color-folk-white">
@@ -125,7 +125,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
             </div>
 
-            <div class="col-3 pt-3">
+            <div class="col-lg-3 pt-3">
                 
                 <div class="row">
 
@@ -269,7 +269,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 $alt_title = get_the_title();
                                                 the_post_thumbnail('post-thumbnail', 
                                                     array(
-                                                    'class' => 'img-fluid w-100 h-100',
+                                                    'class' => 'img-fluid w-100 u-h-100 lg:px:u-h-320 u-object-fit-cover',
                                                     'alt'   => $alt_title
                                                 ));
                                             ?>
@@ -279,7 +279,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                             <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
                                                 <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                                <?php echo get_date_format('d/m/Y', $post)?>
+                                                <?php echo get_the_date('d/m/Y', $post)?>
                                             </p>
 
                                             <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">

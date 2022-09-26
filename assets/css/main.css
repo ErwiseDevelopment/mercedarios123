@@ -1638,6 +1638,9 @@ button.swiper-pagination-bullet {
   .lg\:px\:u-h-264 {
     height: 264px !important; } }
 @media screen and (min-width: 992px) {
+  .lg\:px\:u-h-230 {
+    height: 230px !important; } }
+@media screen and (min-width: 992px) {
   .lg\:px\:u-h-370 {
     height: 370px !important; } }
 @media screen and (min-width: 992px) {
