@@ -130,7 +130,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <div class="col-lg-6">
+                    <div class="col-12">
                         
                         <h2 class="u-font-size-24 xl:u-font-size-34 u-font-weight-bold u-font-family-cinzel u-color-folk-bold-marron mb-3">
                             <?php echo $category_current[0] ? $category_current[0]->name : ''; ?>
