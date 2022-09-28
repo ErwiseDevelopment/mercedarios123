@@ -319,66 +319,66 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                                <?php 
-                                 $args = array(
-                                    'post_per_page' =>  9,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'blog+caridade',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $cats = array();
+                        <?php 
+                            $args = array(
+                                'post_per_page' =>  9,
+                                'post_type'     => 'post',
+                                'category_name' => 'blog+caridade',
+                                'order'         => 'DESC',
+                            );
+                            $contents = new WP_Query( $args );
+                            $cats = array();
 
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
-                                ?>
-                                <div class="swiper-slide">
-                                    <a 
-                                    class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
-                                    href="<?php the_permalink()?>">
+                            if( $contents->have_posts()):
+                                while ($contents->have_posts()) : $contents->the_post();
+                        ?>
+                                    <div class="swiper-slide">
+                                        <a 
+                                        class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none"
+                                        href="<?php the_permalink()?>">
 
-                                        <div class="card-img">
-                                            <?php
-                                            $alt_title = get_the_title();
-                                            the_post_thumbnail('post-thumbnail', 
-                                            array(
-                                                'class' => 'img-fluid w-100 h-100',
-                                                'alt'   => $alt_title
-                                                ))
-                                            ?>
-                                        </div>
+                                            <div class="card-img">
+                                                <?php
+                                                $alt_title = get_the_title();
+                                                the_post_thumbnail('post-thumbnail', 
+                                                array(
+                                                    'class' => 'img-fluid w-100 h-100',
+                                                    'alt'   => $alt_title
+                                                    ))
+                                                ?>
+                                            </div>
 
-                                        <div class="card-body">
+                                            <div class="card-body">
 
-                                            <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                                <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?>  <br>
-                                                <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
-                                            </p>
+                                                <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
+                                                    <span class="u-font-weight-medium">por</span> <?php echo get_the_author_meta('user_firstname') ?>  <br>
+                                                    <?php echo get_the_date( 'd/m/Y', get_the_ID() ); ?>
+                                                </p>
 
-                                            <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
-                                                <?php echo get_the_title()?>
-                                            </h4>
+                                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                                                    <?php the_title()?>
+                                                </h4>
 
-                                            <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-                                            <?php the_excerpt()?>
-                                            </span>
-                                        </div>
+                                                <span class="u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                                                    <?php the_excerpt()?>
+                                                </span>
+                                            </div>
 
-                                        <div class="c-card-footer-absolute card-footer">
+                                            <div class="c-card-footer-absolute card-footer">
 
-                                            <div class="row justify-content-center">
+                                                <div class="row justify-content-center">
 
-                                                <div class="col-6">
-                                                    <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
-                                                        Ler mais
-                                                    </p>
+                                                    <div class="col-6">
+                                                        <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">
+                                                            Ler mais
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                        </a>
+                                    </div>
                         <?php 
-                        endwhile;
+                                endwhile;
                             endif;
                             wp_reset_query();
                                 ?>
@@ -402,7 +402,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
 
                 <!-- pagination -->
-                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs"></div>
+                <div class="swiper-pagination swiper-pagination-blogs w-100 js-swiper-pagination-blogs" style="left:0"></div>
                 <!-- end swiper -->
             </div>
 
