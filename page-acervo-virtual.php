@@ -77,7 +77,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         </span>
 
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
-                                            <?php  echo get_field( 'descricao' ); ?>
+                                            
+											 <?php $texto = get_field( 'descricao' ); 
+												if (empty ($texto) ):{
+									   					echo the_title();}
+									   else: echo $texto;
+									   
+									   endif;
+													?>
+											
                                         </h4>
 
                                         <p class="l-collection__access u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-golden hover:u-bg-folk-dark-marron mb-0 py-1 px-4">
@@ -100,9 +108,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end content -->
 
-<!-- banner materials -->
-<?php echo get_template_part( 'template-parts/content', 'banner-materials' ) ?>
-<!-- end banner materials -->
+
 
 </main><!-- #main -->
 </div><!-- #primary -->

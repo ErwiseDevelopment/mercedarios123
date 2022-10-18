@@ -444,7 +444,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-12 d-flex justify-content-center my-5">
                 
                 <h2 class="c-title-pattern pb-2">
-                    Comunidades   
+                    Nossas paróquias   
 
                     <span class="c-title-pattern__underline"></span>
                 </h2>
