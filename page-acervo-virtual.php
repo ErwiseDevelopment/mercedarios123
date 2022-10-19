@@ -63,13 +63,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
                              <div class="col-lg-6 my-4 py-3">
-   				<div class = "h-100 position-relative">
+   				<div class = "h-100 position-relative  d-block">
    				<img 
                 class="img-fluid"
    				src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
                 alt= "vazio">
                    
-                                    <a class="  d-block text-decoration-none  pt-5 pb-5 px-4"
+                                    <a class="  text-decoration-none  pt-5 pb-5 px-4"
                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
