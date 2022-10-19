@@ -63,41 +63,39 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
                              <div class="col-lg-6 my-4 py-3">
-   				<div class = " position-relative  d-block   pb-5 px-4">
-   				<img 
-                class="img-fluid"
-   				src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
-                alt= "vazio">
-                   
-                                    <a class="h-100 pt-5  text-decoration-none "
-                                    href="<?php echo get_field( 'acessar' ) ?>"
-                                    target="<?php echo get_field( 'nova_guia' ) ?>"
-                                    rel="noreferrer noopener">
-                                        <span class="l-collection__icon-download">
-                                            <img
-                                            class="img-fluid"
-                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
-                                            alt="Ícone download">
-                                        </span>
-				
+                                <div class = " position-relative d-block px-4">
+                                        <img 
+                                        class="img-fluid"
+                                        src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
+                                        alt= "vazio">
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
-                                            
-											 <?php $texto = get_field( 'descricao' ); 
-												if (empty ($texto) ):{
-									   					echo the_title();}
-									   else: echo $texto;
-									   
-									   endif;
-													?>
-											
+                                                    <?php $texto = get_field( 'descricao' ); 
+                                                        if (empty ($texto) ):{
+                                                                echo the_title();}
+                                                                    else: 
+                                                                        echo $texto;
+                                                                    endif;
+                                                    ?>
                                         </h4>
+                                            <a class="h-100 pt-5  text-decoration-none "
+                                                href="<?php echo get_field( 'acessar' ) ?>"
+                                                target="<?php echo get_field( 'nova_guia' ) ?>"
+                                                rel="noreferrer noopener">
+                                                <span class="l-collection__icon-download">
+                                                    <img
+                                                    class="img-fluid"
+                                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                                    alt="Ícone download">
+                                                </span>
+                        
+                                               
 
-                                        <p class="l-collection__access u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-golden hover:u-bg-folk-dark-marron mb-0 py-1 px-4">
-                                            Acessar
-                                        </p>
-                                    </a>
-                                    </div>
+                                                <p class="l-collection__access u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-golden hover:u-bg-folk-dark-marron mb-0 py-1 px-4">
+                                                    Acessar
+                                                </p>
+                                            </a>
                                 </div>
+                            </div>
                         
                     <?php 
                             endwhile; 
