@@ -52,6 +52,14 @@
     ?>
     <!-- end menu -->
         
+    <?php
+        if( $post->post_parent > 0 ) {
+            $page_current = get_post( $post->post_parent );          
+            $page_name_current = $page_current->post_name;
+        } else {
+            $page_name_current = $post->post_name;
+        }    
+    ?>
     <header id="masthead" class="<?php echo $post->post_title == 'Início'|| $post->post_title == 'Notícias' ? 'd-none' : ''; ?> header site-header navbar-static-top position-relative py-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container">
@@ -75,7 +83,7 @@
 
                 <?php
                 wp_nav_menu(array(
-                'theme_location'    => $post->post_name,
+                'theme_location'    => $page_name_current,
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
                 'container_class' => 'collapse navbar-collapse justify-content-center',
