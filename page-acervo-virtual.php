@@ -63,27 +63,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
                                 <div class="col-lg-6 my-4 py-3">
-                                <div  class= " h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4">
-                                    <?php
-                                        $alt_title = get_the_title();
 
-                                        the_post_thumbnail( 'post-thumbnail', 
-                                            array(
-                                                'class' => 'img-fluid w-100 u-object-fit-cover',
-                                                'style' => 'height:300px',
-                                                'alt'   => $alt_title
-                                            ));
-                                    ?>  
-                                    <a href="<?php echo get_field( 'acessar' ) ?>"
+                                    <a 
+                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
+                                    href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
-                                    rel="noreferrer noopener"> 
-                                        </a>   
-                                </div>
-                                    
-                                    <a class="h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4" >
-                                    
-                                    
-                                     
+                                    rel="noreferrer noopener">
                                         <span class="l-collection__icon-download">
                                             <img
                                             class="img-fluid"
