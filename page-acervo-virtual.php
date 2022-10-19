@@ -22,7 +22,7 @@ get_header(); ?>
 <!-- banner -->
 <section 
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
-style="background-image: <?php the_post_thumbnail('post-thumbnail'); ?>
+style="background-image: <?php the_post_thumbnail('post-thumbnail'); ?>">
 
 
 
