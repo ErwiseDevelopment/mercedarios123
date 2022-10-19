@@ -65,7 +65,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-lg-6 my-4 py-3">
                                 <img
                                     
-                                 src=" <?php get_field('imagem');?>"> 
+                                 src=" <?php echo get_field('imagem');?>"> 
                                 
 
                                     <a 
