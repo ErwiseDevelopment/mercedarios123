@@ -62,15 +62,15 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $collections->have_posts()):
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
-                                <div class="col-lg-6 my-4 py-3">
+                                <div class="col-lg-6 my-4 py-3"
+                                <?php $img =  get_field('imagem');
+                                    
+                                 echo $img ;?>>
+                                
 
                                     <a 
                                     class="h-100 position-relative d-block text-decoration-none pt-5 pb-5 px-4"
-                                    <?php $img =  get_field('imagem');
-                                    
-                                    ?>
-                                    img =" <?php echo $img ;?>"
-                                    href="<?php echo get_field( 'acessar' ) ?>"
+                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
                                         <span class="l-collection__icon-download">
