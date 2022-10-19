@@ -66,7 +66,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                     <a 
                                     class="h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4" 
-                                    <?php the_post_thumbnail('post-thumbnail'); 
+                                    <?php echo the_post_thumbnail('post-thumbnail'); 
                                       ?>         
                                      href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
