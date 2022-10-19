@@ -62,9 +62,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $collections->have_posts()):
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
-                                <div >
+                                <div class="col-lg-6 my-4 py-3">
 
-                                <img class="col-lg-6 my-4 py-3"
+                                <img 
                                     
                                  src=" <?php echo get_field('imagem_destaque');?>"> 
                                 
