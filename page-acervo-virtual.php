@@ -63,9 +63,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
                                 <div class="col-lg-6 my-4 py-3">
-
-                                    <a 
-                                    class="h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4" 
+                                <div  class= " h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4">
                                     <?php
                                         $alt_title = get_the_title();
 
@@ -75,10 +73,17 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 'style' => 'height:300px',
                                                 'alt'   => $alt_title
                                             ));
-                                    ?>   
-                                     href="<?php echo get_field( 'acessar' ) ?>"
+                                    ?>  
+                                    <a href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
-                                    rel="noreferrer noopener">
+                                    rel="noreferrer noopener"> 
+                                        </a>   
+                                </div>
+                                    
+                                    <a class="h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4" >
+                                    
+                                    
+                                     
                                         <span class="l-collection__icon-download">
                                             <img
                                             class="img-fluid"
