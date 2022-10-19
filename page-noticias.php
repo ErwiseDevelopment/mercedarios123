@@ -338,13 +338,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             </div>
         </div>
     </div>
-</section>
-
-<?php endwhile; ?>
+    
+</section><?php endwhile; ?>
 
 </div><!-- #main -->
-</section><!-- #primary -->
 
-<?php
+
+</section><!-- #primary --><?php
 
 get_footer();
+
+

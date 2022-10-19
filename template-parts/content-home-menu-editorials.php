@@ -97,7 +97,7 @@
                         <a
                         class="w-100 h-100 d-flex justify-content-center align-items-center u-font-size-14 xxl:u-font-size-17 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
                         style="background-color:#640000"
-                        href="<?php echo get_field('w', 'option')?>">
+                        href="<?php echo get_field('editoria_acervo', 'option')?>">
                             Acervo virtual <br>
                             (NOssa história)
                         </a>

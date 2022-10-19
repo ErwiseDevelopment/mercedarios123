@@ -93,7 +93,7 @@
 
                                 $args = array (
                                     'post_type'       	=> 'evento',
-                                    'posts_per_page'	=> -1,
+                                    'posts_per_page'	=> 5,
                                     'orderby'			=> 'meta_value',
                                     'order'				=> 'ASC',
                                     'meta_key'          => 'data_custom_post_agenda_inicio',
