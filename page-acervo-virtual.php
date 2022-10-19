@@ -64,6 +64,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     ?>
                              <div class="col-lg-6 my-4 py-3">
                                 <div class = " position-relative d-block px-4">
+                                <span class="l-collection__icon-download">
+                                                    <img
+                                                    class="img-fluid"
+                                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                                    alt="Ícone download">
+                                                </span>
                                         <img 
                                         class="img-fluid"
                                         src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
@@ -77,22 +83,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                                     endif;
                                                     ?>
                                         </h4>
+                                        
                                             <a class="h-100 pt-5  text-decoration-none "
                                                 href="<?php echo get_field( 'acessar' ) ?>"
                                                 target="<?php echo get_field( 'nova_guia' ) ?>"
                                                 rel="noreferrer noopener">
-                                                <span class="l-collection__icon-download">
-                                                    <img
-                                                    class="img-fluid"
-                                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
-                                                    alt="Ícone download">
-                                                </span>
-                        
-                                               
-
+                                                
                                                 <p class="l-collection__access u-font-size-22 u-font-weight-bold u-font-family-lato text-center u-color-folk-white u-bg-folk-golden hover:u-bg-folk-dark-marron mb-0 py-1 px-4">
                                                     Acessar
-                                                </p>
+                                                </p>                          
+                                               
+
+                                                
                                             </a>
                                 </div>
                             </div>
