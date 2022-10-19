@@ -69,7 +69,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     <?php $img =  get_field('imagem');
                                     
                                     ?>
-                                    src =" <?php echo $img ;?>"
+                                    img =" <?php echo $img ;?>"
                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
