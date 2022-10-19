@@ -65,7 +65,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-lg-6 my-4 py-3">
 
                                     <a 
-                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
+                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 px-4"
                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
