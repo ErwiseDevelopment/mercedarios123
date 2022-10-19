@@ -62,10 +62,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( $collections->have_posts()):
                             while ($collections->have_posts()) : $collections->the_post();
                     ?>
-                                <div class="col-lg-6 my-4 py-3">
-
-                                    <a 
-                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 px-4"
+                             <div class="col-lg-6 my-4 py-3">
+   				<div class = "h-100 position-relative">
+   				<img 
+   				src = "<?php echo get_field('imagem_destaque')?>"
+   				>
+                                    <a class="  d-block text-decoration-none  pt-5 pb-5 px-4"
                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
@@ -75,7 +77,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
                                             alt="Ícone download">
                                         </span>
-
+				</div>
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
                                             
 											 <?php $texto = get_field( 'descricao' ); 
