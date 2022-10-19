@@ -83,7 +83,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                                     endif;
                                                     ?>
                                         </h4>
-                                        
+                                        </div>    
                                             <a class="h-100 pt-5  text-decoration-none "
                                                 href="<?php echo get_field( 'acessar' ) ?>"
                                                 target="<?php echo get_field( 'nova_guia' ) ?>"
@@ -96,7 +96,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                                 
                                             </a>
-                                </div>
+                                
                             </div>
                         
                     <?php 
