@@ -22,9 +22,9 @@ get_header(); ?>
 <!-- banner -->
 <section 
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
-style="background-image: <?php if (empty (the_post_thumbnail('post-thumbnail'))):
-    { echo get_template_directory_uri()?>url(/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)<?php }  
-else:  the_post_thumbnail('post-thumbnail');  endif;?> ">
+style="background-image: <?php the_post_thumbnail('post-thumbnail'); ?>
+
+
 
     <div class="container">
 
