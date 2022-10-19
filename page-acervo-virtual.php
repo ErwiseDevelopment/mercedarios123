@@ -79,7 +79,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
                                             alt="Ícone download">
                                         </span>
-				</div>
+				
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
                                             
 											 <?php $texto = get_field( 'descricao' ); 
@@ -96,6 +96,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             Acessar
                                         </p>
                                     </a>
+                                    </div>
                                 </div>
                         
                     <?php 
