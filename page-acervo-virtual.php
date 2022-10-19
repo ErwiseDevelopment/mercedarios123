@@ -24,7 +24,7 @@ get_header(); ?>
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
 style="background-image: <?php if (empty (the_post_thumbnail())):
     { echo get_template_directory_uri()?>url(/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)<?php }  
-else: echo the_post_thumbnail();  endif;?> ">
+else:  the_post_thumbnail();  endif;?> ">
 
     <div class="container">
 
