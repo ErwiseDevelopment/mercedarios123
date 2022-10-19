@@ -55,6 +55,12 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__spotify {
+        &::before {
+            content: '\f1bc';
+        }
+    }
+
     &__youtube {
         &::before {
             content: '\f167';

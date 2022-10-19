@@ -11,6 +11,10 @@ $layout-name: 'l-navbar';
         font-weight: 700;
         font-family: 'Lato', sans-serif;
         color: #640000 !important;
+
+        @media screen and (min-width: 1200px) {
+            padding-left: 0 !important;
+        }
     }
 
     .dropdown {

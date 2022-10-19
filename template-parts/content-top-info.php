@@ -89,12 +89,27 @@
                         </a>
                     </div>
 
-                    <div class="col-xl-4 order-3 d-flex justify-content-center align-items-center mt-3 mt-xl-0 px-5">
+                    <div class="col-xl-4 order-3 d-flex justify-content-center align-items-center mt-3 mt-xl-0">
 
                         <ul 
-                        class="w-100 px:u-border-radius-24 overflow-hidden d-flex justify-content-around align-items-center u-bg-cover u-bg-no-repeat mb-0 p-3"
+                        class="w-100 px:u-border-radius-24 overflow-hidden d-flex justify-content-around align-items-center u-bg-cover u-bg-no-repeat js-icon-search mb-0 p-3"
                         style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/social-media-overlay.png)">
                                 
+                            <li class="u-list-style-none">
+                                <p class="px:u-w-32 px:u-h-32 u-icon__free u-icon__search rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-bold text-decoration-none u-color-folk-dark-marron u-bg-folk-white u-cursor-pointer mb-0">
+                                    Pesquisa
+                                </p>
+                            </li>
+
+                            <li class="u-list-style-none">
+                                <a 
+                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__spotify rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
+                                href="<?php echo get_field('facebook_redes', 'option')?>" <?php if (get_field('nova_guia_face', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                rel="noreferrer noopener">
+                                    Spotify
+                                </a>
+                            </li>
+
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"

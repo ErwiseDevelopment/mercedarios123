@@ -1,0 +1,20 @@
+$layout-name: 'l-box-search';
+
+.#{$layout-name} {
+    width: 100%;
+    top: 100%;
+    left: 0;
+    transition: all .4s;
+    opacity: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    visibility: hidden;
+    position: absolute;
+    background-color: $color-folk-white;
+    z-index: 999;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
