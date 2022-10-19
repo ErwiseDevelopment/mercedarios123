@@ -64,9 +64,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     ?>
                                 <div class="col-lg-6 my-4 py-3">
 
-                                <img 
-                                    
-                                 src=" <?php echo get_field('imagem_destaque');?>"> 
+                                <img src= "<?php  echo get_field('imagem_destaque');?>"> 
                                 
 
                                     <a 
@@ -89,6 +87,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 									   else: echo $texto;
 									   
 									   endif;
+
+                                       var_dump( get_field('imagem_destaque');)
 													?>
 											
                                         </h4>
