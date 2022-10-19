@@ -22,9 +22,7 @@ get_header(); ?>
 <!-- banner -->
 <section 
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
-style="background-image: <?php the_post_thumbnail('post-thumbnail'); ?>">
-
-
+style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
 
     <div class="container">
 
@@ -67,8 +65,11 @@ style="background-image: <?php the_post_thumbnail('post-thumbnail'); ?>">
                                 <div class="col-lg-6 my-4 py-3">
 
                                     <a 
-                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
-                                    href="<?php echo get_field( 'acessar' ) ?>"
+                                    class="h-100 position-relative d-block text-decoration-none  pt-5 pb-5 pb-lg-4 px-4" 
+                                    <?php if (empty (the_post_thumbnail('post-thumbnail'))):
+                                    { ?> class="u-bg-folk-dark-marron"  <?php } else:  the_post_thumbnail('post-thumbnail'); 
+                                endif;?>         
+                       href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
                                         <span class="l-collection__icon-download">
