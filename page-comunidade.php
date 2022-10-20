@@ -84,7 +84,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <?php 
                             $editorial_slug_current = 'comunidades';
                                 if( isset( $_GET[ 'cat' ] ) ) {
-                                    $category_current = $_GET[ 'cat'];
+                                    $category_current = $_GET[ 'cat' ];
 
                                     $args = array(
                                         'posts_per_page' => -1,
@@ -94,7 +94,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             array(
                                                 'taxonomy' => 'comunidades-categoria',
                                                 'field'    => 'slug',
-                                                'terms'    => array( $editorial_slug_current , $category_current)
+                                                'terms'    => array( $editorial_slug_current)
+                                            ),
+                                            array(
+                                                'taxonomy' => 'comunidades-estados',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $category_current)
                                             )
                                         )
                                     );
@@ -202,8 +207,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
                                  'parent' => 0,
-                            ), 'comunidades-categoria', array(
-
                             ));
 
                             foreach( $terms as $term ) :
@@ -214,7 +217,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
                                     href="<?php echo get_home_url( null, 'comunidade/?cat=' . $term->slug ); ?>">
                                         <!-- Institucional -->
-                                        <?php var_dump($term->name) ; ?>
+                                        <?php echo $term->name; ?>
                                     </a>
                                 </div>
                         <?php  
