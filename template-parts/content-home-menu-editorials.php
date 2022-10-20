@@ -1,4 +1,4 @@
-<section class="py-4 px-3 px-xl-5">
+<section class="position-relative py-4 px-3 px-xl-5">
 
     <div class="container-fluid">
 
@@ -106,4 +106,11 @@
             </div>
         </div>
     </div>
+
+     <!-- form search -->        
+     <?php 
+        if( $post->post_title == 'Início' )
+            echo get_template_part( 'template-parts/content', 'box-search' );
+    ?>
+    <!-- end form search -->
 </section>
