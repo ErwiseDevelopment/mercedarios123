@@ -44,7 +44,7 @@
                         <a
                         class="l-menu-editorial__item w-100 h-100 position-relative d-flex justify-content-center align-items-center u-font-size-13 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white u-bg-folk-bold-marron py-1 js-menu-editorial-item"
                         href="<?php echo get_field('editoria_caridade', 'option') ?>">
-                            Caridade
+                           Ação Redentora
                         </a>
                     </div>
 

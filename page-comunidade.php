@@ -98,10 +98,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         )
                                     );
                                 } else {
+                                    $editorial_slug_current = 'comunidades';
                                     $args = array(
                                         'posts_per_page' => -1,
                                         'post_type'      => 'Comunidades',
-                                        'order'          => 'DESC'
+                                        'order'          => 'DESC',
+                                        'tax_query'      => array(
+                                            array(
+                                                'taxonomy' => 'comunidades-categoria',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $editorial_slug_current )
+                                            )
+                                        )
                                     );
                                 }
 

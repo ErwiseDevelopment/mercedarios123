@@ -60,7 +60,7 @@
                                 class="w-100 h-100 u-box-shadow-pattern d-block u-font-size-14 xxl:u-font-size-17 u-font-weight-regular u-font-family-cinzel text-center text-uppercase text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden py-2"
                                 style="background-color:#af0202"
                                 href="<?php echo get_field('editoria_caridade', 'option')?>">
-                                    caridade
+                                 Ação Redentora
                                 </a>
                             </div>
 

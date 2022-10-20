@@ -126,7 +126,7 @@
                                     <li class="u-list-style-none mb-2">
                                         <a class="u-font-size-14 u-font-weight-medium u-font-family-lato text-decoration-none u-color-folk-white"
                                         href="<?php echo get_field('editoria_caridade', 'option')?>">
-                                            Caridade
+                                            Ação Redentora
                                         </a>
                                     </li>
 
