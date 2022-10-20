@@ -219,8 +219,7 @@
                     
 
                         <ul 
-                        class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0"
-                        style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/social-media-overlay.png)">
+                        class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
                             
                             <?php if (!empty(get_field('spotify_redes', 'option'))):{?>
                             <li class="u-list-style-none">
