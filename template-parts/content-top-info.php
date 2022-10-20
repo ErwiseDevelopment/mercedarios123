@@ -109,7 +109,7 @@
                                     Spotify
                                 </a>
                             </li>
-
+                                <?php if (!empty(get_field('facebook_redes', 'option'))):{?>        
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
@@ -118,7 +118,7 @@
                                     Facebook
                                 </a>
                             </li>
-
+                             <?php } else: endif;?>       
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
