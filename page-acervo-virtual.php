@@ -70,13 +70,22 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
 
-                                        <span class="l-collection__icon-download <?php echo get_field( 'img_destaque_acervo' ) ? '' : 'l-collection__icon-download--box'; ?>">
-                                            <img
-                                            class="img-fluid"
-                                            src="<?php echo get_field( 'img_destaque_acervo' ) ?>"
-                                            alt="Ícone download">
-                                        </span>
-
+                                        <?php if( get_field( 'img_destaque_acervo' ) ) : ?>
+                                            <span class="l-collection__icon-download">
+                                                <img
+                                                class="img-fluid"
+                                                src="<?php echo get_field( 'img_destaque_acervo' ) ?>"
+                                                alt="Ícone download">
+                                            </span>
+                                        <?php else : ?>
+                                            <span class="l-collection__icon-download l-collection__icon-download--box">
+                                                <img
+                                                class="img-fluid"
+                                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                                alt="Ícone download">
+                                            </span>
+                                        <?php endif; ?>
+                                        
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-32 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-3">
                                             
 											 <?php $texto = get_field( 'descricao' ); 
