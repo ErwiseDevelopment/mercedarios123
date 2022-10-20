@@ -100,7 +100,7 @@
                                     Pesquisa
                                 </p>
                             </li>
-
+                            <?php if (!empty(get_field('spotify_redes', 'option'))):{?>
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__spotify rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
@@ -109,6 +109,7 @@
                                     Spotify
                                 </a>
                             </li>
+                            <?php } else: endif;?>   
                                 <?php if (!empty(get_field('facebook_redes', 'option'))):{?>        
                             <li class="u-list-style-none">
                                 <a 
@@ -118,7 +119,8 @@
                                     Facebook
                                 </a>
                             </li>
-                             <?php } else: endif;?>       
+                             <?php } else: endif;?>     
+                             <?php if (!empty(get_field('instagram_redes', 'option'))):{?>  
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
@@ -127,7 +129,8 @@
                                     Instagram
                                 </a>
                             </li>
-
+                            <?php } else: endif;?>   
+                            <?php if (!empty(get_field('youtube_redes', 'option'))):{?>       
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
@@ -135,7 +138,8 @@
                                     Youtube
                                 </a>
                             </li>
-
+                            <?php } else: endif;?>   
+                            <?php if (!empty(get_field('whatsapp_redes', 'option'))):{?>       
                             <li class="u-list-style-none">
                                 <a 
                                 class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
@@ -143,6 +147,7 @@
                                     Whatsapp
                                 </a>
                             </li>
+                            <?php } else: endif;?>   
                         </ul>
                     </div>
                 </div>
