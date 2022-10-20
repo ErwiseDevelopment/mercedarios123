@@ -116,3 +116,26 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <?php
 get_footer();
 ?>
+
+
+<a 
+                                    class="h-100 position-relative d-block text-decoration-none u-bg-folk-dark-marron pt-5 pb-5 pb-lg-4 px-4"
+                                    href="<?php echo get_field( 'acessar' ) ?>"
+                                    target="<?php echo get_field( 'nova_guia' ) ?>"
+                                    rel="noreferrer noopener">
+                                    <?php if (empty(get_field( 'img_destaque_acervo' ))):{ ?>
+                                        <span class="l-collection__icon-download">
+                                            <img
+                                            class="img-fluid"
+                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                            alt="Ícone download">
+                                        </span>
+                                    <?php } else: {?>
+
+                                        <span class="l-collection__icon-download">
+                                            <img
+                                            class="img-fluid"
+                                            src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
+                                            alt="Ícone download">
+                                        </span>
+                                    <?php } endif; ?>
