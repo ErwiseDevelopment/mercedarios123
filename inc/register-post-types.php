@@ -39,7 +39,7 @@ function erwise_create_post_type() {
 		'public' 		=> true,
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-media-spreadsheet',
-		'supports' 		=> array( 'title', 'thumbnail' ) 
+		'supports' 		=> array( 'title') 
 	) );
 	register_post_type( 'devocoes', array(
 		'labels' 		=> array( 'name' => 'Nossas Devoções', 'singular_name' => 'Nossa Devoção', 'all_items' => 'Nossas Devoções' ),

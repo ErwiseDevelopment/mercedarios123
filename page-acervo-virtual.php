@@ -72,7 +72,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <span class="l-collection__icon-download">
                                             <img
                                             class="img-fluid"
-                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-download.png"
+                                            src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
                                             alt="Ícone download">
                                         </span>
 
