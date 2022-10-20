@@ -2,9 +2,9 @@ $layout-name: 'l-collection';
 
 .#{$layout-name} {
     &__icon-download {
-        width: 100px;
-        height: 100px;    
-        top: -50px;
+        width: 180px;
+        height: 120px;
+        top: -80px;
         left: 50%;
         transform: translateX(-50%);
         overflow: hidden;
@@ -14,6 +14,9 @@ $layout-name: 'l-collection';
         align-items: center;
 
         &--box {    
+            width: 100px;
+            height: 100px;  
+            top: -50px;
             border-radius: 50%;
             background-image: linear-gradient(to right, #CA932C, #966B19);
         }
