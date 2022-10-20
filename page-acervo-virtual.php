@@ -69,10 +69,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     href="<?php echo get_field( 'acessar' ) ?>"
                                     target="<?php echo get_field( 'nova_guia' ) ?>"
                                     rel="noreferrer noopener">
-                                        <span class="l-collection__icon-download">
+
+                                        <span class="l-collection__icon-download <?php echo get_field( 'img_destaque_acervo' ) ? 'l-collection__icon-download--box' : ''; ?>">
                                             <img
                                             class="img-fluid"
-                                            src = "<?php echo get_field( 'img_destaque_acervo' ) ?>"
+                                            src="<?php echo get_field( 'img_destaque_acervo' ) ?>"
                                             alt="Ícone download">
                                         </span>
 
