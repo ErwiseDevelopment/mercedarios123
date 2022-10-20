@@ -82,8 +82,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                             <!-- loop -->
                             <?php 
-                                if( isset( $_GET[ 'cat' ] ) ) {
-                                    $category_current = $_GET[ 'cat' ];
+                            $editorial_slug_current = 'comunidades';
+                                if( isset( $_GET[ 'cat' & 'tip' ] ) ) {
+                                    $category_current = $_GET[ 'cat' & 'tip' ];
 
                                     $args = array(
                                         'posts_per_page' => -1,
@@ -91,14 +92,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         'order'          => 'DESC',
                                         'tax_query'      => array(
                                             array(
-                                                'taxonomy' => 'comunidades-estados',
+                                                'taxonomy' => 'comunidades-categoria',
                                                 'field'    => 'slug',
-                                                'terms'    => array( $category_current )
+                                                'terms'    => array( $editorial_slug_current , $category_current)
                                             )
                                         )
                                     );
                                 } else {
-                                    $editorial_slug_current = 'comunidades';
+                                    
                                     $args = array(
                                         'posts_per_page' => -1,
                                         'post_type'      => 'Comunidades',
