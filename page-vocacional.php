@@ -488,7 +488,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                 <!-- slide -->
                                 <?php
-                                    $page_parent_id = 305;
+                                if (have_rows('etapas_de_formacao', 'option')) :
+                                    while(have_rows('etapas_de_formacao', 'option=')) : the_row();
+                                    $page_parent_id = get_sub_field('id_da_pagina');
 
                                     $args = array(
                                         'posts_per_page' => -1,
@@ -523,6 +525,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         endwhile;
                                     endif;
                                 ?>
+                                   <?php
+                    endwhile; 
+                endif;
+                     ?>
                                 <!-- end slide -->
                             </div>
                         </div>
