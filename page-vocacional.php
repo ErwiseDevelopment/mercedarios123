@@ -486,7 +486,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                 <!-- slide -->
                                 <?php
-                                    $page_parent_id = 305;
+                                    $page_parent_id = [305,305];
 
                                     $args = array(
                                         'posts_per_page' => -1,
