@@ -212,9 +212,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             ));
                             //$order = array($term->term_id);
                             foreach( $terms as $term )  {
-                                if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81 ) {
-                                    array_push($categories, $term);
-                                }
+                                // if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81 ) {
+                                //     array_push($categories, $term);
+                                // }
                             }
                                 foreach($categories as $category) :
                         ?>
