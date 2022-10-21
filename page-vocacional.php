@@ -490,17 +490,17 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php
                                 if (have_rows('etapas_de_formacao', 'option')) :
                                     while(have_rows('etapas_de_formacao', 'option=')) : the_row();
-                                    $page_parent_id = get_sub_field('id_da_pagina');
+                                    $page_parent_id = array();
 
+                                    foreach($page_parent_id as $pages)
                                     
-                                endwhile; 
-                            endif;
+                            
                                  
 
                                     $args = array(
                                         'posts_per_page' => -1,
                                         'post_type'      => 'page',
-                                        'post_parent'    => $page_parent_id,
+                                        'post_parent'    => $pages,
                                         'order'          => 'DESC'
                                     );
 
@@ -529,7 +529,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php 
                                         endwhile;
                                     endif;
+                                endwhile; 
+                            endif;
                                 ?>
+                                   
                                   
                                 <!-- end slide -->
                             </div>
