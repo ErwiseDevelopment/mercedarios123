@@ -209,7 +209,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  array(
                                     'taxonomy' => 'comunidades-estados',
                                     'hide_empty' => false,
-                                    'order' => [29,31,30,26,81]
+                                    'order' => [29,31,30,26,81],
+                                    'parent' => 0,
                                 ));
                             
                             //$order = array($term->term_id);
