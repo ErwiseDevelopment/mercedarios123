@@ -53,6 +53,6 @@ function add_categories_rest_api( $data ) {
     }
 
     return $data;
-}
+};
 
-add_filter('rest_prepare_post', 'add_categories_rest_api', 10, 3);
+
