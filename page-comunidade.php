@@ -208,7 +208,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
                                   'parent' => 0,
-                                  'term_id' => ['29','31','30','26','81']
+                                  'term_ids' => ['29','31','30','26','81']
                             ));
                             //$order = array($term->term_id);
                             foreach( $terms as $term )  :
