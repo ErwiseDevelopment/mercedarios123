@@ -209,6 +209,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                  array(
                                     'taxonomy' => 'comunidades-estados',
                                     'hide_empty' => false,
+                                    'order' => 'DSC'
                                 ));
                             
                             //$order = array($term->term_id);
