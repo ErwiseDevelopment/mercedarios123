@@ -207,8 +207,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         $categories = array();
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
-                                //  'parent' => 0,
-                                //  'order'=> '29',
+                                  'parent' => 0,
+                                  'term_id'=> '29','31','30','26','81'
                             ));
                             //$order = array($term->term_id);
                             foreach( $terms as $term )  {
@@ -223,7 +223,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
                                     href="<?php echo get_home_url( null, 'comunidade/?cat=' . $category->slug ); ?>">
                                         <!-- Institucional -->
-                                        <?php var_dump($category); ?>
+                                        <?php echo $category->name; ?>
                                     </a>
                                 </div>
                         <?php  endforeach;    ?>
