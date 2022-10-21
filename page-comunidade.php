@@ -216,7 +216,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     array_push($categories, $term);
                                 }
                             }
-                                foreach($categories as $category) :;
+                                foreach($categories as $category) :
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
