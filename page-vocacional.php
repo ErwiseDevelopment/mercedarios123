@@ -213,11 +213,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 </h4>
 
                                                 <span class="d-block u-font-size-14 xxl:u-font-size-17 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
-<<<<<<< HEAD
-                                                    <?php echo limit_words( get_the_excerpt(), 20) ?>
-=======
+
                                                     <?php echo the_excerpt()?>
->>>>>>> b741bbd0e0b521a2cfb4c8fb8bbbf6f5163e8808
+
                                                 </span>
                                             </div>
 
@@ -488,19 +486,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                 <!-- slide -->
                                 <?php
-                                if (have_rows('etapas_de_formacao', 'option')) :
-                                    while(have_rows('etapas_de_formacao', 'option=')) : the_row();
-                                    $page_parent_id = array();
-
-                                    foreach($page_parent_id as $pages)
-                                    
-                            
-                                 
+                                    $page_parent_id = 305;
 
                                     $args = array(
                                         'posts_per_page' => -1,
                                         'post_type'      => 'page',
-                                        'post_parent'    => $pages,
+                                        'post_parent'    => $page_parent_id,
                                         'order'          => 'DESC'
                                     );
 
@@ -529,10 +520,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php 
                                         endwhile;
                                     endif;
-                              
                                 ?>
-                                   
-                                  
                                 <!-- end slide -->
                             </div>
                         </div>
@@ -582,8 +570,6 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php 
                                         endwhile;
                                     endif;
-                                endwhile; 
-                            endif;
                                 ?>
                                 <!-- end slide -->
                             </div>
