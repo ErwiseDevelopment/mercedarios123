@@ -529,8 +529,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php 
                                         endwhile;
                                     endif;
-                                endwhile; 
-                            endif;
+                              
                                 ?>
                                    
                                   
@@ -583,6 +582,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <?php 
                                         endwhile;
                                     endif;
+                                endwhile; 
+                            endif;
                                 ?>
                                 <!-- end slide -->
                             </div>
