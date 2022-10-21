@@ -204,7 +204,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- loop -->
                         <?php 
-                        $categorie = array();
+                        $categories = array();
                             $terms = get_terms( 'comunidades-estados', array(
                                 'hide_empty' => false,
                                  'parent' => 0,
