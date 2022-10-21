@@ -205,7 +205,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <!-- loop -->
                         <?php 
                         //$categories = array();
-                            $cateogries = get_terms( 
+                            $categories = get_terms( 
                                  array(
                                     'taxonomy' => 'comunidades-estados',
                                     'hide_empty' => false,
