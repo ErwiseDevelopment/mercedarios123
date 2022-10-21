@@ -204,22 +204,19 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- loop -->
                         <?php 
-                        //$categories = array();
-                            $categories = get_terms( 
-                                 array(
-                                    'taxonomy' => 'comunidades-estados',
-                                    'hide_empty' => false,
-                                    'order' => [29,31,30,26,81],
-                                    'parent' => 0,
-                                ));
-                            
+                        $categories = array();
+                            $terms = get_terms( 'comunidades-estados', array(
+                                'hide_empty' => false,
+                                 'parent' => 0,
+                            ));
                             //$order = array($term->term_id);
-                            // foreach( $terms as $term )  {
-                            //     if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81 ) {
-                            //         array_push($categories, $term);
-                            //     }
-                            // }
-                                foreach($categories as $category) :
+                            foreach( $terms as $term )  {
+                                //preciso listar nessa ordem as categorias, porem nao te listando dessa forma
+                                if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81 ) {
+                                    array_push($categories, $term);
+                                }
+                            }
+                                foreach($categories as $category) :;
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
