@@ -467,7 +467,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     }
 </style>
 
-<section class="l-places position-relative u-bg-folk-dark-marron pb-5 pb-lg-0">
+<section class="l-places position-relative u-bg-folk-dark-marron pb-5 pb-lg-5">
 
     <div class="container">
 
@@ -559,7 +559,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     </p> -->
 
                                                     <span class="d-block u-font-size-16 lg:u-font-size-18 xxl:u-font-size-26 u-font-weight-light u-font-family-lato u-font-style-italic u-color-folk-white">
-                                                        <?php echo limit_words( get_the_excerpt(), 16); ?>
+                                                        <?php echo limit_words( get_the_excerpt(), 25); ?>
                                                     </span>
 
                                                     <p class="u-font-size-16 lg:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato text-right u-color-folk-dark-golden mb-4">
