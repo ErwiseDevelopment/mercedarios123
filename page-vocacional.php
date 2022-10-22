@@ -492,7 +492,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         'posts_per_page' => -1,
                                         'post_type'      => 'page',
                                         'post_parent'    => $page_parent_id,
-                                        'order'          => 'DESC'
+                                        //'order'          => 'DESC'
                                     );
 
                                     $places_pages = new WP_Query( $args );
