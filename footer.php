@@ -186,39 +186,7 @@
             <div class="row justify-content-end">
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
-                    <!-- <ul class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
-                                    
-                        <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"  rel="noreferrer noopener"
-                            href="<php echo get_field('facebook_redes', 'option')?>" <php if (get_field('nova_guia_face', 'option') == '1') :?>  target="_blank" ?php endif; ?>>
-                                Facebook
-                            </a>
-                        </li>
-
-                        <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram  rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"  rel="noreferrer noopener"
-                            href="<php echo get_field('instagram_redes', 'option')?>" <php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <php endif; ?>>
-                                Instagram
-                            </a>
-                        </li>
-
-                        <li class="u-list-style-none mr-2">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" rel="noreferrer noopener"
-                            href="<php echo get_field('youtube_redes', 'option')?>" <php if (get_field('nova_guia_yt', 'option') == '1') :?>  target="_blank" <php endif; ?>>
-                                Youtube
-                            </a>
-                        </li>
-
-                        <li class="u-list-style-none">
-                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white" rel="noreferrer noopener"
-                            href="<php echo get_field('whatsapp_redes', 'option')?>" <php if (get_field('nova_guia_wpp', 'option') == '1') :?>  target="_blank" <php endif; ?>>
-                                Whatsapp
-                            </a>
-                        </li>
-                    </ul> -->
-                    
-
-                        <ul 
+                    <ul 
                         class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
                             
                             <?php if (!empty(get_field('spotify_redes', 'option'))):{?>
@@ -275,7 +243,7 @@
 
                             <div class="col-lg-8 d-flex align-items-center">
                                 <p class="u-line-height-100 u-font-weight-semibold text-center text-md-left u-color-folk-white mb-0" style= "font-size: 13px;">
-                                    ORDEM MERCEDÁRIA © <?php echo date('Y'); ?> TODOS OS DIREITOS RESERVADOS.
+                                    <?php echo get_field('rodape_ass', 'option') ?> © <?php echo date('Y'); ?> TODOS OS DIREITOS RESERVADOS.
                                 </p>
                             </div>
 
