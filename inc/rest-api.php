@@ -1,18 +1,15 @@
 <?php
+function post_featured_image_json( $data, $post, $context ) {
+    $featured_image_id = $data->data['featured_media'];
+    $featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'original' );
 
-function add_thumbnail_rest_api() {
-    register_rest_field( 
-        'post',
-        'featured_image_src',
-        array(
-            'get_callback'    => 'get_image_src',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
+    if( $featured_image_url ) {
+        $data->data['featured_image_src'] = $featured_image_url[0];
+    }
+  
+    return $data;
 }
-
-add_action( 'rest_api_init', 'add_thumbnail_rest_api' );
+add_filter( 'rest_prepare_post', 'post_featured_image_json', 10, 3 );
 
 function get_image_src( $object, $field_name, $request ) {
     $feat_img_array = wp_get_attachment_image_src(
@@ -28,7 +25,6 @@ function add_post_date_rest_api( $data, $post ) {
 
     return $data;
 }
-
 add_filter('rest_prepare_post', 'add_post_date_rest_api', 10, 3);
 
 function add_post_excerpt_rest_api( $data ) {
@@ -36,7 +32,6 @@ function add_post_excerpt_rest_api( $data ) {
 
     return $data;
 }
-
 add_filter('rest_prepare_post', 'add_post_excerpt_rest_api', 10, 3);
 
 function add_categories_rest_api( $data ) {
