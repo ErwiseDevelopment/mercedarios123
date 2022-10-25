@@ -140,9 +140,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                 <div class="row">
 
-                    <div class="col-lg-12 my-3 my-lg-0">
+                    
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3603352791056!2d-47.91948388514452!3d-15.837647739024316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a255bd8aca437%3A0x4bd5cb59a0537dab!2sProv%C3%ADncia%20Merced%C3%A1ria%20do%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1666714575449!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
