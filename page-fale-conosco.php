@@ -141,14 +141,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <div class="col-lg-12 my-3 my-lg-0">
-                        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.321497349539!2d-51.22073417633647!3d-30.02763312395829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979a8b263b01b%3A0x9c516cb3faeabf9a!2sAv.%20Alberto%20Bins%2C%201020%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-141!5e0!3m2!1spt-BR!2sbr!4v1653702322756!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        <p>
-                            <strong>Sede Canônica:</strong> <br>
-                            Av. Alberto Bins, 1020 - Floresta <br>
-                            90030-141 - Porto Alegre - SP - Brasil
-                        </p>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3603352791056!2d-47.91948388514452!3d-15.837647739024316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a255bd8aca437%3A0x4bd5cb59a0537dab!2sProv%C3%ADncia%20Merced%C3%A1ria%20do%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1666714575449!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     </div>
                 </div>
             </div>
