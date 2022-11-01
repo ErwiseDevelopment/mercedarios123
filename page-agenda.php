@@ -19,8 +19,34 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<!-- banner -->
+<section>
+
+	<div class="container-fluid">
+
+		<div class="row">
+
+			<div class="col-12 px-0">
+
+				<?php
+					$alt_title = get_the_title();
+
+					the_post_thumbnail(
+						'post-thumbnail',
+						array(
+							'class' => 'img-fluid',
+							'alt'   => $alt_title
+						)
+					);
+				?>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end banner -->
+
 <!-- page agendas -->
-<section class="l-page-agenda mt-4">
+<section class="l-page-agenda py-5">
 
     <div class="container">
 
@@ -84,8 +110,8 @@ get_header(); ?>
                         $data_final = date('Y'.$date_current.'31');
 
                         $args = array (
-                            'post_type'       	=> 'evento',
-                            'posts_per_page'	=> 2,
+                            'post_type'       	=> 'agendas',
+                            'posts_per_page'	=> -1,
                             'orderby'			=> 'meta_value',
                             'order'				=> 'ASC',
                             'meta_key'          => 'data_custom_post_agenda_inicio',
@@ -143,12 +169,12 @@ get_header(); ?>
 
                                             <div class="card-body">
 
-                                                <h5 class="l-page-agenda__date u-font-weight-bold">
+                                                <h5 class="l-page-agenda__date u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-black pl-4">
                                                     <!-- 11.02 -->
                                                     <?php echo $dia_data . '.' . $mes_data; ?>
                                                 </h5>
 
-                                                <p class="l-page-agenda__post-title u-font-weight-bold">
+                                                <p class="l-page-agenda__post-title u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-black pl-4">
                                                     <!-- Nome do post -->
                                                     <?php echo $calendario['title']; ?>
                                                 </p>
@@ -158,7 +184,7 @@ get_header(); ?>
                     <?php       endif; 
 				            endforeach; 
 			            else : 
-				            echo "<div class='col-12'>Não há eventos para os critérios selecionados.</div>";
+				            echo "<div>Não há eventos para os critérios selecionados.</div>";
 			            endif; 
                     ?>
                     <!-- end loop -->

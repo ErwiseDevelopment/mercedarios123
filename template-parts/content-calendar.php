@@ -139,7 +139,7 @@
                                                 if ( $date_current == $data_month ) : 
                                                     $count = 0;
                                         ?>
-                                                    <div>
+                                                    <div><a href="<?php  ?>"> 
                                                         <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
                                                             <!-- 02/echo '02'; -->
                                                             <?php echo $data_day . '/' . $data_month; ?>
@@ -149,6 +149,7 @@
                                                             <!-- Aniversário Frei Adilson Ribeiro | (31 anos de V.R.C.) -->
                                                             <?php echo $agenda["title"]; ?>
                                                         </p>
+                                                        </a>
                                                     </div>
                                         <?php 
                                                 else : $count++; 
