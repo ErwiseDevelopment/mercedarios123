@@ -139,7 +139,7 @@
                                                 if ( $date_current == $data_month ) : 
                                                     $count = 0;
                                         ?>
-                                                    <div><a class="text-decoration-none " href="<?php the_permalink() ?>"> 
+                                                    <div><a class="text-decoration-none " href="<?php echo the_permalink() ?>"> 
                                                         <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
                                                             <!-- 02/echo '02'; -->
                                                             <?php echo $data_day . '/' . $data_month; ?>
