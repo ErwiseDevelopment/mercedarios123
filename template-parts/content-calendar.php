@@ -81,7 +81,7 @@
                             setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                             date_default_timezone_set('America/Sao_Paulo');
                                 
-                            $post_agenda_count = wp_count_posts( 'agendas' );
+                            $post_agenda_count = wp_count_posts( 'evento' );
                             $post_agenda_count_current = intval( $post_agenda_count->publish );
                             $count = -1;
 
@@ -122,6 +122,7 @@
 				                    $excerpt = get_the_excerpt();
 				                    $cidades = get_the_terms(get_the_ID(), 'tipoevento');
 				                    list($data_day, $data_month, $data_year) = explode("/", $data);
+                                    $link = the_permalink();
 				                    $array_agendas[] = array ( 'data' => $current_year.'-'.$data_month.'-'.$data_day, 'title' => $title, 'excerpt' => $excerpt, 'cidades' => $cidades );
                                 endwhile; 
                                 
@@ -139,7 +140,7 @@
                                                 if ( $date_current == $data_month ) : 
                                                     $count = 0;
                                         ?>
-                                                    <div><a class="text-decoration-none " href="<?php echo the_permalink() ?>"> 
+                                                    <div><a class="text-decoration-none " href="<?php echo $link ?>"> 
                                                         <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
                                                             <!-- 02/echo '02'; -->
                                                             <?php echo $data_day . '/' . $data_month; ?>
