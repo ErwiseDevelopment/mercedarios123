@@ -122,8 +122,7 @@
 				                    $excerpt = get_the_excerpt();
 				                    $cidades = get_the_terms(get_the_ID(), 'tipoevento');
 				                    list($data_day, $data_month, $data_year) = explode("/", $data);
-                                    $link = the_permalink();
-				                    $array_agendas[] = array ( 'data' => $current_year.'-'.$data_month.'-'.$data_day, 'title' => $title, 'excerpt' => $excerpt, 'cidades' => $cidades );
+                                    $array_agendas[] = array ( 'data' => $current_year.'-'.$data_month.'-'.$data_day, 'title' => $title, 'excerpt' => $excerpt, 'cidades' => $cidades, 'link' => get_the_permalink());
                                 endwhile; 
                                 
                                 wp_reset_postdata();
@@ -140,7 +139,8 @@
                                                 if ( $date_current == $data_month ) : 
                                                     $count = 0;
                                         ?>
-                                                    <div><a class="text-decoration-none " href="<?php echo $link ?>"> 
+                                                    <div>
+                                                        <a class="text-decoration-none " href="<?php echo $agenda['link']; ?>"> 
                                                         <p class="u-font-size-18 u-font-weight-bold u-font-family-lato u-color-folk-dark-marron mb-0">
                                                             <!-- 02/echo '02'; -->
                                                             <?php echo $data_day . '/' . $data_month; ?>
