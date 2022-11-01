@@ -14,5 +14,7 @@ function single_temas_scripts()
     wp_enqueue_script('single-temas-menu-toggle', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/menu-toggler.js', array(), '1.0.2', true);
     wp_enqueue_script('single-temas-show-menu-editorial-current', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/show-menu-editorial-current.js', array(), '1.0.2', true);
     wp_enqueue_script('single-temas-show-box-search', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/show-box-search.js', array(), '1.0.2', true);
+    wp_enqueue_script('single-temas-select-change-month', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/select-change-month.js', array(), '1.0.2', true);
+
 }
 add_action('wp_enqueue_scripts', 'single_temas_scripts');
