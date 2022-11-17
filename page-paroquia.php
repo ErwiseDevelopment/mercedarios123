@@ -207,7 +207,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
 
                                                         foreach( $post_categories as $category ) :
-                                                            if( $category->parent <= 0 )
+                                                            if( $category->parent <= 0 ):{
                                                              
                                                     // "/n";
                                                     
@@ -216,12 +216,12 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 <div class="col-12 my-1">
                                     <a 
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
-                                    href="<?php echo get_home_url( null, 'comunidade/?cat=' . $term->slug ); ?>">
+                                    href="<?php echo get_home_url( null, 'comunidade/?cat=' . $category->slug ); ?>">
                                         <!-- Institucional -->
                                         <?php echo $category->name; ?>
                                     </a>
                                 </div>
-                        <?php endforeach; ?>
+                        <?php } endforeach; ?>
                         <!-- end loop -->
                     </div>
                 </div>
