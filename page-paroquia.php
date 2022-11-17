@@ -221,7 +221,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <?php echo $category->name; ?>
                                     </a>
                                 </div>
-                        <?php } endforeach; ?>
+                        <?php }; endif; endforeach; ?>
                         <!-- end loop -->
                     </div>
                 </div>
