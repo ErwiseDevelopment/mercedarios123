@@ -82,7 +82,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                             <!-- loop -->
                             <?php 
-                            $editorial_slug_current = 'comunidades';
+                            $editorial_slug_current = 'paroquias';
                                 if( isset( $_GET[ 'cat' ] ) ) {
                                     $category_current = $_GET[ 'cat' ];
 
@@ -204,29 +204,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- loop -->
                         <?php 
-                        $categories = array();
-                            $terms = get_terms( 'comunidades-estados', array(
+                            $terms = get_terms( 'comunidades-categoria', array(
                                 'hide_empty' => false,
-                                 'parent' => 0,
-                            ));
-                            //$order = array($term->term_id);
-                            foreach( $terms as $term )  {
-                                //preciso listar nessa ordem as categorias, porem nao te listando dessa forma
-                                if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81|| $term->term_id == 91|| $term->term_id == 86 ) {
-                                    array_push($categories, $term);
-                                }
-                            }
-                                foreach($categories as $category) :;
+                            ) );
+
+                            foreach( $terms as $term ) :
                         ?>
                                 <div class="col-12 my-1">
                                     <a 
                                     class="w-100 d-block u-font-size-14 xxl:u-font-size-16 u-font-weight-regular u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-marron hover:u-bg-folk-dark-golden py-2" 
-                                    href="<?php echo get_home_url( null, 'comunidade/?cat=' . $category->slug ); ?>">
+                                    href="<?php echo get_home_url( null, 'comunidade/?cat=' . $term->slug ); ?>">
                                         <!-- Institucional -->
-                                        <?php echo $category->name; ?>
+                                        <?php echo $term->name; ?>
                                     </a>
                                 </div>
-                        <?php  endforeach;    ?>
+                        <?php endforeach; ?>
                         <!-- end loop -->
                     </div>
                 </div>
