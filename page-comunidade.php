@@ -127,7 +127,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <div class="col-12 my-5">
 
                                             <!-- <img
-                                            class="img-fluid w-100 u-object-fit-cover"
+                                            class="img-fluxaxsid w-100 u-object-fit-cover"
                                             src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/sal.png"
                                             alt="Single Temas"> -->
 
