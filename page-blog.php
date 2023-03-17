@@ -352,7 +352,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     'action': 'load_more_posts',
                     'page': page + 1,
                     'args': {
-                        'posts_per_page': 6,
+                        'posts_per_page': 2,
                         'post_type': 'post',
                         'category_name': '<?php echo $category_current . ',+blog'; ?>',
                         'order': 'DSC',
