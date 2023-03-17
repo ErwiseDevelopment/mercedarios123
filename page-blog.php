@@ -236,7 +236,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $category_current = $category->slug; 
                     }
                 } else {
-                    $category_current = 'noticias';
+                    $category_current = 'blog';
                 }
         ?>                     
             <div class="col-12">
@@ -248,7 +248,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             'posts_per_page' => -1,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+blog',
-                            'order'          => 'DESC',
+                            'order'          => 'ASC',
                             'post__not_in'   => $posts_current,
                         );
 
