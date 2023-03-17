@@ -324,11 +324,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-9 col-xl-3">
 
                         <div class="row">
-
-                            <div class="">
-                    <div class="col-12 load-more-posts-container">
-                        <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load-more-posts-button">Carregar Mais</button>
-                    </div>
+                        <div class="col-12 load-more-posts-container">
+    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load-more-posts-button">Carregar Mais</button>
+</div>
                             </div>
                         </div>
                     </div>
@@ -340,23 +338,40 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <?php endwhile; ?>
 <script>
-var ajaxurl = '<?php echo admin_url("admin-ajax.php"); ?>';
-var page = 1;
-var category = '<?php echo $category_current ?>';
+    jQuery(document).ready(function($){
+        var page = 1;
+        var loading = false;
+        var $loadMoreButton = $('.load-more-posts-button');
+        var $postContainer = $('.row');
 
-jQuery(function($){
-    $('body').on('click', '.load-more-posts-button', function() {
-        page++;
-        var data = {
-            action: 'load_more_posts',
-            page: page,
-            category: category
-        };
-        $.post(ajaxurl, data, function(response) {
-            $('.row').append(response);
+        $loadMoreButton.on('click', function(){
+            if (!loading) {
+                loading = true;
+                $loadMoreButton.html('Carregando...');
+                var data = {
+                    'action': 'load_more_posts',
+                    'page': page + 1,
+                    'args': {
+                        'posts_per_page': 6,
+                        'post_type': 'post',
+                        'category_name': '<?php echo $category_current . ',+blog'; ?>',
+                        'order': 'DSC',
+                        'post__not_in': <?php echo json_encode( $posts_current ); ?>
+                    }
+                };
+                $.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
+                    if (response) {
+                        $postContainer.append(response);
+                        loading = false;
+                        page++;
+                        $loadMoreButton.html('Carregar Mais');
+                    } else {
+                        $loadMoreButton.html('Não há mais posts');
+                    }
+                });
+            }
         });
     });
-});
 </script>
 </div><!-- #main -->
 </section><!-- #primary -->

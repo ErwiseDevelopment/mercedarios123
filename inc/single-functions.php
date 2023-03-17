@@ -106,24 +106,24 @@ function mantenedora_cmp( $a, $b ) {
     return $t1 - $t2;
 }
 
-
 function load_more_posts() {
-    $paged = $_POST['page'];
-    $category_current = $_POST['category'];
-    $args = array(
-        'posts_per_page' => 6,
-        'post_type'      => 'post',
-        'category_name'  => $category_current,
-        'paged'          => $paged
-    );
-    $contents = new WP_Query( $args );
-    if ( $contents->have_posts() ) :
-        while ( $contents->have_posts() ) : $contents->the_post();
-            // Seu código para exibir cada post
+
+    $args = isset( $_POST['args'] ) ? array_map( 'sanitize_text_field', $_POST['args'] ) : '';
+    $paged = isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
+
+    $args['paged'] = $paged;
+    $args['post_status'] = 'publish';
+
+    $query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) :
+        while ( $query->have_posts() ) : $query->the_post();
+            // coloque aqui o HTML para exibir cada post
         endwhile;
     endif;
-    wp_reset_query();
-    die;
+
+    wp_die();
 }
+
 add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
 add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
