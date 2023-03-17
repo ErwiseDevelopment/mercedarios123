@@ -106,26 +106,56 @@ function mantenedora_cmp( $a, $b ) {
     return $t1 - $t2;
 }
 
-
-
 function load_more_posts() {
-
-    $args = isset( $_POST['args'] ) ? array_map( 'sanitize_text_field', $_POST['args'] ) : '';
-    $paged = isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
-
-    $args['paged'] = $paged;
-    $args['post_status'] = 'publish';
-
+    $args = $_POST['args'];
+    $args['paged'] = $_POST['paged'];
     $query = new WP_Query( $args );
+    if ( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            ?>
     
-    if ( $query->have_posts() ) :
-        while ( $query->have_posts() ) : $query->the_post();
-            // coloque aqui o HTML para exibir cada post
-        endwhile;
-    endif;
-
+            <div class="col-md-4 mb-5">
+                <a class="card h-100 u-border-color-dark-golden rounded-0 text-decoration-none" href="<?php the_permalink() ?>">
+                    <div class="card-img">
+                        <?php
+                            $alt_title = get_the_title();
+                            the_post_thumbnail('post-thumbnail', 
+                                array(
+                                'class' => 'img-fluid w-100 u-h-100 lg:px:u-h-320 u-object-fit-cover',
+                                'alt'   => $alt_title
+                            ));
+                        ?>
+                    </div>
+                    <div class="card-body">
+                        <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
+                            <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
+                            <?php echo get_the_date('d/m/Y')?>
+                        </p>
+                        <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
+                            <?php echo the_title()?>
+                        </h4>
+                        <span class="u-font-size-14 xxl:u-font-size-16 u-font-weight-light u-font-style-italic u-font-family-lato u-color-folk-dark-gray">
+                            <?php the_excerpt()?>
+                        </span>
+                    </div>
+                    <div class="c-card-footer-absolute card-footer">
+                        <div class="row justify-content-center">
+                            <div class="col-6">
+                                <p class="u-font-size-12 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron hover:u-bg-folk-dark-golden mb-0 py-2">Ler mais</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <?php
+        }
+    }
+    
+    wp_reset_postdata();
     wp_die();
-}
+}  
 
 add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
 add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );

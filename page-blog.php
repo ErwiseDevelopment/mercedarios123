@@ -244,14 +244,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php 
-                        $args = array(
-                            'posts_per_page' => 3,
-                            'post_type'      => 'post',
-                            'category_name'  => $category_current . ',+blog',
-                            'order'          => 'DSC',
-                            'post__not_in'   => $posts_current,
-                            'page'           => 1,
-                        );
+                            $args = array(
+                                'posts_per_page' => 3,
+                                'post_type'      => 'post',
+                                'category_name'  => $category_current . ',+blog',
+                                'order'          => 'DSC',
+                                'post__not_in'   => $posts_current,
+                                'paged'          => 1, // Adicionado o parâmetro de paginação
+                            );
 
                         $contents = new WP_Query( $args );
 
@@ -339,47 +339,32 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <?php endwhile; ?>
 <script>
-    jQuery(function($){
-    var page = 1;
-    var loading = false;
-    var $loadMoreButton = $('.load-more');
-
-    function loadPosts(){
-        if(!loading){
-            loading = true;
-            $loadMoreButton.addClass('loading');
-            $.ajax({
-                url: ajaxurl,
-                type: 'POST',
-                data: {
-                    action: 'load_more_posts',
-                    args: ajaxArgs,
-                    page: page
-                },
-                success: function(data){
-                    if(data){
-                        $('.posts').append(data);
-                        loading = false;
-                        page++;
-                        $loadMoreButton.removeClass('loading');
-                    } else {
-                        $loadMoreButton.remove();
-                    }
+  function loadPosts(){
+    if(!loading){
+        loading = true;
+        $loadMoreButton.addClass('loading');
+        $.ajax({
+            url: ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'load_more_posts',
+                args: ajaxArgs,
+                page: page,
+                paged: page + 1 // Envia a próxima página para o servidor
+            },
+            success: function(data){
+                if(data){
+                    $('.posts').append(data);
+                    loading = false;
+                    page++;
+                    $loadMoreButton.removeClass('loading');
+                } else {
+                    $loadMoreButton.remove();
                 }
-            });
-        }
+            }
+        });
     }
-
-    $(window).scroll(function(){
-        var scrollTop = $(this).scrollTop();
-        var windowHeight = $(this).height();
-        var documentHeight = $(document).height();
-        var scrollBottom = documentHeight - (scrollTop + windowHeight);
-        if(scrollBottom < 200){
-            loadPosts();
-        }
-    });
-});
+}
 </script>
 </div><!-- #main -->
 </section><!-- #primary -->
