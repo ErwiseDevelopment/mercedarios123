@@ -339,6 +339,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <?php endwhile; ?>
 <script>
+
+$(document).ready(function() {
+  $('.load-more-posts-container button').on('click', function(e) {
+    e.preventDefault();
+    loadPosts();
+  });
+});
   function loadPosts(){
     if(!loading){
         loading = true;
