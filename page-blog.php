@@ -250,6 +250,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             'category_name'  => $category_current . ',+blog',
                             'order'          => 'DSC',
                             'post__not_in'   => $posts_current,
+                            'page'           => 1,
                         );
 
                         $contents = new WP_Query( $args );
