@@ -245,7 +245,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <?php 
                         $args = array(
-                            'posts_per_page' => 6,
+                            'posts_per_page' => 3,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+blog',
                             'order'          => 'DSC',
