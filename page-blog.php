@@ -326,7 +326,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <div class="row">
                         <div class="col-12 load-more-posts-container">
-    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 loading">Carregar Mais</button>
+    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load-more-button">Carregar Mais</button>
 </div>
                             </div>
                         </div>
@@ -339,8 +339,23 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <?php endwhile; ?>
 <script>
+var loading = false; // Define a variável loading como falsa
+var page = 1; // Define a variável page como 1
 
-  function loadPosts(){
+$(document).ready(function(){
+    // Define a variável $loadMoreButton como o botão "Carregar mais"
+    var $loadMoreButton = $('.load-more-button');
+    
+    // Adiciona um evento de clique ao botão "Carregar mais"
+    $loadMoreButton.on('click', function(e){
+        e.preventDefault(); // Previne o comportamento padrão do botão
+        
+        loadPosts(); // Chama a função loadPosts
+    });
+});
+
+// Define a função loadPosts
+function loadPosts(){
     if(!loading){
         loading = true;
         $loadMoreButton.addClass('loading');
@@ -367,6 +382,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     }
 }
 </script>
+
 </div><!-- #main -->
 </section><!-- #primary -->
 
