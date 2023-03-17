@@ -127,18 +127,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                         <div class="col-12 my-5">
 
                                             <!-- <img
-                                            class="img-fluxaxsid w-100 u-object-fit-cover"
+                                            class="img-fluid w-100 u-object-fit-cover"
                                             src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/sal.png"
                                             alt="Single Temas"> -->
 
                                             <?php
                                                 $alt_title = get_the_title();
 
-                                                    the_post_thumbnail( 'post-thumbnail',
-                                                        array(
-                                                            'class' => 'img-fluid w-100 px:u-h-190 lg:px:u-h-550 u-object-fit-cover',
-                                                            'alt'   => $alt_title
-                                                        ));
+                                                the_post_thumbnail( 'post-thumbnail',
+                                                    array(
+                                                        'class' => 'img-fluid w-100 px:u-h-190 lg:px:u-h-550 u-object-fit-cover',
+                                                        'alt'   => $alt_title
+                                                    ));
                                             ?>
 
                                             <div class="l-communities__box d-flex flex-column justify-content-center align-items-center u-bg-folk-dark-marron py-4 px-3 px-lg-5">
@@ -153,7 +153,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                         $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
 
                                                         foreach( $post_categories as $category ) :
-                                                            if( $category->parent > 0 )
+                                                            if( $category->parent < 1 )
                                                                 echo $category->name;
                                                         endforeach;
 
@@ -212,7 +212,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             //$order = array($term->term_id);
                             foreach( $terms as $term )  {
                                 //preciso listar nessa ordem as categorias, porem nao te listando dessa forma
-                                if($term->term_id == 29 || $term->term_id == 31 || $term->term_id == 30 || $term->term_id == 26 || $term->term_id == 81|| $term->term_id == 91|| $term->term_id == 86 ) {
+                                 {
                                     array_push($categories, $term);
                                 }
                             }
