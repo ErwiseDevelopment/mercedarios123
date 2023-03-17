@@ -106,6 +106,8 @@ function mantenedora_cmp( $a, $b ) {
     return $t1 - $t2;
 }
 
+
+
 function load_more_posts() {
 
     $args = isset( $_POST['args'] ) ? array_map( 'sanitize_text_field', $_POST['args'] ) : '';
@@ -115,7 +117,7 @@ function load_more_posts() {
     $args['post_status'] = 'publish';
 
     $query = new WP_Query( $args );
-
+    
     if ( $query->have_posts() ) :
         while ( $query->have_posts() ) : $query->the_post();
             // coloque aqui o HTML para exibir cada post
