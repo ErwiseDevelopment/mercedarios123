@@ -328,7 +328,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                id="load-more" href="<?php echo get_home_url( null, '/blog' ) ?>">
+                                id="load-more" >
                                     Carregar mais
                                 </a>
                             </div>
