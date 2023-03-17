@@ -326,7 +326,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <div class="row">
                         <div class="col-12 load-more-posts-container">
-    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load_more_posts">Carregar Mais</button>
+    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 loading">Carregar Mais</button>
 </div>
                             </div>
                         </div>
