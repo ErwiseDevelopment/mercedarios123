@@ -105,3 +105,20 @@ function mantenedora_cmp( $a, $b ) {
     $t2 = strtotime($b['data']);
     return $t1 - $t2;
 }
+
+
+function load_posts() {
+    $args = $_POST['query'];
+    $args['paged'] = $_POST['page'] + 1;
+    $args['post_status'] = 'publish';
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+            // conteúdo do post
+        endwhile;
+        wp_reset_postdata();
+    endif;
+    die();
+}
+add_action('wp_ajax_load_posts', 'load_posts');
+add_action('wp_ajax_nopriv_load_posts', 'load_posts');

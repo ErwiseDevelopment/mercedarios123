@@ -245,7 +245,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <?php 
                         $args = array(
-                            'posts_per_page' => -1,
+                            'posts_per_page' => 6,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+blog',
                             'order'          => 'DSC',
@@ -328,7 +328,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="<?php echo get_home_url( null, '/blog' ) ?>">
+                                id="load-more" href="<?php echo get_home_url( null, '/blog' ) ?>">
                                     Carregar mais
                                 </a>
                             </div>
@@ -341,7 +341,36 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 
 <?php endwhile; ?>
-
+<script>
+jQuery(function($) {
+    var page = 1;
+    var loading = false;
+    $('#load-more').click(function() {
+        if (!loading) {
+            loading = true;
+            var data = {
+                'action': 'load_posts',
+                'query': query_vars,
+                'page': page,
+            };
+            $.ajax({
+                url: ajaxurl,
+                type: 'post',
+                data: data,
+                success: function(response) {
+                    if (response == '') {
+                        $('#load-more').hide();
+                    } else {
+                        $('#load-more').before(response);
+                        loading = false;
+                        page++;
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
 </div><!-- #main -->
 </section><!-- #primary -->
 
