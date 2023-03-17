@@ -325,12 +325,10 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <div class="row">
 
-                            <div class="col-12">
-                                <button
-                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                id="load-more" >
-                                    Carregar mais
-                    </button>
+                            <div class="">
+                    <div class="col-12 load-more-posts-container">
+                        <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load-more-posts-button">Carregar Mais</button>
+                    </div>
                             </div>
                         </div>
                     </div>
@@ -342,32 +340,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <?php endwhile; ?>
 <script>
-jQuery(function($) {
-    var page = 1;
-    var loading = false;
-    $('#load-more').click(function() {
-        if (!loading) {
-            loading = true;
-            var data = {
-                'action': 'load_posts',
-                'query': query_vars,
-                'page': page,
-            };
-            $.ajax({
-                url: ajaxurl,
-                type: 'post',
-                data: data,
-                success: function(response) {
-                    if (response == '') {
-                        $('#load-more').hide();
-                    } else {
-                        $('#load-more').before(response);
-                        loading = false;
-                        page++;
-                    }
-                }
-            });
-        }
+var ajaxurl = '<?php echo admin_url("admin-ajax.php"); ?>';
+var page = 1;
+var category = '<?php echo $category_current ?>';
+
+jQuery(function($){
+    $('body').on('click', '.load-more-posts-button', function() {
+        page++;
+        var data = {
+            action: 'load_more_posts',
+            page: page,
+            category: category
+        };
+        $.post(ajaxurl, data, function(response) {
+            $('.row').append(response);
+        });
     });
 });
 </script>

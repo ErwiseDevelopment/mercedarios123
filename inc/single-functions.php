@@ -107,18 +107,23 @@ function mantenedora_cmp( $a, $b ) {
 }
 
 
-function load_posts() {
-    $args = $_POST['query'];
-    $args['paged'] = $_POST['page'] + 1;
-    $args['post_status'] = 'publish';
-    $query = new WP_Query($args);
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post();
-            // conteúdo do post
+function load_more_posts() {
+    $paged = $_POST['page'];
+    $category_current = $_POST['category'];
+    $args = array(
+        'posts_per_page' => 6,
+        'post_type'      => 'post',
+        'category_name'  => $category_current,
+        'paged'          => $paged
+    );
+    $contents = new WP_Query( $args );
+    if ( $contents->have_posts() ) :
+        while ( $contents->have_posts() ) : $contents->the_post();
+            // Seu código para exibir cada post
         endwhile;
-        wp_reset_postdata();
     endif;
-    die();
+    wp_reset_query();
+    die;
 }
-add_action('wp_ajax_load_posts', 'load_posts');
-add_action('wp_ajax_nopriv_load_posts', 'load_posts');
+add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
+add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
