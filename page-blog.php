@@ -326,11 +326,11 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         <div class="row">
 
                             <div class="col-12">
-                                <a
+                                <button
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
                                 id="load-more" >
                                     Carregar mais
-                                </a>
+                    </button>
                             </div>
                         </div>
                     </div>
