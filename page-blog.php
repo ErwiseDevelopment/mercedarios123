@@ -247,7 +247,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                         if( isset($_GET['posts']) ) {
                             $posts_per_page = 6;
                         } else {
-                            $posts_per_page = -1;
+                            $posts_per_page =  6;
                         }
                             
                         $args = array(
