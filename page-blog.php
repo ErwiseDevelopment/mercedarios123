@@ -224,7 +224,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     </div>
 </section>
 
-<section class="py-5">
+<section class="py-5" id="blog">
 
     <div class="container">
 
@@ -236,7 +236,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $category_current = $category->slug; 
                     }
                 } else {
-                    $category_current = 'blog';
+                    $category_current = 'noticias';
                 }
         ?>                     
             <div class="col-12">
@@ -244,14 +244,19 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php 
-                            $args = array(
-                                'posts_per_page' => 3,
-                                'post_type'      => 'post',
-                                'category_name'  => $category_current . ',+blog',
-                                'order'          => 'DSC',
-                                'post__not_in'   => $posts_current,
-                                'paged'          => 1, // Adicionado o parâmetro de paginação
-                            );
+                        if( isset($_GET['posts']) ) {
+                            $posts_per_page = -1;
+                        } else {
+                            $posts_per_page = 1;
+                        }
+                            
+                        $args = array(
+                            'posts_per_page' => $posts_per_page,
+                            'post_type'      => 'post',
+                            'category_name'  => $category_current . ',+blog',
+                            'order'          => 'DESC',
+                            'post__not_in'   => $posts_current,
+                        );
 
                         $contents = new WP_Query( $args );
 
@@ -314,74 +319,36 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
             </div>
 
-            <div class="col-12 mt-5">
+            <?php if( !isset($_GET['posts']) ) : ?>
+                <div class="col-12 mt-5">
 
-                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
 
-                    <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
-                        <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
-                    </div>
+                        <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
+                            <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
+                        </div>
 
-                    <div class="col-9 col-xl-3">
+                        <div class="col-9 col-xl-3">
 
-                        <div class="row">
-                        <div class="col-12 posts">
-    <button class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2 load-more-button">Carregar Mais</button>
-</div>
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <a
+                                    class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/blog?posts' ) ?>">
+                                        Carregar mais
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
 
 <?php endwhile; ?>
-<script>
-var loading = false; // Define a variável loading como falsa
-var page = 1; // Define a variável page como 1
-
-$(document).ready(function(){
-    // Define a variável $loadMoreButton como o botão "Carregar mais"
-    var $loadMoreButton = $('.load-more-button');
-    
-    // Adiciona um evento de clique ao botão "Carregar mais"
-    $loadMoreButton.on('click', function(e){
-        e.preventDefault(); // Previne o comportamento padrão do botão
-        
-        loadPosts(); // Chama a função loadPosts
-    });
-});
-
-// Define a função loadPosts
-function loadPosts(){
-    if(!loading){
-        loading = true;
-        $loadMoreButton.addClass('loading');
-        $.ajax({
-            url: ajaxurl,
-            type: 'POST',
-            data: {
-                action: 'load_more_posts',
-                args: ajaxArgs,
-                page: page,
-                paged: page + 1 // Envia a próxima página para o servidor
-            },
-            success: function(data){
-                if(data){
-                    $('.posts').append(data);
-                    loading = false;
-                    page++;
-                    $loadMoreButton.removeClass('loading');
-                } else {
-                    $loadMoreButton.remove();
-                }
-            }
-        });
-    }
-}
-</script>
 
 </div><!-- #main -->
 </section><!-- #primary -->
