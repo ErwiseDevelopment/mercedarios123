@@ -377,9 +377,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                     </a>
                                 </div>
                         <?php 
-                        endwhile;
-                            
-                            wp_reset_query();
+                        
                                 ?>
                         <!-- end slide -->
                     </div>
@@ -433,7 +431,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 
 <!-- end blog -->
-<?php  endif;?>
+<?php endwhile;
+                            
+                            wp_reset_query(); endif;?>
 <!-- our construction -->
 <section class="py-5">
 
