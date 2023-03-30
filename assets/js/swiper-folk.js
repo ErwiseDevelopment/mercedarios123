@@ -19,7 +19,7 @@ const swiperBannerMaterials = new Swiper( '.js-swiper-banner-materials', {
 const swiperBlogs = new Swiper( '.js-swiper-blogs', {
     slidesPerView: 3,
     spaceBetween: 30,
-
+        
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -38,6 +38,7 @@ const swiperBlogs = new Swiper( '.js-swiper-blogs', {
     },
 
     pagination: {
+        clickable: true,
         el: '.js-swiper-pagination-blogs'
     }
 })
