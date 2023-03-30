@@ -61,21 +61,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-12">
 
                         <?php 
+                            $args = array(
+                                'posts_per_page' => 1,
+                                'post_type'      => 'post',
+                                'category_name'  => $category_current . ',+noticias',
+                                'order'          => 'DESC',
+                            );
 
-                                if( isset($_GET['posts']) ) {
-                                    $posts_per_page = -1;
-                                } else {
-                                    $posts_per_page = 6;
-                                }
-                                    
-                                $args = array(
-                                    'posts_per_page' => $posts_per_page,
-                                    'post_type'      => 'post',
-                                    'category_name'  => $category_current . ',+noticias',
-                                    'order'          => 'DESC',
-                                    'post__not_in'   => $posts_current,
-                                );
-                           
                             $contents = new WP_Query( $args );
                             $posts_current = array();
 
@@ -232,7 +224,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     </div>
 </section>
 
-<section class="py-5">
+<section class="py-5" id="blog">
 
     <div class="container">
 
@@ -244,7 +236,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $category_current = $category->slug; 
                     }
                 } else {
-                    $category_current = 'noticias';
+                    $category_current = 'blog';
                 }
         ?>                     
             <div class="col-12">
@@ -252,8 +244,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <?php 
+                        if( isset($_GET['posts']) ) {
+                            $posts_per_page = -1;
+                        } else {
+                            $posts_per_page = 6;
+                        }
+                            
                         $args = array(
-                            'posts_per_page' => -1,
+                            'posts_per_page' => $posts_per_page,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+noticias',
                             'order'          => 'DESC',
@@ -277,7 +275,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                 $alt_title = get_the_title();
                                                 the_post_thumbnail('post-thumbnail', 
                                                     array(
-                                                    'class' => 'img-fluid w-100 h-100',
+                                                    'class' => 'img-fluid w-100 u-h-100 lg:px:u-h-320 u-object-fit-cover',
                                                     'alt'   => $alt_title
                                                 ));
                                             ?>
@@ -287,7 +285,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                                             <p class="u-font-size-12 xxl:u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
                                                 <span class="u-font-weight-medium">por</span>  <?php echo get_the_author_meta('user_firstname') ?> <br>
-                                                <?php echo get_date_format('d/m/Y', $post)?>
+                                                <?php echo get_the_date('d/m/Y', $post)?>
                                             </p>
 
                                             <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-cinzel u-color-folk-dark-gray">
@@ -321,33 +319,37 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 </div>
             </div>
 
-            <div class="col-12 mt-5">
+            <?php if( !isset($_GET['posts']) ) : ?>
+                <div class="col-12 mt-5">
 
-                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
 
-                    <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
-                        <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
-                    </div>
+                        <div class="col-9 d-none d-xl-flex justify-content-center align-items-center">
+                            <div class="w-100 u-border-b-5 u-border-color-dark-marron"></div>
+                        </div>
 
-                    <div class="col-9 col-xl-3">
+                        <div class="col-9 col-xl-3">
 
-                        <div class="row">
+                            <div class="row">
 
-                            <div class="col-12">
-                                <a
-                                class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="<?php echo get_home_url( null, '/noticias?posts' ) ?>">
-                                    Carregar mais
-                                </a>
+                                <div class="col-12">
+                                    <a
+                                    class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
+                                    href="<?php echo get_home_url( null, '/noticias?posts' ) ?>">
+                                        Carregar mais
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
-    
-</section><?php endwhile; ?>
+</section>
+
+<?php endwhile; ?>
+
 
 </div><!-- #main -->
 
