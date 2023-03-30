@@ -561,7 +561,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end our construction -->
 
 <!-- photos -->
-<?php if (!empty($gallery))?>
+<?php if (empty($gallery))?>
 <section class="py-5">
 
     <div class="container">
