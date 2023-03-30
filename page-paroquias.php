@@ -298,7 +298,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- blog -->
 <?php if($contents <> NULL):
 
-var_dump($contents)?>
+var_dump($contents->category_name)?>
 <section class="py-5">
 
     <div class="container">
