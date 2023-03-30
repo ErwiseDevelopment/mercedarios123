@@ -186,12 +186,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 href="<?php the_permalink() ?>">
 
                                     <div class="card-img">
-                                        <!-- <img
-                                        class="img-fluid w-100"
-                                        src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/news-post-1.png"
-                                        alt=""> -->
-
-                                        <?php 
+                                       <?php 
                                         $alt_title = get_the_title();
                                         the_post_thumbnail('post-thumbnail', 
                                         array(
@@ -298,7 +293,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- blog -->
 <?php 
 
-var_dump($contents->category_name)?>
+var_dump($args->category_name)?>
 <section class="py-5">
 
     <div class="container">
