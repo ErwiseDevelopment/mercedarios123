@@ -88,14 +88,14 @@
                 </div>
 
                 <!-- arrows -->
-                <div class="swiper-button-prev swiper-button-prev-blogs d-none d-xl-flex js-swiper-button-prev-blog">
+                <div class="swiper-button-prev swiper-button-prev-blogs d-none d-xl-flex js-swiper-button-prev-blogs">
                     <img
                     class="img-fluid w-100 h-100"
                     src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/arrow-left.png"
                     alt="Seta Esquerda">
                 </div>
 
-                <div class="swiper-button-next swiper-button-next-blogs d-none d-xl-flex js-swiper-button-next-blog">
+                <div class="swiper-button-next swiper-button-next-blogs d-none d-xl-flex js-swiper-button-next-blogs">
                     <img
                     class="img-fluid"
                     src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/arrow-right.png"
