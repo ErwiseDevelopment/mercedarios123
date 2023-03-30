@@ -512,34 +512,14 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                                     <div class="u-bg-folk-golden mx-auto" style="width:calc(100% - 150px);height:2px"></div>
 
                                                     <p class="u-font-size-17 u-font-weight-regular u-font-family-lato text-center u-color-folk-white mt-2">
-                                                        <!-- <hp
-                                                            $post_categories = get_the_terms(get_the_ID(), 'comunidades-estados' );
-                                                            $post_categories_current = array();
-
-                                                            $terms = get_terms( array(
-                                                                'taxonomy' => 'comunidades-estados',
-                                                                'hide_empty' => false,
-                                                            ));
-
-                                                            foreach( $post_categories as $post_category ) {
-                                                                foreach( $terms as $term ) {
-                                                                    if( $post_category->name == $term->name )
-                                                                        array_push( $post_categories_current, $post_category->name );
-                                                                }
-                                                            }
-                                                            echo $post_categories_current[1];
-                                                            "/n"
-                                                           
-                                                        ?>
-                                                        -->
                                                         <?php
-                                                        $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
+                                                            $post_categories = get_the_terms( get_the_ID(), 'comunidades-estados' );
 
-                                                        foreach( $post_categories as $category ) :
-                                                            if( $category->parent > 0 )
-                                                                echo $category->name;
-                                                        endforeach;
-                                                    ?>
+                                                            foreach( $post_categories as $category ) :
+                                                                if( $category->parent > 0 )
+                                                                    echo $category->name;
+                                                            endforeach;
+                                                        ?>
                                                     </p>
 
                                                     <p 
@@ -581,6 +561,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end our construction -->
 
 <!-- photos -->
+<?php if (!empty($gallery))?>
 <section class="py-5">
 
     <div class="container">
