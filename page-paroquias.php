@@ -301,6 +301,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             $cats = array();
                                          $poste = $contents->have_posts();
                                          if($poste=1):
+                                            while ($contents->have_posts()) : $contents->the_post();
                                     ?>
 <section class="py-5">
            
@@ -326,9 +327,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- slide -->
                                 <?php 
-
-                                        
-                                            while ($contents->have_posts()) : $contents->the_post();
+                                  
                                 
                                 ?>
                                 <div class="swiper-slide">
