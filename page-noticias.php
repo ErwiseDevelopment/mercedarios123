@@ -61,13 +61,21 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                     <div class="col-12">
 
                         <?php 
-                            $args = array(
-                                'posts_per_page' => 1,
-                                'post_type'      => 'post',
-                                'category_name'  => $category_current . ',+noticias',
-                                'order'          => 'DESC',
-                            );
 
+                                if( isset($_GET['posts']) ) {
+                                    $posts_per_page = -1;
+                                } else {
+                                    $posts_per_page = 6;
+                                }
+                                    
+                                $args = array(
+                                    'posts_per_page' => $posts_per_page,
+                                    'post_type'      => 'post',
+                                    'category_name'  => $category_current . ',+noticias',
+                                    'order'          => 'DESC',
+                                    'post__not_in'   => $posts_current,
+                                );
+                           
                             $contents = new WP_Query( $args );
                             $posts_current = array();
 
@@ -245,7 +253,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                     <?php 
                         $args = array(
-                            'posts_per_page' => 99,
+                            'posts_per_page' => -1,
                             'post_type'      => 'post',
                             'category_name'  => $category_current . ',+noticias',
                             'order'          => 'DESC',
@@ -328,7 +336,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             <div class="col-12">
                                 <a
                                 class="w-100 d-block u-font-size-22 u-font-weight-bold u-font-family-lato text-center text-decoration-none u-color-folk-white u-bg-folk-dark-golden py-2"
-                                href="<?php echo get_home_url( null, '/noticias' ) ?>">
+                                href="<?php echo get_home_url( null, '/noticias?posts' ) ?>">
                                     Carregar mais
                                 </a>
                             </div>
