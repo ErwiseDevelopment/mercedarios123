@@ -290,17 +290,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end news -->
 
-<!-- blog -->
-<?php 
-                                               $args = array(
-                                                'post_per_page' =>  9,
-                                                'post_type'     => 'post',
-                                                'category_name' => 'blog+paroquias',
-                                                'order'         => 'DESC',
-                                             );
-                                                $contents = new WP_Query( $args );
-                                                $cats = array();
-        if(!$contents):?>
+<!-- blog -->     
+       
 <section class="py-5">
            
     <div class="container">
@@ -325,10 +316,18 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- slide -->
                                 <?php 
-
-
-                                    if( $contents->have_posts()):
-                                        while ($contents->have_posts()) : $contents->the_post();
+                                        $args = array(
+                                            'post_per_page' =>  9,
+                                            'post_type'     => 'post',
+                                            'category_name' => 'blog+paroquias',
+                                            'order'         => 'DESC',
+                                         );
+                                            $contents = new WP_Query( $args );
+                                            $cats = array();
+                                         $poste = $contents->have_posts();
+                                    if( $poste = 1) :
+                                        
+                                            while ($contents->have_posts()) : $contents->the_post();
                                 
                                 ?>
                                 <div class="swiper-slide">
