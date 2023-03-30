@@ -300,7 +300,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                             $contents = new WP_Query( $args );
                                             $cats = array();
                                          $poste = $contents->have_posts();
-                                    if( $poste = 1) :
+                                         var_dump($poste);
                                     ?>
 <section class="py-5">
            
@@ -433,7 +433,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 
 <!-- end blog -->
-<?php endif; ?>
+<?php  ?>
 <!-- our construction -->
 <section class="py-5">
 
