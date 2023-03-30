@@ -291,7 +291,8 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end news -->
 
 <!-- blog -->     
-       <?php                                         $args = array(
+                                    <?php                                
+                                        $args = array(
                                             'post_per_page' =>  9,
                                             'post_type'     => 'post',
                                             'category_name' => 'blog+paroquias',
