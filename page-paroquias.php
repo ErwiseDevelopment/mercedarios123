@@ -296,7 +296,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end news -->
 
 <!-- blog -->
-<?php if($contents <> NULL):?>
+<?php if($contents <> NULL):
+
+var_dump($contents)?>
 <section class="py-5">
 
     <div class="container">
