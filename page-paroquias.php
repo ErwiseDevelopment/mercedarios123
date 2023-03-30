@@ -291,7 +291,17 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end news -->
 
 <!-- blog -->     
-       
+       <?php                                         $args = array(
+                                            'post_per_page' =>  9,
+                                            'post_type'     => 'post',
+                                            'category_name' => 'blog+paroquias',
+                                            'order'         => 'DESC',
+                                         );
+                                            $contents = new WP_Query( $args );
+                                            $cats = array();
+                                         $poste = $contents->have_posts();
+                                    if( $poste = 1) :
+                                    ?>
 <section class="py-5">
            
     <div class="container">
@@ -316,16 +326,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
                         <!-- slide -->
                                 <?php 
-                                        $args = array(
-                                            'post_per_page' =>  9,
-                                            'post_type'     => 'post',
-                                            'category_name' => 'blog+paroquias',
-                                            'order'         => 'DESC',
-                                         );
-                                            $contents = new WP_Query( $args );
-                                            $cats = array();
-                                         $poste = $contents->have_posts();
-                                    if( $poste = 1) :
+
                                         
                                             while ($contents->have_posts()) : $contents->the_post();
                                 
@@ -377,7 +378,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                                 </div>
                         <?php 
                         endwhile;
-                            endif;
+                            
                             wp_reset_query();
                                 ?>
                         <!-- end slide -->
@@ -432,7 +433,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 
 <!-- end blog -->
-
+<?php endif; ?>
 <!-- our construction -->
 <section class="py-5">
 
