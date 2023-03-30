@@ -430,7 +430,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         </div>
     </div>
 </section>
-<?php endif; ?>
+
 <!-- end blog -->
 
 <!-- our construction -->
