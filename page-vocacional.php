@@ -598,7 +598,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
     </div>
 </section>
 <!-- end places -->
-
+<?php if ($gallery <> NULL):?>
 <!-- photos -->
 <section class="py-5">
 
@@ -708,7 +708,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 </section>
 <!-- end photos -->
 
-<?php endwhile; ?>
+<?php endif; endwhile; ?>
 
 </main><!-- #main -->
 </section><!-- #primary -->
