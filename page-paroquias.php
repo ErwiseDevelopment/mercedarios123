@@ -301,9 +301,9 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         $contents = new WP_Query( $args );
         $cats = array();
         
-        if($contents <> NULL):?>
+        if(!$contents):?>
 <section class="py-5">
-
+            <?php var_dump( $contents)?>
     <div class="container">
 
         <div class="row">
