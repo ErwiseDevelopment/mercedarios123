@@ -236,7 +236,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             $category_current = $category->slug; 
                     }
                 } else {
-                    $category_current = 'blog';
+                    $category_current = 'noticias';
                 }
         ?>                     
             <div class="col-12">
