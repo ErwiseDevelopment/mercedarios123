@@ -292,8 +292,16 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
 <!-- blog -->
 <?php 
-
-var_dump($args->category_name)?>
+    $args = array(
+        'post_per_page' =>  9,
+        'post_type'     => 'post',
+        'category_name' => 'blog+paroquias',
+        'order'         => 'DESC',
+     );
+        $contents = new WP_Query( $args );
+        $cats = array();
+        
+        if($contents <> NULL):?>
 <section class="py-5">
 
     <div class="container">
@@ -318,17 +326,11 @@ var_dump($args->category_name)?>
 
                         <!-- slide -->
                                 <?php 
-                                 $args = array(
-                                    'post_per_page' =>  9,
-                                    'post_type'     => 'post',
-                                    'category_name' => 'blog+paroquias',
-                                    'order'         => 'DESC',
-                                 );
-                                    $contents = new WP_Query( $args );
-                                    $cats = array();
+                             
 
                                     if( $contents->have_posts()):
                                         while ($contents->have_posts()) : $contents->the_post();
+                                
                                 ?>
                                 <div class="swiper-slide">
                                     <a 
@@ -430,7 +432,7 @@ var_dump($args->category_name)?>
         </div>
     </div>
 </section>
-
+<?php endif; ?>
 <!-- end blog -->
 
 <!-- our construction -->
