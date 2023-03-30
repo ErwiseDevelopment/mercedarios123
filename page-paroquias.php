@@ -296,6 +296,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 <!-- end news -->
 
 <!-- blog -->
+<?php if($contents <> NULL):?>
 <section class="py-5">
 
     <div class="container">
@@ -432,6 +433,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         </div>
     </div>
 </section>
+<?php endif;?>
 <!-- end blog -->
 
 <!-- our construction -->
